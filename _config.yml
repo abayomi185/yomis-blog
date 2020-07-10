@@ -1,10 +1,10 @@
 # Site settings
-title:       Yomi's Blog
+title:       yomis-blog
 email:       abayomi.ikuru@gmail.com
 author:      Abayomi Ikuru
 description: "A blog for my tech related projects"
-baseurl:     ""
-url:         "yomis.blog"
+baseurl:     "/yomis-blog"
+url:         "http://abayomi185.github.io"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
