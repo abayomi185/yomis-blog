@@ -28,14 +28,14 @@ jobs:
         # access token granted, at a minimum, the `public_repo` and
         # the `repo_deployment` scopes needed to deploy to GH Pages.
         secret_gh_pages_api_token: ${{ secrets.SECRET }}
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6.x
-    - name: Bundle install
-      run: |
-        bundle config path vendor/bundle
-        bundle install --jobs 4 --retry 3
-    - name: Build with Jekyll
-      run: |
-        bundle exec jekyll build
+    # - name: Set up Ruby 2.6
+    #   uses: actions/setup-ruby@v1
+    #   with:
+    #     ruby-version: 2.6.x
+    # - name: Bundle install
+    #   run: |
+    #     bundle config path vendor/bundle
+    #     bundle install --jobs 4 --retry 3
+    # - name: Build with Jekyll
+    #   run: |
+    #     bundle exec jekyll build
