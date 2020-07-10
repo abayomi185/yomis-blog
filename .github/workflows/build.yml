@@ -49,7 +49,7 @@ jobs:
         token: ${{ secrets.GH_TOKEN }}
         repository: 'master'             # Default is current repository
         branch: 'gh-pages'         # Default is gh-pages for github provider
-        jekyll_src: './_site'           # Default is root directory
+        jekyll_src: './'           # Default is root directory
         jekyll_cfg: '_config.yml'  # Default is _config.yml
 
     # - name: Deploy 🚀
