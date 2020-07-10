@@ -22,13 +22,13 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gems-
 
-    - uses: fabacab/jekyll-builder-for-github-pages-action@master
-      with:
-        # Provide this action with your repository's `GH_PAGES_TOKEN`
-        # "Secret" variable. This should be the value of a personal
-        # access token granted, at a minimum, the `public_repo` and
-        # the `repo_deployment` scopes needed to deploy to GH Pages.
-        secret_gh_pages_api_token: ${{ secrets.GITHUB_TOKEN }}
+    # - uses: fabacab/jekyll-builder-for-github-pages-action@master
+    #   with:
+    #     # Provide this action with your repository's `GH_PAGES_TOKEN`
+    #     # "Secret" variable. This should be the value of a personal
+    #     # access token granted, at a minimum, the `public_repo` and
+    #     # the `repo_deployment` scopes needed to deploy to GH Pages.
+    #     secret_gh_pages_api_token: ${{ secrets.GITHUB_TOKEN }}
 
     # - name: Set up Ruby 2.6
     #   uses: actions/setup-ruby@v1
@@ -52,9 +52,9 @@ jobs:
     #     jekyll_src: './'           # Default is root directory
     #     jekyll_cfg: '_config.yml'  # Default is _config.yml
 
-    # - name: Deploy 🚀
-    #   uses: JamesIves/github-pages-deploy-action@releases/v3
-    #   with:
-    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    #     BRANCH: gh-pages # The branch the action should deploy to.
-    #     FOLDER: _site # The folder the action should deploy.
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.SECRET }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: _site # The folder the action should deploy.
