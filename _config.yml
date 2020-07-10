@@ -78,7 +78,7 @@ share_stumbleupon: false
 share_hackernews: false
 
 include:
-  - "_img"
+  - _img
 
 text:
   pagination:
