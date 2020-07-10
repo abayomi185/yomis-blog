@@ -43,18 +43,18 @@ jobs:
     #     bundle exec jekyll build
 
     # Use GitHub Deploy Action to build and deploy to Github
-    # - uses: jeffreytse/jekyll-deploy-action@v0.1.0
-    #   with:
-    #     provider: 'github'
-    #     auth_token: ${{ secrets.GITHUB_TOKEN }}
-    #     repository: ''             # Default is current repository
-    #     branch: 'gh-pages'         # Default is gh-pages for github provider
-    #     jekyll_src: './'           # Default is root directory
-    #     jekyll_cfg: '_config.yml'  # Default is _config.yml
-
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - uses: jeffreytse/jekyll-deploy-action@v0.1.0
       with:
-        GITHUB_TOKEN: ${{ secrets.SECRET }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: _site # The folder the action should deploy.
+        provider: 'github'
+        auth_token: ${{ secrets.GITHUB_TOKEN }}
+        repository: 'master'             # Default is current repository
+        branch: 'gh-pages'         # Default is gh-pages for github provider
+        jekyll_src: './'           # Default is root directory
+        jekyll_cfg: '_config.yml'  # Default is _config.yml
+
+    # - name: Deploy 🚀
+    #   uses: JamesIves/github-pages-deploy-action@releases/v3
+    #   with:
+    #     GITHUB_TOKEN: ${{ secrets.SECRET }}
+    #     BRANCH: gh-pages # The branch the action should deploy to.
+    #     FOLDER: _site # The folder the action should deploy.
