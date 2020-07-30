@@ -1,0 +1,28 @@
+{
+    "piserver_image_gallery_all": [
+        {
+            "info": "Built Piserver without casing. Space available for two 3.5 inch HDDs",
+            "filename": "piserver_full.jpg"
+        },
+        {
+            "info": "Front View with visible front airflow vent at the base of the chassis",
+            "filename": "piserver_front.jpg"
+        },
+        {
+            "info": "Left-side view showing 12V PSU, IEC connector and Ethernet adapter",
+            "filename": "piserver_left.jpg"
+        },
+        {
+            "info": "Right-side view showing 5V PSU and tray system with a Raspberry Pi mounted",
+            "filename": "piserver_right.jpg"
+        },
+        {
+            "info": "Top View showing a 140mm fan and an OLED display",
+            "filename": "piserver_top.jpg"
+        },
+        {
+            "info": "Top View without fan mounted, exposing the inside of the chassis ",
+            "filename": "piserver_top_nofan.jpg"
+        }
+    ]
+}

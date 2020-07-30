@@ -1,0 +1,4 @@
+{% for image in site.data.piserver-gallery.piserver_image_gallery_all %}
+    <img class="gallery-image" src="/_img/piserver/collection/{{ image.filename }}" alt="">
+    <small>{{ image.info }}</small>
+{% endfor %}
