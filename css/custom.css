@@ -102,6 +102,19 @@
     
 }
 
+.pay-button {
+    border-radius: 0.5rem;
+}
+
+.pay-button-text {
+    color: #0076df;
+    transition: 200ms;
+}
+
+.pay-button-text:hover {
+    color: #000000;
+}
+
 .tab-active {
     color: #0076df;
     text-decoration: underline;
