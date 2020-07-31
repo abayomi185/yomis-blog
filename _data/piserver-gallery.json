@@ -4,15 +4,15 @@
             "header": "PhotoShoot"
         },
         {
-            "info": "",
+            "info": "Built up PiServer 1.0",
             "filename": "piserver1.jpg"
         },
         {
-            "info": "",
+            "info": "PiServer on my desk and powering an RGB LED light strip",
             "filename": "piserver12.jpg"
         },
         {
-            "info": "",
+            "info": "External ports",
             "filename": "piserver2.jpg"
         },
         {
@@ -20,40 +20,56 @@
             "filename": "piserver3.jpg"
         },
         {
-            "info": "",
+            "info": "Top OLED display",
             "filename": "piserver4.jpg"
         },
         {
-            "info": "",
+            "info": "Front view",
             "filename": "piserver5.jpg"
         },
         {
-            "info": "",
+            "info": "Left side view showing connectors, wiring and 12V PSU that powers the HDD and top fan",
             "filename": "piserver6.jpg"
         },
         {
-            "info": "",
+            "info": "Front view showing tray design and 'yellow' covered MOSFETs for RGB LED control",
             "filename": "piserver7.jpg"
         },
         {
-            "info": "",
+            "info": "HDD Tray with felt pads to reduce vibration",
             "filename": "piserver8.jpg"
         },
         {
-            "info": "",
+            "info": "3.5 inch 2TB seagate iron wolf HDD on tray",
             "filename": "piserver9.jpg"
         },
         {
-            "info": "",
+            "info": "Front view showing Raspberry Pi and dc connectors in recessed cable area",
             "filename": "piserver10.jpg"
         },
         {
-            "info": "",
+            "info": "Bottom tray in place to partly cover cables",
             "filename": "piserver11.jpg"
         },
         {
-            "info": "",
+            "info": "Left side showing 12V PSU with shroud removed",
             "filename": "piserver13.jpg"
+        },
+        {
+            "info": "Front view showing 1 of 3 ventilation slits and felt pads in HDD compartment",
+            "filename": "piserver18.jpg"
+        },
+        {
+            "info": "Right side showing 5V PSU that powers the Raspberry Pi 4",
+            "filename": "piserver19.jpg"
+        },
+        {
+            "info": "Rear view showing the inside amd cabling in PiServer",
+            "filename": "piserver21.jpg"
+        },
+        {
+            "info": "A closer look of the rear with the HDD taken out",
+            "filename": "piserver20.jpg"
         },
         {
             "header": "Design"
@@ -149,12 +165,20 @@
 
     "piserver_video_gallery_all": [
         {
-            "info": "PiServer OLED & Fan Software Setup",
-            "video_link": "https://www.youtube.com/embed/5Cm1Kj1eGfk" 
+            "info": "OLED & Fan Software Setup",
+            "video_link": "https://www.youtube.com/embed/5Cm1Kj1eGfk"
         },
         {
-            "info": "",
-            "video_link": "https://www.youtube.com/embed/jzT0-t-7-PA"
+            "info": "Initial introductory video to Instagram Story",
+            "video_link": "https://youtube.com/embed/dBrY3AJkKY4"
+        },
+        {
+            "info": "CAD Design Animation of an intial prototype design",
+            "video_link": "https://www.youtube.com/embed/IoyjjXPkN5s"
+        },
+        {
+            "info": "Extra Clips",
+            "video_link": "https://youtube.com/embed/P3mPqi-lL4s"
         }
     ]
 }

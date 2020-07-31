@@ -30,7 +30,7 @@ Here are some specifics:
 - **Mobile Applications** (Swift, React Native)
 
 <br>
-**I love to figure things out** and this blog is a means to document the processes, challenges & successes I've encountered and to share them with you.
+**I love to figure things out** and this blog is a means to document the processes, challenges & successes I've encountered, and to share them with you.
 
 <br>
 Oh yes, **I would love to chat**.<br>
