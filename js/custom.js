@@ -65,5 +65,5 @@ $("#right-tab").unbind().click(function() {
 });
 
 $( document ).ready(function() {
-  
+  $('.right-tab-content').hide();
 });
