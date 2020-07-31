@@ -1,4 +1,12 @@
 {% for image in site.data.piserver-gallery.piserver_image_gallery_all %}
-    <img class="gallery-image" src="/_img/piserver/collection/{{ image.filename }}" alt="">
-    <small>{{ image.info }}</small>
+{% if image.header%}
+    <h1 id="{{image.header}}">{{image.header}}</h1><br>
+{% else %}
+    <div class="tab-content">
+        <img class="gallery-image" src="/_img/piserver/collection/{{ image.filename }}" alt="" style="border-radius: 0.5rem; max-height: 650px">
+        <br>
+        <small>{{ image.info }}</small>
+    </div>
+{% endif %}
+    
 {% endfor %}

@@ -16,26 +16,21 @@ image: /_img/homepage/piserver.jpg
 {: refdef}
 <br>
 
-<!-- Use Ninja Slider No.4 for image viewer
-
-//image hover shows unplash and button<br>
-//image click makes the hover button stay
-
-[//]: # (This may be the most platform independent comment)
-
-
-## Videos
-
-Youtube embed -->
-
 {:refdef: style="text-align: center;"}
 <div class="left-tab-content">
+    <div>
+        {% for title_head in site.data.piserver-gallery.piserver_image_gallery_all %}
+            {% if title_head.header%}
+                <a href="#{{title_head.header}}" style="margin: 10px;"><h4 style="display: inline;">{{title_head.header}}</h4></a>
+            {% endif %}
+        {% endfor %}
+    </div>
     {% include_relative _post-includes/piserver-gallery-images.html %}
 </div>
 {: refdef}
-
+<br>
 {:refdef: style="text-align: center;"}
 <div class="right-tab-content">
-
+    {% include_relative _post-includes/piserver-gallery-videos.html %}
 </div>
 {: refdef}

@@ -1,3 +1,8 @@
+.avatar {
+    width: 150px;
+    border-radius: 50%;
+}
+
 .custom-intro {
     /* background-color: #e6e6e6; */
     background-color: #f5f5f5;
@@ -70,6 +75,12 @@
     height: auto;
 }
 
+.smaller-post-img {
+    border-radius: 0.5rem;
+    max-height: 500px;
+    height: auto;
+}
+
 .gallery-img {
     max-height: 480px;
 }
@@ -98,6 +109,10 @@
 
 .tab-inactive {
     opacity: 90%;
+}
+
+.tab-content {
+    margin-bottom: 2rem;
 }
 
 /* -------------Swiper Modifications------------*/
@@ -137,10 +152,11 @@
     height: 100%; */
     opacity: 0.4;
     /* border-radius: 0.5rem; */
-    background-size: 110%;
-    background-repeat: no-repeat;
+    /* background-size: 110%; */
+    /* background-repeat: no-repeat; */
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .gallery-thumbs .swiper-slide-thumb-active {
@@ -168,7 +184,7 @@
 }
 
 .thumb-image{
-    min-width: 100%;
+    max-height: 100%;
     border-radius: 0.5rem;
 }
 

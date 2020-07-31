@@ -1,6 +1,64 @@
 {
     "piserver_image_gallery_all": [
         {
+            "header": "PhotoShoot"
+        },
+        {
+            "info": "",
+            "filename": "piserver1.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver12.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver2.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver3.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver4.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver5.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver6.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver7.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver8.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver9.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver10.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver11.jpg"
+        },
+        {
+            "info": "",
+            "filename": "piserver13.jpg"
+        },
+        {
+            "header": "Design"
+        },
+        {
             "info": "Built Piserver without casing. Space available for two 3.5 inch HDDs",
             "filename": "piserver_full.jpg"
         },
@@ -21,8 +79,82 @@
             "filename": "piserver_top.jpg"
         },
         {
-            "info": "Top View without fan mounted, exposing the inside of the chassis ",
+            "info": "Top View without fan mounted, exposing the inside of the chassis",
             "filename": "piserver_top_nofan.jpg"
+        },
+        {
+            "header": "Prototypes"
+        },
+        
+        {
+            "info": "Failed prototype being used as a test bench",
+            "filename": "piserver_testbench.jpg"
+        },
+        {
+            "info": "Failed prototype; Very difficult to remove 3D printing supports",
+            "filename": "piserver_prototype_black.jpg"
+        },
+        {
+            "header": "Assembly"
+        },
+        {
+            "info": "My Workbench...work-bed...bed",
+            "filename": "piserver_workbench.jpg"
+        },
+        {
+            "info": "Printing PiServer 1.0",
+            "filename": "piserver_print.jpg"
+        },
+        {
+            "info": "PiServer 1.0 print complete. Print time: 2 Days, 20 Hours",
+            "filename": "piserver_print_complete.jpg"
+        },
+        {
+            "info": "PiServer top tray with Raspberry Pi 4",
+            "filename": "piserver_top_tray.jpg"
+        },
+        {
+            "info": "Laying wires in recessed wire area",
+            "filename": "piserver_wiring_top.jpg"
+        },
+        {
+            "info": "Wiring up the left side",
+            "filename": "piserver_wiring_left.jpg"
+        },
+        {
+            "info": "Wiring up the right side",
+            "filename": "piserver_wiring_right.jpg"
+        },
+        
+        {
+            "info": "Mounting the fan on PiServer",
+            "filename": "piserver_wiring.jpg"
+        },
+        {
+            "info": "Placing PiServer outer casing; Very gracious tolerance to avoid need to print another",
+            "filename": "piserver16.jpg"
+        },
+        {
+            "info": "PiServer with its outer casing hovering above it",
+            "filename": "piserver17.jpg"
+        },
+        {
+            "header": "Reddit-fame"
+        },
+        {
+            "info": "PiServer post on <a href='https://reddit.com/r/homelab'>r/homelab</a> subreddit",
+            "filename": "piserver_reddit_fame.jpg"
+        }
+    ],
+
+    "piserver_video_gallery_all": [
+        {
+            "info": "PiServer OLED & Fan Software Setup",
+            "video_link": "https://www.youtube.com/embed/5Cm1Kj1eGfk" 
+        },
+        {
+            "info": "",
+            "video_link": "https://www.youtube.com/embed/jzT0-t-7-PA"
         }
     ]
 }
