@@ -6,6 +6,7 @@ summary: Images & Videos from PiServer Project
 categories: projects
 permalink: /piserver-gallery
 image: /_img/homepage/piserver.jpg
+twitter_card: https://yomis.blog/_img/piserver/twitter_card.jpg
 ---
 
 {:refdef: style="text-align: center;"}

@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% if page.meta_description %}{{ page.meta_description | xml_escape }}{% elsif page.summary %}{{ page.summary | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
     <meta name="twitter:card" content="summary"></meta>
-    <meta name="twitter:image:src" content="https://yomis.blog/_img/piserver/twitter_card.jpg">
+    <meta name="twitter:image:src" content="{% if page.twitter_card %}{{ page.twitter_card }}{% else %}https://yomis.blog/_img/twitter_card.png{% endif %}">
     <link rel="manifest" type="application/manifest+json; charset=utf-8" href="{{ "/manifest.json" | relative_url }}" />
     {% if page.meta_robots %}<meta name="robots" content="{{ page.meta_robots }}">
     {% else %}<meta name="robots" content="all">{% endif %}
