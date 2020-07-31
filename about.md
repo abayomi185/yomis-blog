@@ -3,6 +3,7 @@ layout: page
 title: about-me
 permalink: /about/
 tags: about
+summary: You were expecting another but it was I, Yomi!
 ---
 
 <br>
