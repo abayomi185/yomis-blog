@@ -2,12 +2,14 @@
 layout: post
 title: PiServer Gallery
 date: 2020-07-14 09:33
-summary: Images & Videos from PiServer Project
+summary: A Collection of images & videos from the PiServer Project
 categories: projects
 permalink: /piserver-gallery
 image: /_img/homepage/piserver.jpg
 twitter_card: https://yomis.blog/_img/piserver/twitter_card.jpg
 ---
+
+This is a collection of photos and videos of the activities & processes from design to finish from the [PiServer project]({% post_url 2020-07-08-PiServer %}).
 
 {:refdef: style="text-align: center;"}
 <div id="tab">
