@@ -5,7 +5,7 @@ date: 2020-09-05 12:30
 summary: Data corruption, power loss and modifications!
 categories: projects
 permalink: /piserver-usbmod
-image: /_img/homepage/piserver.jpg
+image: /_img/homepage/usbmod.jpg
 twitter_card: https://yomis.blog/_img/piserver/twitter_card.jpg
 ---
 
