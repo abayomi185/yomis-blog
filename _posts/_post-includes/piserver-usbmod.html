@@ -1,0 +1,35 @@
+<!-- Slider main container -->
+<div class="custom-swiper-container">
+<div class="swiper-container gallery-top">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+      <!-- Slides -->
+      {% for image in site.data.piserver-usbmod.piserver_usbmod_collection %}
+        <div class="swiper-slide"><img class="gallery-img-fit" src="/_img/piserver/usb_hub_mod/{{ image }}" alt=""></div>
+      {% endfor %}
+
+  </div>
+  <!-- If we need pagination -->
+  <!-- <div class="swiper-pagination"></div> -->
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<div class="swiper-container gallery-thumbs">
+  <div class="swiper-wrapper">
+    {% for thumbnail in site.data.piserver-usbmod.piserver_usbmod_collection %}
+    <!-- <div class="swiper-slide" style="background-image: url(/_img/piserver/collection/{{ thumbnail }}"></div> -->
+    <div class="swiper-slide"><img class="thumb-image" src="/_img/piserver/usb_hub_mod/{{ thumbnail }}" alt=""></div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+<!-- style="background-image: url(/_img/piserver/collection/{{ thumbnail }} -->
+
+<!-- <div class="swiper-slide"><img class="thumb-image" src="/_img/piserver/collection/{{ thumbnail }}" alt=""></div> -->
