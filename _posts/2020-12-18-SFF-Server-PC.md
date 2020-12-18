@@ -4,9 +4,9 @@ title: SFF Server PC
 date: 2020-12-18 13:00
 summary: New and improved Server Build
 categories: projects
-permalink: /serverpc
-image: /_img/homepage/serverpc.jpg
-twitter_card: https://yomis.blog/_img/homepage/serverpc.jpg
+permalink: /server-pc
+image: /_img/homepage/server-pc.jpg
+twitter_card: https://yomis.blog/_img/homepage/server-pc.jpg
 ---
 
 {:refdef: style="text-align: center;"}
