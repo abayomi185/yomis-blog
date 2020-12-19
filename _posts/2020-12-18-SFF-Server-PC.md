@@ -6,7 +6,7 @@ summary: New and improved Server Build
 categories: projects
 permalink: /server-pc
 image: /_img/homepage/server-pc.jpg
-twitter_card: https://yomis.blog/_img/homepage/server-pc.jpg
+twitter_card: https://yomis.blog/_img/serverpc/network-diagram-close.jpg
 ---
 
 {:refdef: style="text-align: center;"}
@@ -82,3 +82,6 @@ I’ve gone ahead to do a lot more with this build that I’ll document at a lat
 {: refdef}
 * * *
 
+{:refdef: style="text-align: center;"}
+![](/_img/serverpc/network-diagram.png){:class="xlarge-post-img"}
+{: refdef}
