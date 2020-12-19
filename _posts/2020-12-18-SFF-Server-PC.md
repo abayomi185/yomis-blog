@@ -2,7 +2,7 @@
 layout: post
 title: SFF Server PC
 date: 2020-12-18 13:00
-summary: New and improved Server Build
+summary: New and improved Server Build now on an x86 Platform
 categories: projects
 permalink: /server-pc
 image: /_img/homepage/server-pc.jpg
