@@ -23,7 +23,7 @@ Staying true to the **small form factor (SFF)** of PiServer, I looked to accompl
 
 * * *
 {:refdef: style="text-align: center;"}
-Here’s a spreadsheet created by Redditor [u/prayogahs](https://www.reddit.com/r/sffpc/comments/e878ha/sff_case_list/) that helped a lot; [spreadsheet](https://docs.google.com/spreadsheets/d/1AddRvGWJ_f4B6UC7_IftDiVudVc8CJ8sxLUqlxVsCz4/edit#gid=1885868234)
+Here’s a [spreadsheet](https://docs.google.com/spreadsheets/d/1AddRvGWJ_f4B6UC7_IftDiVudVc8CJ8sxLUqlxVsCz4/edit#gid=1885868234) created by Redditor [u/prayogahs](https://www.reddit.com/r/sffpc/comments/e878ha/sff_case_list/) that helped a lot.
 {: refdef}
 * * *
 
