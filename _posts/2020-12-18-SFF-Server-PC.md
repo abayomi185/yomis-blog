@@ -64,7 +64,7 @@ I discovered KVM, a Type 1 [Hypervisor](https://en.wikipedia.org/wiki/Hypervisor
 
 {:refdef: style="text-align: center;"}
 ![](/_img/serverpc/virt-manager.png){:class="medium-post-img"}
-<br><small>Virt Manager UI for KVM</small>
+<br><small>Virt-Manager UI for KVM</small>
 {: refdef}
 
 #### Windows VM
