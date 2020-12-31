@@ -13,7 +13,7 @@ twitter_card: https://yomis.blog/_img/serverpc/network-diagram-close.jpg
 ![](/_img/serverpc/serverpc.jpg){:class="medium-post-img"}
 {: refdef}
 
-Having tested the waters with PiServer (Raspberry pi 4 powered NAS/Server), I thought I could use a step up, to experiment with ‘bigger toys’ similar to those used in a professional setting; an **x86 platform**.
+Having tested the waters with [PiServer](/piserver) (Raspberry pi 4 powered NAS/Server), I thought I could use a step up, to experiment with ‘bigger toys’ similar to those used in a professional setting; an **x86 platform**.
 
 >One of the main aims for this project was to successfully run Windows 10 in a virtual machine using KVM(Kernel-based Virtual Machine) to run games as well as improve my knowledge on virtualisation. This PC is a linux based machine that I would go on to use for; cryptocurrency mining, linux kernel compilation, more containerised applications, a reverse proxy server and more.
 
@@ -52,7 +52,7 @@ I opted for the [Metalfish S3 plus](https://www.aliexpress.com/item/100002181463
 ## Software
 I opted to use [Linux Mint](https://linuxmint.com) as my base OS after a lot of research and indecisiveness. My reasons were; it is based on Ubuntu which is very popular and documentation is plentiful and it runs Cinnamon DE (Desktop Environment) which I find mostly pleasing perhaps due to its similarities with Windows (I have yet to try out a Window Tiling Manager). I tested a number of other distros (Linux Distributions) including Arch with KDE Plasma DE which I ultimately decided against as I wanted the server PC to be as stable as a rock.
 
-Fast forward onto the super interesting and time consuming part of this setup after tweaking fan curves for whisper silence, upgrading from 16GB to 32GB RAM and setting up Samba and Docker as it was on PiServer. It was time to set up Windows and macOS in a virtual machine using KVM.
+Fast forward onto the super interesting and time consuming part of this setup, after tweaking fan curves for whisper silence, upgrading from 16GB to 32GB RAM and setting up Samba and Docker as it was on PiServer. It was time to set up Windows and macOS in a virtual machine using KVM.
 
 * * *
 {:refdef: style="text-align: center;"}
