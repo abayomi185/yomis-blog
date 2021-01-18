@@ -15,13 +15,13 @@ twitter_card: https://yomis.blog/_img/serverpc/network-diagram-close.jpg
 <br><small>Home Lab Network Diagram</small>
 {: refdef}
 
-I’m joyed with all the server applications I’ve set up but the joy is lost when I’m away from home (although not common these days) and I need to access my data in my home network. Services like google drive and the likes do work at a cost, but I'm a student and my building concern for privacy urges me to find a solution. Finding a solution is just what I did and alas, my joy when I’m away from home is restored.
+I’m joyed with all the server applications I’ve set up on [Server PC](/server-pc) but the joy is lost when I’m away from home (although not common these days) and I need to access my data in my home network. Services like google drive and the likes do work at a cost, but I'm a student and my building concern for privacy urges me to find a solution. Finding a solution is just what I did and alas, my joy when I’m away from home is restored.
 
 This set up would be easier if I had a self-managed internet modem and/or router from an ISP, with the ability to request/set a static public IP but such convenience I find doesn't help with developing creative solutions. My solution with the help of this fantastic [guide by John Crawford](https://jordancrawford.kiwi/setting-up-tinc/), a pen and a paper is as follows.
 
 As the network diagram above shows, I'm able to access my containerised docker application from any device in the Airport network. This works fine in my student room but access from the internet into the network is not possible due to the network structure at my accomodation. This structure is standard across other internet managed accomodations and public internets as it ensures a level of security in the network downstream.
 
-To remotely access my [Server PC](/server-pc), I needed to set up a [Virtual Private Network (VPN)](https://en.wikipedia.org/wiki/Virtual_private_network) connection to a known computer with a fixed public IP address. This known computer, a [Hetzner](https://www.hetzner.com) CX11 cloud instance would act as a buffer between the clients and the server, forwarding requests through the VPN tunnel. 
+To remotely access my Server PC, I needed to set up a [Virtual Private Network (VPN)](https://en.wikipedia.org/wiki/Virtual_private_network) connection to a known computer with a fixed public IP address. This known computer, a [Hetzner](https://www.hetzner.com) CX11 cloud instance would act as a buffer between the clients and the server, forwarding requests through the VPN tunnel. 
 
 * * *
 The CX11 cloud instance costs 3.99 Euros a month with 10gb of persistent storage.
