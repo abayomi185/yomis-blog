@@ -15,7 +15,7 @@ twitter_card: https://yomis.blog/_img/serverpc/network-diagram-close.jpg
 
 Having tested the waters with [PiServer](/piserver) (Raspberry pi 4 powered NAS/Server), I thought I could use a step up, to experiment with ‘bigger toys’ similar to those used in a professional setting; an **x86 platform**.
 
->One of the main aims for this project was to successfully run Windows 10 in a virtual machine using KVM(Kernel-based Virtual Machine) to run games as well as improve my knowledge on virtualisation. This PC is a linux based machine that I would go on to use for; cryptocurrency mining, linux kernel compilation, more containerised applications, a reverse proxy server and more.
+>One of the main aims for this project was to successfully run Windows 10 in a virtual machine using KVM(Kernel-based Virtual Machine) to run games as well as improve my knowledge on virtualisation. This PC is a linux based machine that I would go on to use for; cryptocurrency mining, linux kernel compilation, more containerised applications, reverse proxy servers and more.
 
 ## Hardware
 
