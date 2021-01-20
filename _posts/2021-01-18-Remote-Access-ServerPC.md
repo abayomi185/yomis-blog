@@ -24,7 +24,7 @@ As the network diagram above shows, I'm able to access my containerised docker a
 To remotely access my Server-PC, I needed to set up a [Virtual Private Network (VPN)](https://en.wikipedia.org/wiki/Virtual_private_network) connection to a known computer with a fixed public IP address. This known computer, a [Hetzner](https://www.hetzner.com) CX11 cloud instance would act as a buffer between the clients and the server, forwarding requests through the VPN tunnel. 
 
 * * *
-The CX11 cloud instance costs 3.99 Euros a month with 10gb of persistent storage.
+The CX11 cloud instance costs 2.99 Euros a month with 10gb of persistent storage.
 * * *
 
 A pen and paper although not compulsory was required at this stage to map out the flow of requests from the client to the server. My server applications are all containerised and can be accessed via a reverse proxy for convenience. The reverse proxy ([Nginx](https://www.nginx.com)) in this case allows me to access running services using a domain name like **nextcloud.home** as opposed to **10.0.1.8:8080** with the help of [Pihole](https://pi-hole.net) as a DNS resolver.
