@@ -25,6 +25,7 @@ Here are some specifics:
 - **Design** (CAD)
 - **Apple**
 - **Photography** (taking photos, image sensor technology)
+- **Computer Vision** (image signal processing, image classification)
 - **Semiconductors and processors** (x86, ARM, RISC)
 - **Coding** (Python, C, C++)
 - **Web Applications** (React, Javascript)
