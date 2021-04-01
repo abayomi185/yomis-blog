@@ -29,7 +29,7 @@ Here are some specifics:
 - **Semiconductors and processors** (x86, ARM, RISC)
 - **Coding** (Python, C, C++)
 - **Web Applications** (React, Javascript)
-- **Mobile Applications** (Swift, React Native)
+- **Mobile Applications** (Swift, Flutter)
 
 <br>
 **I love to figure things out** and this blog is a means to document the processes, challenges & successes I've encountered, and to share them with you.
