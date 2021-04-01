@@ -9,8 +9,14 @@ image: /_img/homepage/mining-rig.jpg
 twitter_card: https://yomis.blog/_img/homepage/mining-rig-twitter.jpg
 ---
 
+{:refdef: style="text-align: center;"}
+![](/_img/currys/mining-rig.jpg){:class="xlarge-post-img"}
+<br><small>6 GPU Mining Rig</small><br/>
+<small>Source: [cryptosrus](https://cryptosrus.com/ethereum-mining-rig)</small>
+{: refdef}
+
 * * *
-To go straight to **GitHub** project page, follow this link;<br/>
+To go straight to the **GitHub** repo, follow this link;<br/>
 [abayomi185 - currys-pc-order-bot](https://github.com/abayomi185/currys-pc-order-bot)
 
 <!-- Place this tag where you want the button to render. -->
@@ -26,12 +32,6 @@ The current market of GPUs has seen prices surging past than their MSRP to nearl
 There still lies an issue, typical shortages could be considered easy to deal with by waiting a little bit and getting the item when they are back in stock. Unfortunately for me and a lot of gamers, system builders and enthusiasts, we are also in a period of high profitability in the cryptocurrency mining scene.
 
 The new GPUs perform extremely well for mining cryptocurrency with an average ROI (Return on Investment) of about 3 to 6 months mining Ethereum, the most profitable coin to mine for most GPUs at the moment. Due to this, miners are very eager to get their hands on these cards and often employ the use of bots to automatically buy GPUs when they are in stock, to build mining rigs with multiple GPUs.
-
-{:refdef: style="text-align: center;"}
-![](/_img/currys/mining-rig.jpg){:class="xlarge-post-img"}
-<br><small>6 GPU Mining Rig</small><br/>
-<small>Source: [cryptosrus](https://cryptosrus.com/ethereum-mining-rig)</small>
-{: refdef}
 
 This was the sole reason for making the Curry's PC Order Bot. It uses Python and Selenium to automatically interact with webpages. It handles checking the site periodically and buying the GPU once in stock.
 
