@@ -10,8 +10,8 @@ twitter_card: https://yomis.blog/_img/homepage/mining-rig-twitter.jpg
 ---
 
 * * *
-To go straight to GitHub project page, follow this link;<br/>
-[github - abayomi185 - currys-pc-order-bot](https://github.com/abayomi185/currys-pc-order-bot)
+To go straight to **GitHub** project page, follow this link;<br/>
+[abayomi185 - currys-pc-order-bot](https://github.com/abayomi185/currys-pc-order-bot)
 
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/abayomi185" data-show-count="true" aria-label="Follow @abayomi185 on GitHub">Follow @abayomi185</a>
