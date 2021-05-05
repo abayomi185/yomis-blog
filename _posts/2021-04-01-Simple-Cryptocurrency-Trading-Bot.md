@@ -26,7 +26,7 @@ To go straight to the **GitHub** repo, follow this link;<br/>
 
 I recently got into cryptocurrency trading and mining. It's been great and I've learnt a lot. There still a lot to the technical aspects of the network and the blockchain I have yet to learn but I am slowly building my knowledge.
 
-During the hype of Doge coin stemming from tweets by Elon Musk earlier this year, I got to find out about pump and dump groups. During this period, the number of pump and dump groups grew rapidly and I got many invites to join new groups. As a disclaimer, these schemes are largely coonsidered as scams where only the organisers make good profits. This article is also **not financial advice**.
+During the hype of Doge coin stemming from tweets by Elon Musk earlier this year, I got to find out about pump and dump groups. During this period, the number of pump and dump groups grew rapidly and I got many invites to join new groups. As a disclaimer, these schemes are largely considered as scams where only the organisers make good profits. This article is also not financial advice.
 
 * * *
 What is Pump and Dump? Check this **Investopedia** article; [Pump and Dump](https://www.investopedia.com/terms/p/pumpanddump.asp)
