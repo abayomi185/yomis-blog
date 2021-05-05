@@ -26,7 +26,7 @@ To go straight to the **GitHub** repo, follow this link;<br/>
 
 I recently got into cryptocurrency trading and mining. It's been great and I've learnt a lot. There still a lot to the technical aspects of the network and the blockchain I have yet to learn but I am slowly building my knowledge.
 
-During the hype of Doge coin stemming from tweets by Elon Musk earlier this year, I got to find out about pump and dump groups. During this period, the number of pump and dump groups grew rapidly and I got many invites to join new groups. As a disclaimer, these schemes are largely coonsidered as scams where only the organisers make good profits. This article is also not financial advice.
+During the hype of Doge coin stemming from tweets by Elon Musk earlier this year, I got to find out about pump and dump groups. During this period, the number of pump and dump groups grew rapidly and I got many invites to join new groups. As a disclaimer, these schemes are largely coonsidered as scams where only the organisers make good profits. This article is also **not financial advice**.
 
 * * *
 What is Pump and Dump? Check this **Investopedia** article; [Pump and Dump](https://www.investopedia.com/terms/p/pumpanddump.asp)
@@ -34,7 +34,7 @@ What is Pump and Dump? Check this **Investopedia** article; [Pump and Dump](http
 
 For the first pump and dump event I participated in, I was able to make a 15% profit by being quick to the website and executing the buy and sell order in an instant. I wasn't so lucky for the next two events. The group organisers often show graphs of "successful pumps" but restrict discussions in the Discord groups, a tell-tale sign that very few people in the groups are actually able to make profits.
 
-I began to think that I could make a bot to be even faster at making orders as opposed to navigating the interface of the cryto exchange site. I looked into highly optimised code designed for speed often using C++ and learned a bit about the industry of [High-Frequency Trading](https://www.investopedia.com/terms/h/high-frequency-trading.asp) (HFT). I ultimately settled for Python, a programming language I am familiar with and found an API wrapper for Binance, the crypto exchange service I use. **See below for a summary on How the bot works**.
+I began to think that I could make a bot to be even faster at making orders as opposed to navigating the interface of the crypto exchange site. I looked into highly optimised code designed for speed often using C++ and learned a bit about the industry of [High-Frequency Trading](https://www.investopedia.com/terms/h/high-frequency-trading.asp) (HFT). I ultimately settled for Python, a programming language I am familiar with and found an API wrapper for Binance, the crypto exchange service I use. **See below for a summary on How the bot works**.
 
 My first few pump events using the bot were over-optimistic. I was expecting gains of more than a 100%, influenced by the graphs in the groups often showing peak profits of over 400% during the events. I soon got to know about pre-pumping from the Investopedia article linked above and lowered my expectations.
 
