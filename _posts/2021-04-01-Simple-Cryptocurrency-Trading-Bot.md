@@ -16,12 +16,14 @@ twitter_card: https://yomis.blog/_img/homepage/btc-symbol.png
 
 * * *
 To go straight to the **GitHub** repo, follow this link;<br/>
-[abayomi185 - simple-binance-pump-dump-bot](https://github.com/abayomi185/simple-binance-pump-dump-bot)
+[abayomi185 - simple-binance-pump-dump-bot](https://github.com/abayomi185/simple-pump-and-dump-bot)
 
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/abayomi185" data-show-count="true" aria-label="Follow @abayomi185 on GitHub">Follow @abayomi185</a>
 <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/abayomi185/simple-binance-pump-dump-bot" data-icon="octicon-star" data-show-count="true" aria-label="Star abayomi185/currys-pc-order-bot on GitHub">Star</a>
+<a class="github-button" href="https://github.com/abayomi185/simple-pump-and-dump-bot" data-icon="octicon-star" data-show-count="true" aria-label="Star abayomi185/currys-pc-order-bot on GitHub">Star</a>
+
+**01-05-21**: Now with support for Kucoin Exchange.
 * * *
 
 I recently got into cryptocurrency trading and mining. It's been great and I've learnt a lot. There still a lot to the technical aspects of the network and the blockchain I have yet to learn but I am slowly building my knowledge.
@@ -43,5 +45,5 @@ My last attempt at a pump with the bot was great earning me a profit of 12%. My 
 
 * * *
 ## How the bot works
-The bot works by waiting for an input for the coin (usually an altcoin) to be pumped in a CLI interface. For this I need to quickly enter the altcoin when it is announced (A web scraping method will be implemented soon). The bot then buys the altcoin using the coin pairing in the config file (often BTC). A market order is then executed using threads, after which the bot queries the Binance server every fixed amount of time (this can also be configured) until the value of the altcoin reaches a configured threshold or the timeout for the bot has been reached. The timeout is in place to ensure that the bot would always sell all the altcoins in the event that the profit threshold was not reached to minimise loses.
+The bot works by waiting for an input for the coin (usually an altcoin) to be pumped in a CLI interface. For this I need to quickly enter the altcoin when it is announced (A web scraping method will be implemented soon). The bot then buys the altcoin using the coin pairing in the config file (often BTC). A market order is then executed using an async function, after which the bot queries the Binance server every fixed amount of time (this can also be configured) until the value of the altcoin reaches a configured threshold or the timeout for the bot has been reached. The timeout is in place to ensure that the bot would always sell all the altcoins in the event that the profit threshold was not reached to minimise loses.
 * * *
