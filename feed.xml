@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yomi's Blog</title>
+    <description>A blog for my tech related projects</description>
+    <link>http://abayomi185.github.io/yomis-blog/</link>
+    <atom:link href="http://abayomi185.github.io/yomis-blog/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Crypto-currency Trading Bot</title>
+        <description>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/crypto-bot/crypto-bot.jpg&quot; alt=&quot;&quot; class=&quot;medium-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;CLI interface for the bot&lt;/small&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;To go straight to the &lt;strong&gt;GitHub&lt;/strong&gt; repo, follow this link;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/abayomi185/simple-pump-and-dump-bot&quot;&gt;abayomi185 - simple-binance-pump-dump-bot&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- Place this tag where you want the button to render. --&gt;
+&lt;p&gt;&lt;a class=&quot;github-button&quot; href=&quot;https://github.com/abayomi185&quot; data-show-count=&quot;true&quot; aria-label=&quot;Follow @abayomi185 on GitHub&quot;&gt;Follow @abayomi185&lt;/a&gt;
+&lt;!-- Place this tag where you want the button to render. --&gt;
+&lt;a class=&quot;github-button&quot; href=&quot;https://github.com/abayomi185/simple-pump-and-dump-bot&quot; data-icon=&quot;octicon-star&quot; data-show-count=&quot;true&quot; aria-label=&quot;Star abayomi185/currys-pc-order-bot on GitHub&quot;&gt;Star&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;01-05-21&lt;/strong&gt;: Now with support for Kucoin Exchange.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;I recently got into cryptocurrency trading and mining. It’s been great and I’ve learnt a lot. There still a lot to the technical aspects of the network and the blockchain I have yet to learn but I am slowly building my knowledge.&lt;/p&gt;
+
+&lt;p&gt;During the hype of Doge coin stemming from tweets by Elon Musk earlier this year, I got to find out about pump and dump groups. During this period, the number of pump and dump groups grew rapidly and I got many invites to join new groups. As a disclaimer, these schemes are largely considered as scams where only the organisers make good profits. This article is also not financial advice.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;What is Pump and Dump? Check this &lt;strong&gt;Investopedia&lt;/strong&gt; article; &lt;a href=&quot;https://www.investopedia.com/terms/p/pumpanddump.asp&quot;&gt;Pump and Dump&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;For the first pump and dump event I participated in, I was able to make a 15% profit by being quick to the website and executing the buy and sell order in an instant. I wasn’t so lucky for the next two events. The group organisers often show graphs of “successful pumps” but restrict discussions in the Discord groups, a tell-tale sign that very few people in the groups are actually able to make profits.&lt;/p&gt;
+
+&lt;p&gt;I began to think that I could make a bot to be even faster at making orders as opposed to navigating the interface of the crypto exchange site. I looked into highly optimised code designed for speed often using C++ and learned a bit about the industry of &lt;a href=&quot;https://www.investopedia.com/terms/h/high-frequency-trading.asp&quot;&gt;High-Frequency Trading&lt;/a&gt; (HFT). I ultimately settled for Python, a programming language I am familiar with and found an API wrapper for Binance, the crypto exchange service I use. &lt;strong&gt;See below for a summary on How the bot works&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;My first few pump events using the bot were over-optimistic. I was expecting gains of more than a 100%, influenced by the graphs in the groups often showing peak profits of over 400% during the events. I soon got to know about pre-pumping from the Investopedia article linked above and lowered my expectations.&lt;/p&gt;
+
+&lt;p&gt;My last attempt at a pump with the bot was great earning me a profit of 12%. My config file was setup to sell when the value of the Altcoin increased by 10%. The bot in its current state is very rudimentary and does not implement sophisticated algorithms of any kind. The next steps would be to incorporate trend analysis and identifiers, and possibly rewrite the bot in cython or C++.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;how-the-bot-works&quot;&gt;How the bot works&lt;/h2&gt;
+&lt;p&gt;The bot works by waiting for an input for the coin (usually an altcoin) to be pumped in a CLI interface. For this I need to quickly enter the altcoin when it is announced (A web scraping method will be implemented soon). The bot then buys the altcoin using the coin pairing in the config file (often BTC). A market order is then executed using an async function, after which the bot queries the Binance server every fixed amount of time (this can also be configured) until the value of the altcoin reaches a configured threshold or the timeout for the bot has been reached. The timeout is in place to ensure that the bot would always sell all the altcoins in the event that the profit threshold was not reached to minimise loses.&lt;/p&gt;
+&lt;hr /&gt;
+</description>
+        <pubDate>Thu, 01 Apr 2021 17:00:00 +0000</pubDate>
+        <link>http://abayomi185.github.io/yomis-blog/crypto-trading-bot</link>
+        <guid isPermaLink="true">http://abayomi185.github.io/yomis-blog/crypto-trading-bot</guid>
+      </item>
+    
+      <item>
+        <title>Auto GPU Buying Bot - Curry's PC</title>
+        <description>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/currys/mining-rig.jpg&quot; alt=&quot;&quot; class=&quot;xlarge-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;6 GPU Mining Rig&lt;/small&gt;&lt;br /&gt;
+&lt;small&gt;Source: &lt;a href=&quot;https://cryptosrus.com/ethereum-mining-rig&quot;&gt;cryptosrus&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;To go straight to the &lt;strong&gt;GitHub&lt;/strong&gt; repo, follow this link;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/abayomi185/currys-pc-order-bot&quot;&gt;abayomi185 - currys-pc-order-bot&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- Place this tag where you want the button to render. --&gt;
+&lt;p&gt;&lt;a class=&quot;github-button&quot; href=&quot;https://github.com/abayomi185&quot; data-show-count=&quot;true&quot; aria-label=&quot;Follow @abayomi185 on GitHub&quot;&gt;Follow @abayomi185&lt;/a&gt;
+&lt;!-- Place this tag where you want the button to render. --&gt;
+&lt;a class=&quot;github-button&quot; href=&quot;https://github.com/abayomi185/currys-pc-order-bot&quot; data-icon=&quot;octicon-star&quot; data-show-count=&quot;true&quot; aria-label=&quot;Star abayomi185/currys-pc-order-bot on GitHub&quot;&gt;Star&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;The situation with GPU (Graphics Processing Unit) shortages and the general chip manufacturing shortages brought about partly by the increased demand of electronic hardware duirng the COVID-19 pandemic has caused compounding issues in many other industries and organisations.&lt;/p&gt;
+
+&lt;p&gt;The current market of GPUs has seen prices surging past than their MSRP to nearly 3x in some instances. Older GPUs are also demanding a much higher price than they should be on the second hand market.&lt;/p&gt;
+
+&lt;p&gt;There still lies an issue, typical shortages could be considered easy to deal with by waiting a little bit and getting the item when they are back in stock. Unfortunately for me and a lot of gamers, system builders and enthusiasts, we are also in a period of high profitability in the cryptocurrency mining scene.&lt;/p&gt;
+
+&lt;p&gt;The new GPUs perform extremely well for mining cryptocurrency with an average ROI (Return on Investment) of about 3 to 6 months mining Ethereum, the most profitable coin to mine for most GPUs at the moment. Due to this, miners are very eager to get their hands on these cards and often employ the use of bots to automatically buy GPUs when they are in stock, to build mining rigs with multiple GPUs.&lt;/p&gt;
+
+&lt;p&gt;This was the sole reason for making the Curry’s PC Order Bot. It uses Python and Selenium to automatically interact with webpages. It handles checking the site periodically and buying the GPU once in stock.&lt;/p&gt;
+
+&lt;p&gt;This bot has been discovered by a few users on GitHub and a contributor who has helped a with idea suggestions and implementing additions via pull requests to improve the bot.&lt;/p&gt;
+
+&lt;p&gt;I would love to say the project was successful but I was unable to use this bot to acquire a GPU for myself. A user following this project on GitHub had limited success with acquiring a GPU. Only losing out due to a payment authentication which the user was unable to complete while asleep at night. I am unaware of other success stories.&lt;/p&gt;
+
+&lt;p&gt;The reason for the low success rate is due to the design of Curry’s PC infrastructure. Users from a GPU stock alert group discovered they could send direct requests to Curry’s PC API, getting more information about stock numbers and executing purchases before the website updates to reflect the updated GPU stock.&lt;/p&gt;
+
+&lt;p&gt;Regardless of the situation, I am glad to have learnt about web scraping using Python and Selenium and hope the shortage of GPUs improves soon to stop the blatant price hikes from independent retailers and established retailers.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 02 Mar 2021 17:00:00 +0000</pubDate>
+        <link>http://abayomi185.github.io/yomis-blog/currys-pc-buy-bot</link>
+        <guid isPermaLink="true">http://abayomi185.github.io/yomis-blog/currys-pc-buy-bot</guid>
+      </item>
+    
+      <item>
+        <title>Remote Access on Server PC</title>
+        <description>&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/serverpc/network-diagram.png&quot; alt=&quot;&quot; class=&quot;xlarge-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;Home Lab Network Diagram&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m joyed with all the server applications I’ve set up on &lt;a href=&quot;/server-pc&quot;&gt;Server-PC&lt;/a&gt; but the joy is lost when I’m away from home (although not common these days) and I need to access my data in my home network. Services like google drive and the likes do work at a cost, but I’m a student and my building concern for privacy urges me to find a solution. Finding a solution is just what I did and alas, my joy when I’m away from home is restored.&lt;/p&gt;
+
+&lt;p&gt;This set up would be easier if I had a self-managed internet modem and/or router from an ISP, with the ability to request/set a static public IP but such convenience I find doesn’t help with developing creative solutions. My solution with the help of this fantastic &lt;a href=&quot;https://jordancrawford.kiwi/setting-up-tinc/&quot;&gt;guide by John Crawford&lt;/a&gt;, a pen and a paper is as follows.&lt;/p&gt;
+
+&lt;p&gt;As the network diagram above shows, I’m able to access my containerised docker application from any device in the Airport network. This works fine in my student room but access from the internet into the network is not possible due to the network structure at my accomodation. This structure is standard across other managed accomodations and public internet access points, as it ensures a level of security in the network.&lt;/p&gt;
+
+&lt;p&gt;To remotely access my Server-PC, I needed to set up a &lt;a href=&quot;https://en.wikipedia.org/wiki/Virtual_private_network&quot;&gt;Virtual Private Network (VPN)&lt;/a&gt; connection to a known computer with a fixed public IP address. This known computer, a &lt;a href=&quot;https://www.hetzner.com&quot;&gt;Hetzner&lt;/a&gt; CX11 cloud instance would act as a buffer between the clients and the server, forwarding requests through the VPN tunnel.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;The CX11 cloud instance costs 2.99 Euros a month with 10gb of persistent storage.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;A pen and paper although not compulsory was required at this stage to map out the flow of requests from the client to the server. My server applications are all containerised and can be accessed via a reverse proxy for convenience. The reverse proxy (&lt;a href=&quot;https://www.nginx.com&quot;&gt;Nginx&lt;/a&gt;) in this case allows me to access running services using a domain name like &lt;strong&gt;nextcloud.home&lt;/strong&gt; as opposed to &lt;strong&gt;10.0.1.8:8080&lt;/strong&gt; with the help of &lt;a href=&quot;https://pi-hole.net&quot;&gt;Pihole&lt;/a&gt; as a DNS resolver.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.tinc-vpn.org&quot;&gt;Tinc&lt;/a&gt;, the open source VPN package is unlike the typical conception of a VPN in society, with an app and a pricing model but it is also similar. Tinc is able to create an encrypted VPN tunnel between two computers if one of them has a static IP address. The two computers would then appear to be in the same network much like my devices in the Airport network.&lt;/p&gt;
+
+&lt;p&gt;Tinc and Nginx are both installed on the cloud instance. Tinc is set up with shared encryption keys on Server-PC and CX11 for security purposes and Nginx is set up to forward requests from port 80 to Tinc (Server-PC) via Tinc (CX11) both running in docker containers (I’m using &lt;a href=&quot;https://hub.docker.com/r/jenserat/tinc&quot;&gt;jenserat - tinc&lt;/a&gt; docker image). Request are made to CX11 port 80 via a purchased domain name making use of Hetzner nameservers.&lt;/p&gt;
+
+&lt;p&gt;The request is received at Tinc (Server-PC) where another Nginx reverse proxy server awaits to forward the request to the desired docker container. This request channel is then tied to different subdomains like &lt;strong&gt;photoprism.example.com&lt;/strong&gt; or &lt;strong&gt;jellyfin.example.com&lt;/strong&gt; with the help of Nginx to forward the request to the right containerised application in a docker internal network (for security purposes).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;With all this done, I have learned a great deal about reverse proxy servers, load balancers and the means by which http requests are sent with http headers. This project has been fun and I’ve been happy to share data and files with friends and family from my own server in true &lt;a href=&quot;https://www.reddit.com/r/selfhosted/&quot;&gt;r/selfhosted&lt;/a&gt; fashion.&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Mon, 18 Jan 2021 21:00:00 +0000</pubDate>
+        <link>http://abayomi185.github.io/yomis-blog/server-pc-remote-access</link>
+        <guid isPermaLink="true">http://abayomi185.github.io/yomis-blog/server-pc-remote-access</guid>
+      </item>
+    
+      <item>
+        <title>SFF Server PC</title>
+        <description>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/serverpc/serverpc.jpg&quot; alt=&quot;&quot; class=&quot;medium-post-img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Having tested the waters with &lt;a href=&quot;/piserver&quot;&gt;PiServer&lt;/a&gt; (Raspberry pi 4 powered NAS/Server), I thought I could use a step up, to experiment with ‘bigger toys’ similar to those used in a professional setting; an &lt;strong&gt;x86 platform&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;One of the main aims for this project was to successfully run Windows 10 in a virtual machine using KVM(Kernel-based Virtual Machine) to run games as well as improve my knowledge on virtualisation. This PC is a linux based machine that I would go on to use for; cryptocurrency mining, linux kernel compilation, more containerised applications, reverse proxy servers and more.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;hardware&quot;&gt;Hardware&lt;/h2&gt;
+
+&lt;p&gt;Staying true to the &lt;strong&gt;small form factor (SFF)&lt;/strong&gt; of PiServer, I looked to accomplish something very similar with this new build. The &lt;a href=&quot;https://www.reddit.com/r/sffpc&quot;&gt;r/sffpc&lt;/a&gt; subreddit was a great source as well as &lt;a href=&quot;https://www.youtube.com/channel/UCRYOj4DmyxhBVrdvbsUwmAA&quot;&gt;Optimum Tech&lt;/a&gt; on YouTube detailing the things to look out for when purchasing and building a small form factor PC.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;Here’s a &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1AddRvGWJ_f4B6UC7_IftDiVudVc8CJ8sxLUqlxVsCz4/edit#gid=1885868234&quot;&gt;spreadsheet&lt;/a&gt; created by Redditor &lt;a href=&quot;https://www.reddit.com/r/sffpc/comments/e878ha/sff_case_list/&quot;&gt;u/prayogahs&lt;/a&gt; that helped a lot.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;I opted for the &lt;a href=&quot;https://www.aliexpress.com/item/10000218146300.html&quot;&gt;Metalfish S3 plus&lt;/a&gt; and the rest of the specs are as follows;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Intel i5-10400 6 Cores / 12 Threads CPU&lt;/li&gt;
+  &lt;li&gt;Alpenfohn Black Ridge CPU Cooler&lt;/li&gt;
+  &lt;li&gt;32GB 2666MHz Corsair Vengeance LPX DDR4 RAM&lt;/li&gt;
+  &lt;li&gt;Radeon 5500XT GPU&lt;/li&gt;
+  &lt;li&gt;ASUS ROG H470-I Gaming Motherboard&lt;/li&gt;
+  &lt;li&gt;Corsair SF450 PSU 80+ Gold&lt;/li&gt;
+  &lt;li&gt;240GB M.2 SATA SSD&lt;/li&gt;
+  &lt;li&gt;500GB 2.5” SATA SSD&lt;/li&gt;
+  &lt;li&gt;2TB 2.5” HDD&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Slide show if images here --&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;text-align: center;&quot;&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;350&quot; src=&quot;https://www.youtube.com/embed/e5DTeG9-QMM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; style=&quot;width: 85%;&quot;&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;software&quot;&gt;Software&lt;/h2&gt;
+&lt;p&gt;I opted to use &lt;a href=&quot;https://linuxmint.com&quot;&gt;Linux Mint&lt;/a&gt; as my base OS after a lot of research and indecisiveness. My reasons were; it is based on Ubuntu which is very popular and documentation is plentiful and it runs Cinnamon DE (Desktop Environment) which I find mostly pleasing perhaps due to its similarities with Windows (I have yet to try out a Window Tiling Manager). I tested a number of other distros (Linux Distributions) including Arch with KDE Plasma DE which I ultimately decided against as I wanted the server PC to be as stable as a rock.&lt;/p&gt;
+
+&lt;p&gt;Fast forward onto the super interesting and time consuming part of this setup, after tweaking fan curves for whisper silence, upgrading from 16GB to 32GB RAM and setting up Samba and Docker as it was on PiServer. It was time to set up Windows and macOS in a virtual machine using KVM.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;Kernel-based Virtual Machine (KVM) - &lt;a href=&quot;https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;I discovered KVM, a Type 1 &lt;a href=&quot;https://en.wikipedia.org/wiki/Hypervisor&quot;&gt;Hypervisor&lt;/a&gt; by watching, &lt;a href=&quot;https://www.youtube.com/user/SomeOrdinaryGamers&quot;&gt;SomeOrdinaryGamers&lt;/a&gt; on YouTube and I was so intrigued by the capabilities and security benefits from running a virtual machine. KVM is special because as it says in its name, it virtualises at the kernel level which does wonders for performance in VMs and best of all, GPU’s and other peripherals can be &lt;strong&gt;“passed”&lt;/strong&gt; to the VM effectively making the VM have full control of PCIe devices and other devices as it would if it were running bare metal (not under a VM).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/serverpc/virt-manager.png&quot; alt=&quot;&quot; class=&quot;medium-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;Virt-Manager UI for KVM&lt;/small&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;windows-vm&quot;&gt;Windows VM&lt;/h4&gt;
+&lt;p&gt;Installing Windows 10 was easy enough using multiple guides and the very detailed &lt;a href=&quot;https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF&quot;&gt;Arch documentation&lt;/a&gt;. As a disclaimer, Arch uses a slightly different configuration process to most ubuntu based distros, so your search may need to be specific. This guide by Mathias Hueber made setting it up on Linux Mint simple, &lt;a href=&quot;https://mathiashueber.com/pci-passthrough-ubuntu-2004-virtual-machine/&quot;&gt;PCI Passthrough Guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;macos-vm&quot;&gt;macOS VM&lt;/h4&gt;
+&lt;p&gt;Installing macOS is different to say the least and compatibility is inconsistent across different hardware, although less of an issue for a basic setup in a virtual machine. I followed the guide by Kholia, &lt;a href=&quot;https://github.com/kholia/OSX-KVM&quot;&gt;OSX-KVM&lt;/a&gt; which uses OpenCore as opposed to Clover, with the general consensus being OpenCore has a better future.&lt;/p&gt;
+
+&lt;p&gt;A tip, if you’re having issues with OpenCore GPU Passthrough; I mounted the OpenCore-Passthrough.qcow2 image and added ‘agdpmod=pikera’ to boot-args in the OpenCore config.plist, to get GPU Passthrough to work with my Radeon Card (Nvidia graphics cards are not supported in macOS versions past High Sierra).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/serverpc/network-diagram.png&quot; alt=&quot;&quot; class=&quot;xlarge-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;Home Lab Network Diagram&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I didn’t go into the nuances I stumbled on with this setup as they kept me up for many nights and I would prefer not to but if you come across any issues, I would love to help out, granted I’m no expert. The &lt;a href=&quot;https://www.reddit.com/r/VFIO/&quot;&gt;r/VFIO&lt;/a&gt; subreddit and discord have loads of helpful information too. And if you didn’t already know, reading error logs help a ton.&lt;/p&gt;
+
+&lt;p&gt;I do want to mention that going with a Radeon GPU prior the new generation GPUs (Big Navi), you will most likely face the radeon “PCIe Reset Bug”, which now has a &lt;a href=&quot;https://github.com/gnif?tab=repositories&quot;&gt;fix&lt;/a&gt; from Geoffrey McRae with Reddit username &lt;a href=&quot;https://www.reddit.com/user/gnif2&quot;&gt;gnif2&lt;/a&gt; that doesn’t require recompiling the linux kernel anymore (I had fun compiling the linux kernel though).&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;I’ve gone ahead to do a lot more with this build that I’ll document at a later date, cryptocurrency mining with hiveOS being one of them. I have learned a lot from doing all of this, I urge you to give it a go if you are considering building a similar setup.&lt;/p&gt;
+&lt;hr /&gt;
+</description>
+        <pubDate>Fri, 18 Dec 2020 13:00:00 +0000</pubDate>
+        <link>http://abayomi185.github.io/yomis-blog/server-pc</link>
+        <guid isPermaLink="true">http://abayomi185.github.io/yomis-blog/server-pc</guid>
+      </item>
+    
+      <item>
+        <title>Pi-Deck</title>
+        <description>&lt;p&gt;Pi-Deck is an ongoing project to create a streamdeck like device powered by a raspberry pi.&lt;/p&gt;
+
+&lt;p&gt;Hardware design and assembly is complete, software development is in progress.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://github.com/abayomi185/pi-deck&quot;&gt;github repo&lt;/a&gt; for updates on the software development.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;!-- Slider main container --&gt;&lt;/p&gt;
+&lt;div class=&quot;custom-swiper-container&quot;&gt;
+    &lt;div class=&quot;swiper-container gallery-top&quot;&gt;
+      &lt;!-- Additional required wrapper --&gt;
+      &lt;div class=&quot;swiper-wrapper&quot;&gt;
+          &lt;!-- Slides --&gt;
+          
+            &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+          
+            &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+          
+            &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+          
+            &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+          
+            &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+          
+            &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+          
+    
+      &lt;/div&gt;
+      &lt;!-- If we need pagination --&gt;
+      &lt;!-- &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt; --&gt;
+    
+      &lt;!-- If we need navigation buttons --&gt;
+      &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+    
+      &lt;!-- If we need scrollbar --&gt;
+      &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;swiper-container gallery-thumbs&quot;&gt;
+      &lt;div class=&quot;swiper-wrapper&quot;&gt;
+        
+        &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/image1.jpg&quot;&gt;&lt;/div&gt; --&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+        
+        &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/image2.jpg&quot;&gt;&lt;/div&gt; --&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+        
+        &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/image3.jpg&quot;&gt;&lt;/div&gt; --&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+        
+        &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/image4.jpg&quot;&gt;&lt;/div&gt; --&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+        
+        &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/image5.jpg&quot;&gt;&lt;/div&gt; --&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+        
+        &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/image6.jpg&quot;&gt;&lt;/div&gt; --&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/pi-deck/teaser/image6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Nov 2020 20:00:00 +0000</pubDate>
+        <link>http://abayomi185.github.io/yomis-blog/pi-deck-teaser</link>
+        <guid isPermaLink="true">http://abayomi185.github.io/yomis-blog/pi-deck-teaser</guid>
+      </item>
+    
+      <item>
+        <title>PiServer HDD Power Woes</title>
+        <description>&lt;p&gt;A couple months down the line with &lt;a href=&quot;/piserver&quot;&gt;PiServer&lt;/a&gt;, I noticed an issue that I’ve been lazy to fix until now.
+Ever so often, the hard drive (HDD) in PiServer would cut out when I happen to SSH in or access an application on PiServer over the network. It has caused a few minor issues such as corrupting a few files and halting certain processes until the HDD is able to spin back up.&lt;/p&gt;
+
+&lt;p&gt;I’ve now been able to rectify this issue by using a 5V powered USB 3.0 hub (an inexpensive noname hub from eBay). It’s not an elegant solution but it gets the job done. The HDD will now receive its power directly from the power supply as opposed to sharing power with the Pi’s processor, of which I had to remove its core frequency overclock.
+&lt;br /&gt;
+&lt;!-- Slider main container --&gt;&lt;/p&gt;
+&lt;div class=&quot;custom-swiper-container&quot;&gt;
+&lt;div class=&quot;swiper-container gallery-top&quot;&gt;
+  &lt;!-- Additional required wrapper --&gt;
+  &lt;div class=&quot;swiper-wrapper&quot;&gt;
+      &lt;!-- Slides --&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/usb_hub_mod/top_exposed.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/usb_hub_mod/top_exposed_wideview.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/usb_hub_mod/front_confined.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/usb_hub_mod/back_confined.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+
+  &lt;/div&gt;
+  &lt;!-- If we need pagination --&gt;
+  &lt;!-- &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt; --&gt;
+
+  &lt;!-- If we need navigation buttons --&gt;
+  &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+
+  &lt;!-- If we need scrollbar --&gt;
+  &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;swiper-container gallery-thumbs&quot;&gt;
+  &lt;div class=&quot;swiper-wrapper&quot;&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/top_exposed.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/usb_hub_mod/top_exposed.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/top_exposed_wideview.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/usb_hub_mod/top_exposed_wideview.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/front_confined.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/usb_hub_mod/front_confined.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/back_confined.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/usb_hub_mod/back_confined.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- style=&quot;background-image: url(/_img/piserver/collection/ --&gt;
+
+&lt;!-- &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/_img/piserver/collection/&quot; alt=&quot;&quot;&gt;&lt;/div&gt; --&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This mod allows for storage expansion/redundancy with another HDD in future. The throughput of USB 3.0, well now called USB 3.1 Gen 1 is 5Gbps (gigabits) theoretically. Don’t get me started on the changes of the other USB 3 spec names, they seem unnecessary. The 5Gbps theoretical speed translates to about 300MB/s applicable which would be more than good enough for two spinning HDDs (The single HDD tops out at around 120MB/s). This is assuming the total bandwidth to the USB chip via PCIe is not constrained on the Raspberry Pi 4 which shouldn’t be the case.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Sep 2020 12:30:00 +0000</pubDate>
+        <link>http://abayomi185.github.io/yomis-blog/piserver-usbmod</link>
+        <guid isPermaLink="true">http://abayomi185.github.io/yomis-blog/piserver-usbmod</guid>
+      </item>
+    
+      <item>
+        <title>PiServer Gallery</title>
+        <description>&lt;p&gt;This is a collection of photos and videos of the activities &amp;amp; processes from design to finish, from the &lt;a href=&quot;/piserver&quot;&gt;PiServer project&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div id=&quot;tab&quot; style=&quot;text-align: center;&quot;&gt;
+    &lt;button class=&quot;tab-button tab-active&quot; id=&quot;left-tab&quot;&gt;&lt;h2 class=&quot;link-tab link-tab-left&quot;&gt;Photos&lt;/h2&gt;&lt;/button&gt;
+    &lt;button class=&quot;tab-button tab-inactive&quot; id=&quot;right-tab&quot;&gt;&lt;h2 class=&quot;link-tab link-tab-right&quot;&gt;Videos&lt;/h2&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;left-tab-content&quot; style=&quot;text-align: center;&quot;&gt;
+    &lt;div&gt;
+        
+            
+                &lt;a href=&quot;#PhotoShoot&quot; style=&quot;margin: 10px;&quot;&gt;&lt;h4 style=&quot;display: inline;&quot;&gt;PhotoShoot&lt;/h4&gt;&lt;/a&gt;
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                &lt;a href=&quot;#Design&quot; style=&quot;margin: 10px;&quot;&gt;&lt;h4 style=&quot;display: inline;&quot;&gt;Design&lt;/h4&gt;&lt;/a&gt;
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                &lt;a href=&quot;#Prototypes&quot; style=&quot;margin: 10px;&quot;&gt;&lt;h4 style=&quot;display: inline;&quot;&gt;Prototypes&lt;/h4&gt;&lt;/a&gt;
+            
+        
+            
+        
+            
+        
+            
+                &lt;a href=&quot;#Assembly&quot; style=&quot;margin: 10px;&quot;&gt;&lt;h4 style=&quot;display: inline;&quot;&gt;Assembly&lt;/h4&gt;&lt;/a&gt;
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                &lt;a href=&quot;#Reddit-fame&quot; style=&quot;margin: 10px;&quot;&gt;&lt;h4 style=&quot;display: inline;&quot;&gt;Reddit-fame&lt;/h4&gt;&lt;/a&gt;
+            
+        
+            
+        
+    &lt;/div&gt;
+    
+
+    &lt;h1 id=&quot;PhotoShoot&quot;&gt;PhotoShoot&lt;/h1&gt;&lt;br /&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver1.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Built up PiServer 1.0&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver12.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;PiServer on my desk and powering an RGB LED light strip&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver2.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;External ports&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver3.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver4.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Top OLED display&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver5.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Front view&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver6.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Left side view showing connectors, wiring and 12V PSU that powers the HDD and top fan&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver7.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Front view showing tray design and 'yellow' covered MOSFETs for RGB LED control&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver8.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;HDD Tray with felt pads to reduce vibration&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver9.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;3.5 inch 2TB seagate iron wolf HDD on tray&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver10.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Front view showing Raspberry Pi and dc connectors in recessed cable area&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver11.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Bottom tray in place to partly cover cables&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver13.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Left side showing 12V PSU with shroud removed&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver18.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Front view showing 1 of 3 ventilation slits and felt pads in HDD compartment&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver19.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Right side showing 5V PSU that powers the Raspberry Pi 4&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver21.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Rear view showing the inside amd cabling in PiServer&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver20.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;A closer look of the rear with the HDD taken out&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;h1 id=&quot;Design&quot;&gt;Design&lt;/h1&gt;&lt;br /&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_full.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Built Piserver without casing. Space available for two 3.5 inch HDDs&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_front.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Front View with visible front airflow vent at the base of the chassis&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_left.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Left-side view showing 12V PSU, IEC connector and Ethernet adapter&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_right.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Right-side view showing 5V PSU and tray system with a Raspberry Pi mounted&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_top.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Top View showing a 140mm fan and an OLED display&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_top_nofan.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Top View without fan mounted, exposing the inside of the chassis&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;h1 id=&quot;Prototypes&quot;&gt;Prototypes&lt;/h1&gt;&lt;br /&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_testbench.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Failed prototype being used as a test bench&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_prototype_black.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Failed prototype; Very difficult to remove 3D printing supports&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;h1 id=&quot;Assembly&quot;&gt;Assembly&lt;/h1&gt;&lt;br /&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_workbench.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;My Workbench...work-bed...bed&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_print.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Printing PiServer 1.0&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_print_complete.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;PiServer 1.0 print complete. Print time: 2 Days, 20 Hours&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_top_tray.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;PiServer top tray with Raspberry Pi 4&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_wiring_top.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Laying wires in recessed wire area&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_wiring_left.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Wiring up the left side&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_wiring_right.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Wiring up the right side&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_wiring.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Mounting the fan on PiServer&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver16.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;Placing PiServer outer casing; Very gracious tolerance given to avoid needing to print another&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver17.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;PiServer with its outer casing hovering above it&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+
+    &lt;h1 id=&quot;Reddit-fame&quot;&gt;Reddit-fame&lt;/h1&gt;&lt;br /&gt;
+
+    
+
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;img class=&quot;gallery-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_reddit_fame.jpg&quot; alt=&quot;&quot; style=&quot;border-radius: 0.5rem; max-height: 650px&quot; /&gt;
+        &lt;br /&gt;
+        &lt;small&gt;PiServer post on &lt;a href=&quot;https://reddit.com/r/homelab&quot;&gt;r/homelab&lt;/a&gt; subreddit&lt;/small&gt;
+    &lt;/div&gt;
+
+    
+
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;right-tab-content&quot; style=&quot;text-align: center;&quot;&gt;
+    
+&lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div style=&quot;position: relative; overflow: hidden; padding-top: 56.25%; margin-bottom: 10px&quot;&gt;
+        &lt;iframe src=&quot;https://www.youtube.com/embed/5Cm1Kj1eGfk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;small&gt;OLED &amp;amp; Fan Software Setup&lt;/small&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div style=&quot;position: relative; overflow: hidden; padding-top: 56.25%; margin-bottom: 10px&quot;&gt;
+        &lt;iframe src=&quot;https://youtube.com/embed/dBrY3AJkKY4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;small&gt;Initial introductory video to Instagram Story&lt;/small&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div style=&quot;position: relative; overflow: hidden; padding-top: 56.25%; margin-bottom: 10px&quot;&gt;
+        &lt;iframe src=&quot;https://www.youtube.com/embed/IoyjjXPkN5s&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;small&gt;CAD Design Animation of an intial prototype design&lt;/small&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div style=&quot;position: relative; overflow: hidden; padding-top: 56.25%; margin-bottom: 10px&quot;&gt;
+        &lt;iframe src=&quot;https://youtube.com/embed/P3mPqi-lL4s&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;small&gt;Extra Clips&lt;/small&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;/div&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;#tab&quot;&gt;Go To Top&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Jul 2020 09:33:00 +0000</pubDate>
+        <link>http://abayomi185.github.io/yomis-blog/piserver-gallery</link>
+        <guid isPermaLink="true">http://abayomi185.github.io/yomis-blog/piserver-gallery</guid>
+      </item>
+    
+      <item>
+        <title>PiServer</title>
+        <description>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/piserver/piserver3.jpg&quot; alt=&quot;&quot; class=&quot;xlarge-post-img&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-start-of-things-to-come&quot;&gt;The Start of Things to Come&lt;/h2&gt;
+
+&lt;p&gt;Firstly, I must say I love taking photos and I also happen to be an Apple fan (please don’t hate). Do you happen to see where this is going? I am also a 3rd year student studying Electrical &amp;amp; Electronics Engineering, this might help you understand my level of expertise or lack there of if you happen to be an enthusiast or professional.&lt;/p&gt;
+
+&lt;p&gt;So you’re running out of space on your internal storage, you’re also running out of space on your many hard drives. You very much consider all the data you have to be very important regardless of if they really are. You’re holding on to them for safe keeping or in the event that you might need that one file or image someday…someday.&lt;/p&gt;
+
+&lt;p&gt;I very much understand, I was faced with a similar dilemma. Dare I say, the exact situation you’ve just described.&lt;/p&gt;
+
+&lt;p&gt;I had to do something, and just when the COVID-19 quarantine lockdown dawned, I thought, now is the time. Thankfully, amazon delivery services were still running.
+&lt;!-- Etsy, Gumroad, shoppy.gg, fiverr --&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;This is a slightly more comprehensive documentation on Piserver as posted on the subreddit &lt;a href=&quot;https://www.reddit.com/r/homelab/comments/gjm2or/my_first_mini_uni_home_server_putting_the/?utm_source=share&amp;amp;utm_medium=web2x&quot;&gt;r/homelab&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;This write up is split into three segments; design, electrics/electronics and software.&lt;/p&gt;
+
+&lt;h2 id=&quot;heres-the-rundown&quot;&gt;Here’s the rundown:&lt;/h2&gt;
+
+&lt;h3 id=&quot;design&quot;&gt;Design&lt;/h3&gt;
+
+&lt;p&gt;The idea of this project was to create an accessible large storage device for personal use. The proposed intended use of this medium was to store an archive of raw/jpeg photos, games and to act as a Time Machine backup server. The result of the project has exceeded expectations and has more intended uses that would be discussed further on.&lt;/p&gt;
+
+&lt;p&gt;As at the time of searching, there were two big name brands that dominated the search results for Network Attached Storage (NAS), Synology and QNAP. They both have various tiers of solutions they offer at various price point. My budget would only suffice for picking up a low end NAS and I wasn’t pleased with what I saw. At this point I remembered I own a &lt;a href=&quot;https://www.raspberrypi.org&quot;&gt;Raspberry Pi 4&lt;/a&gt; from an earlier attempt at a project and thus the PiServer idea was born.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/piserver/raspberry-pi4.jpg&quot; alt=&quot;&quot; class=&quot;small-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;Raspbberry Pi 4 SBC (Single-Board Computer)&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Inspiration for the design of PiServer enclosure came from &lt;a href=&quot;https://www.apple.com/mac-pro-2013/specs/&quot;&gt;Apple’s 2013 Mac Pro&lt;/a&gt;, nicknamed the trashcan, an elegant and simple design free from visual obstructions.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/piserver/mac-pro.jpg&quot; alt=&quot;&quot; class=&quot;medium-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;Apple Mac Pro 2013&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+The PiServer is designed to hold a 3.5 inch HDD in a confined space while maintaining the cylindrical shape. This brought about its challenges when planning for tolerances and other devices that would need to be fitted inside the case; I took dimensions of parts that seemed appropriate off the internet and started jotting them down.&lt;/p&gt;
+
+&lt;p&gt;The PiServer enclosure is made from PLA, a 3D printable material and weighs a few grams under 1kg with its enclosing case fitted. With this in mind, it had to be carefully designed to reduce costs from printing prototypes. As with many things it wasn’t perfect and two prototypes were created which exposed a major flaw in the design in relation to how a 3D printer is able to create a model.&lt;/p&gt;
+
+&lt;p&gt;The initial design had overhangs that spanned across the middle of the enclosure. To print such large overhangs, a 3D printer would need to print support structures to hold the platforms in place while creating them. The support structures proved too difficult to remove and resulted in the first failed prototype that completed with no printing errors. This prototype also took 3 days to print.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/piserver/collection/piserver_failed_prototype.jpg&quot; alt=&quot;&quot; class=&quot;medium-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;Failed prototype due to hard-to-remove supports&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;The second prototype reduced the PLA mass significantly and got rid of some unnecessary overhangs as well as improving my knowledge on 3D printing models. This prototype was not able to finish due to a printer error. The same error also happened a second time.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/piserver/scraps.jpg&quot; alt=&quot;&quot; class=&quot;medium-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;Scrap corner&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s starting to get grim, the prototypes use a lot of PLA, it takes a lot of time to print and its beginning to get expensive.&lt;/p&gt;
+
+&lt;p&gt;At this point, it is evident that the PiServer needs a significant re-design.&lt;/p&gt;
+
+&lt;p&gt;Introducing, &lt;strong&gt;PiServer 1.0&lt;/strong&gt; with a beautifully crafted rail system that allows for modularity while keeping a compact and efficient form factor. It comes in a two tone colour, eloquent grey &amp;amp; dashing blue or any PLA material you can get your hands on.
+&lt;br /&gt;
+&lt;!-- Slider main container --&gt;&lt;/p&gt;
+&lt;div class=&quot;custom-swiper-container&quot;&gt;
+&lt;div class=&quot;swiper-container gallery-top&quot;&gt;
+  &lt;!-- Additional required wrapper --&gt;
+  &lt;div class=&quot;swiper-wrapper&quot;&gt;
+      &lt;!-- Slides --&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_full.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_front.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_left.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_right.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_top.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_top_nofan.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+        &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;gallery-img-fit&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      
+
+  &lt;/div&gt;
+  &lt;!-- If we need pagination --&gt;
+  &lt;!-- &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt; --&gt;
+
+  &lt;!-- If we need navigation buttons --&gt;
+  &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+
+  &lt;!-- If we need scrollbar --&gt;
+  &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;swiper-container gallery-thumbs&quot;&gt;
+  &lt;div class=&quot;swiper-wrapper&quot;&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver1.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver_full.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_full.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver_front.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_front.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver_left.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_left.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver_right.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_right.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver_top.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_top.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver_top_nofan.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver_top_nofan.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver3.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+    &lt;!-- &lt;div class=&quot;swiper-slide&quot; style=&quot;background-image: url(/_img/piserver/collection/piserver5.jpg&quot;&gt;&lt;/div&gt; --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/yomis-blog/_img/piserver/collection/piserver5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- style=&quot;background-image: url(/_img/piserver/collection/ --&gt;
+
+&lt;!-- &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;thumb-image&quot; src=&quot;/_img/piserver/collection/&quot; alt=&quot;&quot;&gt;&lt;/div&gt; --&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;Check out the &lt;a href=&quot;/piserver-gallery&quot;&gt;PiServer Media Gallery&lt;/a&gt; for &lt;strong&gt;more photos &amp;amp; videos&lt;/strong&gt;.
+&lt;br /&gt;
+.STL files are also available for download below.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;PiServer 1.0 addresses nearly all the issues with the alpha builds, including platforms to place hard drives and the Raspberry Pi. It also offers more space to organise and route cables. A fan brace has also been included to accommodate a mini OLED display intended to serve as information display.&lt;/p&gt;
+
+&lt;p&gt;Airflow in PiServer 1.0 was critically considered to ensure optimum performance. This is evident in the base of the of the main enclosure (vents on the sides), the rectangular holes in the rack platforms, and the fan sitting atop it all to facilitate air movement.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;electricselectronics&quot;&gt;Electrics/Electronics&lt;/h3&gt;
+
+&lt;p&gt;To power PiServer, I opted to use off-the-shelf power supplies to reduce risks as I would be using AC power. There are two PSUs, a 25.2W 12V and a 25W 5V MeanWell supply; These were carefully selected to meet the space restrictions and power requirements of the devices in PiServer. The 12V supply powers the drives and the top-mounted fan while the 5V supply powers the Pi and some add on accessories. To polish the look of PiServer, an IEC connector and an ethernet adapter is used to provide detachable connections on the outside of the PiServer enclosure. The idea to power LED lights from PiServer came as an afterthought. 3 MOSFETs were soldered to a breadboard (wrapped with yellow electrical tape) with its supply connected to the 5V supply and the gate controlled by the Raspberry Pi’s GPIO pins using PWM.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/piserver/collection/piserver12.jpg&quot; alt=&quot;&quot; class=&quot;small-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;PiServer powering LED light strip&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;software&quot;&gt;Software&lt;/h3&gt;
+
+&lt;p&gt;The software side of things has been the most interesting part of this project and it is an ongoing process. Working on PiServer exposed me to the world of Linux, Web Servers and Networking. I’ve become familiar with using the terminal, the linux file structure, linux permissions, Python, Docker, ssh-keys, Flask (Python), Node.js and more.&lt;/p&gt;
+
+&lt;p&gt;The main function of the Raspberry Pi, running as a NAS is managed by an open source software, &lt;a href=&quot;https://www.openmediavault.org&quot;&gt;OpenMediaVault 5&lt;/a&gt; (OMV 5). Soon after I discovered what &lt;a href=&quot;https://www.docker.com&quot;&gt;Docker&lt;/a&gt; was, and I went ahead to pull and run a &lt;a href=&quot;https://www.plex.tv&quot;&gt;Plex&lt;/a&gt; container. I realised there was a need to pay for a pass to stream content so I soon killed the container and went with an open source alternative, &lt;a href=&quot;https://jellyfin.org&quot;&gt;Jellyfin&lt;/a&gt;. This becomes a regular occurrence with this project and I’m very grateful for open source software. Jellyfin is a media server that serves media content hosted on PiServer over a local network. It’s a nice feeling being able to pick up a mobile device and continue watching the content I was watching at my desk.&lt;/p&gt;
+
+&lt;p&gt;There is a docker container for OpenVPN &amp;amp; Deluge, a &lt;a href=&quot;https://pi-hole.net&quot;&gt;Syncthing&lt;/a&gt; container and a &lt;a href=&quot;https://pi-hole.net&quot;&gt;PiHole&lt;/a&gt; Container. Syncthing is a great tool to sync folders across different computers and is currently set up on PiServer to sync files on an external ssd (my working drive) connected to my laptop, to a backup folder on PiServer. This has quickly become one of the most useful software on PiServer to take away the factor of having to manually copy my files over. The PiHole container is another useful tool for blocking advertisements and internet trackers on all devices in my local network by acting as a Domain Name Server (DNS).&lt;/p&gt;
+
+&lt;p&gt;PiServer is also a TimeMachine Backup Server for making full backups of my laptop.&lt;/p&gt;
+
+&lt;p&gt;My most recent project making use of PiServer called glorious-rgb, is a web server built using Python and Flask that I use to control an LED light strip in my room.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/yomis-blog/_img/piserver/collection/piserver_rgb.jpg&quot; alt=&quot;&quot; class=&quot;smaller-post-img&quot; /&gt;
+&lt;br /&gt;&lt;small&gt;Glorious RGB web app to control an RGB LED light strip&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+There are future plans to link PiServer to Apple’s HomeKit and Amazon Alexa to perform the function of a hub for smart home accessories, or in my case, dorm accessories.&lt;/p&gt;
+
+&lt;p&gt;PiServer is connected by gigabit ethernet and delivers acceptable speeds that nearly saturate the gigabit link (The HDD and now SSD are connected to the Raspberry Pi via USB 3). This has proven adequate for playing Steam games such as Rocket League &amp;amp; GTA V over my local network which is facilitated by a 6th Gen &lt;a href=&quot;https://support.apple.com/kb/sp680?locale=en_GB&quot;&gt;AirPort Extreme&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;to-summarise&quot;&gt;To Summarise:&lt;/h2&gt;
+
+&lt;p&gt;PiServer has been a successful project that has been able to execute a lot of orders excluding order 66…yet. It acts as a NAS, a media server, a backup server, a games library and most importantly, a learning tool to develop my skills in different software and networking applications.&lt;/p&gt;
+
+&lt;p&gt;Some details about PiServer were initially uploaded to the &lt;a href=&quot;https://www.reddit.com/r/homelab/comments/gjm2or/my_first_mini_uni_home_server_putting_the/?utm_source=share&amp;amp;utm_medium=web2x&quot;&gt;r/homelab&lt;/a&gt; Subreddit and was well received. PiServer .STL files are available to buy and download for a fee of &lt;strong&gt;£5 (GBP)&lt;/strong&gt; via the link below.&lt;/p&gt;
+
+&lt;!-- &lt;button class=&quot;pay-button&quot; data-shoppy-product=&quot;kTflEvf&quot;&gt;&lt;span class=&quot;pay-button-text&quot;&gt;Download STL Files&lt;/span&gt;&lt;/button&gt; --&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://shoppy.gg/product/kTflEvf&quot;&gt;Download PiServer .STL Files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You may also buy the CAD files if you’d like to modify PiServer for &lt;strong&gt;£15 (GBP)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;!-- &lt;button class=&quot;pay-button&quot; data-shoppy-product=&quot;mUQiYFw&quot;&gt;&lt;span class=&quot;pay-button-text&quot;&gt;Download CAD Files&lt;/span&gt;&lt;/button&gt; --&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://shoppy.gg/product/mUQiYFw&quot;&gt;Download PiServer CAD Files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Thank you for reading, and the answer is yes, &lt;strong&gt;I would love to have a chat with you&lt;/strong&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!-- Now, if you’d like to get to the nitty gritty details, you can check out This-Post detailing just that. --&gt;
+</description>
+        <pubDate>Wed, 08 Jul 2020 21:30:00 +0000</pubDate>
+        <link>http://abayomi185.github.io/yomis-blog/piserver</link>
+        <guid isPermaLink="true">http://abayomi185.github.io/yomis-blog/piserver</guid>
+      </item>
+    
+  </channel>
+</rss>

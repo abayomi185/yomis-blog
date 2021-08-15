@@ -1,0 +1,22 @@
+{
+  "short_name": "Yomi's Blog",
+  "name": "Yomi's Blog",
+  "description": "A blog for my tech related projects",
+  "icons": [
+    {
+      "src": "/yomis-blog/splash-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/yomis-blog/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/yomis-blog/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/yomis-blog/",
+  "theme_color": "#ffffff"
+}
