@@ -3,9 +3,9 @@ title:       Yomi's Blog
 email:       
 author:      Abayomi Ikuru
 description: "A blog for my tech related projects"
-baseurl:     ""
+baseurl:     "/yomis-blog"
 #url:         "yomis.blog"
-url:         "https://abayomi185.github.io/yomis-blog"
+url:         "https://abayomi185.github.io"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
