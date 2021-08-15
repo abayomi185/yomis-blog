@@ -10,7 +10,7 @@ twitter_card: https://yomis.blog/_img/homepage/btc-symbol.png
 ---
 
 {:refdef: style="text-align: center;"}
-![](/_img/crypto-bot/crypto-bot.jpg){:class="medium-post-img"}
+![]({{ site.baseurl }}/_img/crypto-bot/crypto-bot.jpg){:class="medium-post-img"}
 <br><small>CLI interface for the bot</small>
 {: refdef}
 

@@ -11,7 +11,7 @@ twitter_card: https://yomis.blog/_img/serverpc/network-diagram-close.jpg
 
 <br>
 {:refdef: style="text-align: center;"}
-![](/_img/serverpc/network-diagram.png){:class="xlarge-post-img"}
+![]({{ site.baseurl }}/_img/serverpc/network-diagram.png){:class="xlarge-post-img"}
 <br><small>Home Lab Network Diagram</small>
 {: refdef}
 

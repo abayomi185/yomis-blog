@@ -10,7 +10,7 @@ twitter_card: https://yomis.blog/_img/homepage/mining-rig-twitter.jpg
 ---
 
 {:refdef: style="text-align: center;"}
-![](/_img/currys/mining-rig.jpg){:class="xlarge-post-img"}
+![]({{ site.baseurl }}/_img/currys/mining-rig.jpg){:class="xlarge-post-img"}
 <br><small>6 GPU Mining Rig</small><br/>
 <small>Source: [cryptosrus](https://cryptosrus.com/ethereum-mining-rig)</small>
 {: refdef}

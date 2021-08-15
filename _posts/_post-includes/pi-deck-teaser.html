@@ -5,7 +5,7 @@
       <div class="swiper-wrapper">
           <!-- Slides -->
           {% for image in site.data.pi-deck-teaser.pi_deck_teaser_collection %}
-            <div class="swiper-slide"><img class="gallery-img-fit" src="/_img/pi-deck/teaser/{{ image }}" alt=""></div>
+            <div class="swiper-slide"><img class="gallery-img-fit" src="{{ site.baseurl }}/_img/pi-deck/teaser/{{ image }}" alt=""></div>
           {% endfor %}
     
       </div>
@@ -24,7 +24,7 @@
       <div class="swiper-wrapper">
         {% for thumbnail in site.data.pi-deck-teaser.pi_deck_teaser_collection %}
         <!-- <div class="swiper-slide" style="background-image: url(/_img/piserver/collection/{{ thumbnail }}"></div> -->
-        <div class="swiper-slide"><img class="thumb-image" src="/_img/pi-deck/teaser/{{ thumbnail }}" alt=""></div>
+        <div class="swiper-slide"><img class="thumb-image" src="{{ site.baseurl }}/_img/pi-deck/teaser/{{ thumbnail }}" alt=""></div>
         {% endfor %}
       </div>
     </div>

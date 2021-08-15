@@ -10,7 +10,7 @@ twitter_card: https://yomis.blog/_img/serverpc/network-diagram-close.jpg
 ---
 
 {:refdef: style="text-align: center;"}
-![](/_img/serverpc/serverpc.jpg){:class="medium-post-img"}
+![]({{ site.baseurl }}/_img/serverpc/serverpc.jpg){:class="medium-post-img"}
 {: refdef}
 
 Having tested the waters with [PiServer](/piserver) (Raspberry pi 4 powered NAS/Server), I thought I could use a step up, to experiment with ‘bigger toys’ similar to those used in a professional setting; an **x86 platform**.
@@ -63,7 +63,7 @@ Kernel-based Virtual Machine (KVM) - [wiki](https://en.wikipedia.org/wiki/Kernel
 I discovered KVM, a Type 1 [Hypervisor](https://en.wikipedia.org/wiki/Hypervisor) by watching, [SomeOrdinaryGamers](https://www.youtube.com/user/SomeOrdinaryGamers) on YouTube and I was so intrigued by the capabilities and security benefits from running a virtual machine. KVM is special because as it says in its name, it virtualises at the kernel level which does wonders for performance in VMs and best of all, GPU’s and other peripherals can be **“passed”** to the VM effectively making the VM have full control of PCIe devices and other devices as it would if it were running bare metal (not under a VM).
 
 {:refdef: style="text-align: center;"}
-![](/_img/serverpc/virt-manager.png){:class="medium-post-img"}
+![]({{ site.baseurl }}/_img/serverpc/virt-manager.png){:class="medium-post-img"}
 <br><small>Virt-Manager UI for KVM</small>
 {: refdef}
 
@@ -77,7 +77,7 @@ A tip, if you’re having issues with OpenCore GPU Passthrough; I mounted the Op
 
 <br>
 {:refdef: style="text-align: center;"}
-![](/_img/serverpc/network-diagram.png){:class="xlarge-post-img"}
+![]({{ site.baseurl }}/_img/serverpc/network-diagram.png){:class="xlarge-post-img"}
 <br><small>Home Lab Network Diagram</small>
 {: refdef}
 
