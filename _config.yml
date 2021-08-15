@@ -5,7 +5,7 @@ author:      Abayomi Ikuru
 description: "A blog for my tech related projects"
 baseurl:     "/yomis-blog"
 #url:         "yomis.blog"
-url:         "https://abayomi185.github.io/yomis-blog"
+url:         "http://abayomi185.github.io"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
