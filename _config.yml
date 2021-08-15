@@ -4,7 +4,8 @@ email:
 author:      Abayomi Ikuru
 description: "A blog for my tech related projects"
 baseurl:     ""
-url:         "yomis.blog"
+#url:         "yomis.blog"
+url:         "https://abayomi185.github.io/yomis-blog"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
@@ -16,7 +17,8 @@ host: 0.0.0.0
 google_verification:
 # Use either direct GA implementation or set up GTM account
 # - using both will skew your data (leave blank to not use at all)
-google_analytics: UA-131516762-3
+#google_analytics: UA-131516762-3
+google_analytics:
 google_tag_manager:
 # Bing services
 bing_verification:
