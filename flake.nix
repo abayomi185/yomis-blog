@@ -14,7 +14,6 @@
     flake-utils.lib.eachDefaultSystem (system: let
       overlays = [
         (final: prev: {
-          nodejs = prev.nodejs_20;
           bun = prev.bun;
         })
       ];
@@ -26,7 +25,7 @@
       devShell =
         pkgs.mkShell
         {
-          packages = with pkgs; [node2nix nodejs bun];
+          packages = with pkgs; [node2nix bun];
         };
     });
 }
