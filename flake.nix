@@ -25,7 +25,11 @@
       devShell =
         pkgs.mkShell
         {
-          packages = with pkgs; [node2nix bun];
+          packages = with pkgs; [
+            node2nix
+            bun
+            nodePackages."@astrojs/language-server"
+          ];
         };
     });
 }
