@@ -1,35 +1,32 @@
 {
-  description = "Node development environment";
+  description = "Bun development environment";
 
-  inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
-  };
+  inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*.tar.gz";
 
   outputs = {
     self,
     nixpkgs,
-    flake-utils,
-  }:
-    flake-utils.lib.eachDefaultSystem (system: let
-      overlays = [
-        (final: prev: {
-          bun = prev.bun;
-        })
-      ];
+  }: let
+    overlays = [
+      (final: prev: {
+        bun = prev.bun;
+      })
+    ];
 
-      pkgs = import nixpkgs {
-        inherit system overlays;
-      };
-    in {
-      devShell =
-        pkgs.mkShell
-        {
-          packages = with pkgs; [
-            node2nix
-            bun
-            nodePackages."@astrojs/language-server"
-          ];
-        };
+    supportedSystems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
+    forEachSupportedSystem = f:
+      nixpkgs.lib.genAttrs supportedSystems (system:
+        f {
+          pkgs = import nixpkgs {inherit overlays system;};
+        });
+  in {
+    devShells = forEachSupportedSystem ({pkgs}: {
+      packages = with pkgs; [
+        node2nix
+        bun
+        nodePackages."@astrojs/language-server"
+        yaml-language-server
+      ];
     });
+  };
 }
