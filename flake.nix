@@ -21,12 +21,14 @@
         });
   in {
     devShells = forEachSupportedSystem ({pkgs}: {
-      packages = with pkgs; [
-        node2nix
-        bun
-        nodePackages."@astrojs/language-server"
-        yaml-language-server
-      ];
+      default = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          bun
+          nodePackages."@astrojs/language-server"
+          yaml-language-server
+          pulumi-bin
+        ];
+      };
     });
   };
 }
