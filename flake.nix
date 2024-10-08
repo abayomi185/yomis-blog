@@ -1,5 +1,5 @@
 {
-  description = "Bun development environment";
+  description = "Yomi's blog development environment";
 
   inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*.tar.gz";
 
