@@ -1,4 +1,5 @@
 ---
+import { AppConfig } from '@/utils/AppConfig';
 import Section from './Section.astro';
 
 const year = new Date();
@@ -6,7 +7,9 @@ const year = new Date();
 
 <Section>
 	<footer class="text-center">
-		© {year.getFullYear()} - <a class="underline hover:text-orange-600" href="/imprint/">Imprint</a> - made with
-		♥️ by <a class="underline hover:text-orange-600" href="http://nicdun.dev" target="_blank">nicdun.dev</a> 
+		{AppConfig.site_name} © {year.getFullYear()} - <a
+			class="underline hover:text-orange-600"
+			href="/imprint/">Imprint</a
+		> - made with ♥️
 	</footer>
 </Section>

@@ -1,4 +1,5 @@
 ---
+import { AppConfig } from '@/utils/AppConfig';
 import Section from './Section.astro';
 import Social from './Social.astro';
 
@@ -6,18 +7,8 @@ const site = Astro.site;
 ---
 
 <Section>
-	<br />
-	<p class="pb-2 pt-6 text-4xl font-bold">Hello, I'm your new Astro.js Blog Template 🚀</p>
 	<div class="text-sm">
-		<p class="py-2">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.Lorem ipsum dolor sit amet <span class="font-black text-orange-600">Angular</span> adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.Lorem ipsum dolor sit amet consectetur <span class="font-black text-orange-600">Angular</span> elit. Tenetur vero esse non molestias eos <span class="font-black text-orange-600">Angular</span>, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
-		</p>
-		<p class="py-2">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.Lorem ipsum dolor sit amet <span class="font-black text-orange-600">Angular</span> adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
-		</p>
-		<p class="py-2">
-			Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.Lorem ipsum dolor sit amet consectetur <span class="font-black text-orange-600">Angular</span> elit. Tenetur vero esse non molestias eos <span class="font-black text-orange-600">Angular</span>, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
-		</p>
+		<p class="py-4">{AppConfig.description}</p>
 	</div>
 	<div class="flex">
 		<Social href="https://github.com/#">

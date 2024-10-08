@@ -1,24 +1,27 @@
-import { MarkdownInstance } from "astro";
+import { AnyEntryMap, CollectionEntry } from 'astro:content';
 
 export const formatDate = (pubDate: string) => {
   var options: Intl.DateTimeFormatOptions = {
-	weekday: 'short',
-	year: 'numeric',
-	month: 'long',
-	day: 'numeric'
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
+  };
+
+  return new Date(pubDate).toLocaleDateString(undefined, options);
 };
 
-  return new Date(pubDate).toLocaleDateString('en-US', options);
-}
-
-export const sortPostsByDate = (a: MarkdownInstance<any>, b: MarkdownInstance<any>) => {
-  const pubDateA = new Date(a.frontmatter.pubDate);
-  const pubDateB = new Date(b.frontmatter.pubDate);
+// export function getCollection<C extends keyof AnyEntryMap, E extends CollectionEntry<C>>(
+export const sortPostsByDate = (
+  a: CollectionEntry<keyof AnyEntryMap>,
+  b: CollectionEntry<keyof AnyEntryMap>
+) => {
+  const pubDateA = new Date(a.data.pubDate);
+  const pubDateB = new Date(b.data.pubDate);
   if (pubDateA < pubDateB) {
     return 1;
   }
-  if(pubDateA > pubDateB) {
+  if (pubDateA > pubDateB) {
     return -1;
   }
   return 0;
-} 
+};

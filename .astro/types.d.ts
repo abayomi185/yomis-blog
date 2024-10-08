@@ -9,8 +9,6 @@ declare module 'astro:content' {
 }
 
 declare module 'astro:content' {
-	export { z } from 'astro/zod';
-
 	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
 
 	export type CollectionKey = keyof AnyEntryMap;
@@ -18,53 +16,6 @@ declare module 'astro:content' {
 
 	export type ContentCollectionKey = keyof ContentEntryMap;
 	export type DataCollectionKey = keyof DataEntryMap;
-
-	// This needs to be in sync with ImageMetadata
-	export type ImageFunction = () => import('astro/zod').ZodObject<{
-		src: import('astro/zod').ZodString;
-		width: import('astro/zod').ZodNumber;
-		height: import('astro/zod').ZodNumber;
-		format: import('astro/zod').ZodUnion<
-			[
-				import('astro/zod').ZodLiteral<'png'>,
-				import('astro/zod').ZodLiteral<'jpg'>,
-				import('astro/zod').ZodLiteral<'jpeg'>,
-				import('astro/zod').ZodLiteral<'tiff'>,
-				import('astro/zod').ZodLiteral<'webp'>,
-				import('astro/zod').ZodLiteral<'gif'>,
-				import('astro/zod').ZodLiteral<'svg'>,
-				import('astro/zod').ZodLiteral<'avif'>,
-			]
-		>;
-	}>;
-
-	type BaseSchemaWithoutEffects =
-		| import('astro/zod').AnyZodObject
-		| import('astro/zod').ZodUnion<[BaseSchemaWithoutEffects, ...BaseSchemaWithoutEffects[]]>
-		| import('astro/zod').ZodDiscriminatedUnion<string, import('astro/zod').AnyZodObject[]>
-		| import('astro/zod').ZodIntersection<BaseSchemaWithoutEffects, BaseSchemaWithoutEffects>;
-
-	type BaseSchema =
-		| BaseSchemaWithoutEffects
-		| import('astro/zod').ZodEffects<BaseSchemaWithoutEffects>;
-
-	export type SchemaContext = { image: ImageFunction };
-
-	type DataCollectionConfig<S extends BaseSchema> = {
-		type: 'data';
-		schema?: S | ((context: SchemaContext) => S);
-	};
-
-	type ContentCollectionConfig<S extends BaseSchema> = {
-		type?: 'content';
-		schema?: S | ((context: SchemaContext) => S);
-	};
-
-	type CollectionConfig<S> = ContentCollectionConfig<S> | DataCollectionConfig<S>;
-
-	export function defineCollection<S extends BaseSchema>(
-		input: CollectionConfig<S>
-	): CollectionConfig<S>;
 
 	type AllValuesOf<T> = T extends any ? T[keyof T] : never;
 	type ValidContentEntrySlug<C extends keyof ContentEntryMap> = AllValuesOf<
@@ -155,11 +106,11 @@ declare module 'astro:content' {
 			? {
 					collection: C;
 					slug: ValidContentEntrySlug<C>;
-			  }
+				}
 			: {
 					collection: C;
 					id: keyof DataEntryMap[C];
-			  }
+				}
 	>;
 	// Allow generic `string` to avoid excessive type errors in the config
 	// if `dev` is not running to update as you edit.
@@ -174,7 +125,177 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		
+		"posts": {
+"auto-gpu-buying-bot-currys-pc.md": {
+	id: "auto-gpu-buying-bot-currys-pc.md";
+  slug: "auto-gpu-buying-bot-currys-pc";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"blog-update.md": {
+	id: "blog-update.md";
+  slug: "blog-update";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"chat-with-my-consciousness.md": {
+	id: "chat-with-my-consciousness.md";
+  slug: "chat-with-my-consciousness";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"crypto-trading-bot.md": {
+	id: "crypto-trading-bot.md";
+  slug: "crypto-trading-bot";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"data-loss.md": {
+	id: "data-loss.md";
+  slug: "data-loss";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"first_blog_post.md": {
+	id: "first_blog_post.md";
+  slug: "first_blog_post";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"fresh-start-on-proxmox.md": {
+	id: "fresh-start-on-proxmox.md";
+  slug: "fresh-start-on-proxmox";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"lily58-reborn.md": {
+	id: "lily58-reborn.md";
+  slug: "lily58-reborn";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"lily58l.md": {
+	id: "lily58l.md";
+  slug: "lily58l";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"nixos.md": {
+	id: "nixos.md";
+  slug: "nixos";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"nvidia-gpu-in-proxmox-lxc.md": {
+	id: "nvidia-gpu-in-proxmox-lxc.md";
+  slug: "nvidia-gpu-in-proxmox-lxc";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"pi-deck-teaser.md": {
+	id: "pi-deck-teaser.md";
+  slug: "pi-deck-teaser";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"piserver-gallery.md": {
+	id: "piserver-gallery.md";
+  slug: "piserver-gallery";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"piserver-usbmod.md": {
+	id: "piserver-usbmod.md";
+  slug: "piserver-usbmod";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"piserver.md": {
+	id: "piserver.md";
+  slug: "piserver";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"proxmox-resizing-a-disk.md": {
+	id: "proxmox-resizing-a-disk.md";
+  slug: "proxmox-resizing-a-disk";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"remote-access-on-server-pc.md": {
+	id: "remote-access-on-server-pc.md";
+  slug: "remote-access-on-server-pc";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"second_blog_post.md": {
+	id: "second_blog_post.md";
+  slug: "second_blog_post";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"setting-up-ssh-on-unix.md": {
+	id: "setting-up-ssh-on-unix.md";
+  slug: "setting-up-ssh-on-unix";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"sff-server-pc.md": {
+	id: "sff-server-pc.md";
+  slug: "sff-server-pc";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"simple-intro-to-natural-language-processing-with-python.md": {
+	id: "simple-intro-to-natural-language-processing-with-python.md";
+  slug: "simple-intro-to-natural-language-processing-with-python";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"tailscale-openwrt.md": {
+	id: "tailscale-openwrt.md";
+  slug: "tailscale-openwrt";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"third_blog_post.md": {
+	id: "third_blog_post.md";
+  slug: "third_blog_post";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+"tmux-tips.md": {
+	id: "tmux-tips.md";
+  slug: "tmux-tips";
+  body: string;
+  collection: "posts";
+  data: any
+} & { render(): Render[".md"] };
+};
+
 	};
 
 	type DataEntryMap = {
@@ -183,5 +304,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	export type ContentConfig = never;
 }

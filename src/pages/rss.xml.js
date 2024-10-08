@@ -1,14 +1,12 @@
-import rss, {pagesGlobToRssItems} from '@astrojs/rss';
+import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 
 export async function GET(context) {
   return rss({
-    title: 'nicdun.dev - blog',
-    description: 'Crafting the Digital Future with Web Development Wonders',
+    title: "Yomi's Blog RSS Feed",
+    description: 'A space to document and share my projects and ideas.',
     site: context.site,
-    items: await pagesGlobToRssItems(
-      import.meta.glob('./posts/*.{md,mdx}'),
-    ),
+    items: await pagesGlobToRssItems(import.meta.glob('./posts/*.{md,mdx}')),
     stylesheet: './rss/styles.xsl',
-    customData: `<language>en-us</language>`,
+    customData: `<language>en-us</language>`
   });
 }

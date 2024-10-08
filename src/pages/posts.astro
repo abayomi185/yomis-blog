@@ -1,0 +1,12 @@
+---
+import Section from '@/components/Section.astro';
+import Base from '@/layouts/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+
+<Base head={{ title, description }}>
+	<Section />
+</Base>
