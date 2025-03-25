@@ -1,17 +1,13 @@
 {
   description = "Yomi's blog development environment";
 
-  inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*.tar.gz";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs = {
     self,
     nixpkgs,
   }: let
-    overlays = [
-      (final: prev: {
-        bun = prev.bun;
-      })
-    ];
+    overlays = [];
 
     supportedSystems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
     forEachSupportedSystem = f:
@@ -23,10 +19,9 @@
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          bun
           nodePackages."@astrojs/language-server"
-          yaml-language-server
           pulumi-bin
+          pulumi-esc
         ];
       };
     });
