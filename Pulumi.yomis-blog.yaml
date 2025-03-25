@@ -1,6 +1,0 @@
-encryptionsalt: v1:TMGYBc3Sd4s=:v1:6tc/+yKHoFt0kc6m:0pzZX2BA3U/qQLKFsTNvrOmzxeJNNw==
-config:
-  cloudflare:apiToken:
-    secure: v1:1DDy6+dQvMbSzUsQ:VUjTaJwcgt9CseisB81BdrIVK0TSmP9Vr1rAaoGT2vBNEK3DYuKXS4sfoUkTSlWgmPLFd0S4nXU=
-  yomis-blog:accountId:
-    secure: v1:+T8+W64lWpDFhXz3:Koc+et7tNiGOYPTBwEAunWZVapYh0VkDvHq94klHd8iy5ljBMiq1/tYe4sxE6aX4
