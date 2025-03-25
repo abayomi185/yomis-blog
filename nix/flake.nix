@@ -19,9 +19,7 @@
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          nodePackages."@astrojs/language-server"
-          pulumi-bin
-          pulumi-esc
+          astro-language-server
         ];
       };
     });
