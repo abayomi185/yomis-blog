@@ -1,0 +1,13 @@
+keys:
+  - &mstdo age1kak7nac7pp9kel9cl43m93jdrdtzdqhw07dkc62hk0qvq37u05nqce5mf5
+  - &mbp14 age1sx0dh82apfxxdv9z0l77dmu00e9vz5rn3pfwwnxhwumdxmwy7gsshaxxlc
+creation_rules:
+  - path_regex: '.*\.(sops|enc)\.ya?ml$'
+    encrypted_regex: '^(data|stringData)$'
+    key_groups:
+      - age:
+          - *mstdo
+          - *mbp14
+stores:
+  yaml:
+    indent: 2
