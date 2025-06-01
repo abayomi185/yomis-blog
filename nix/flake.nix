@@ -18,9 +18,18 @@
   in {
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
-        packages = with pkgs; [
-          astro-language-server
-        ];
+        packages = with pkgs;
+          [
+            astro-language-server
+          ]
+          ++ [
+            (pkgs.writeShellScriptBin "npm" ''
+              pnpm "$@"
+            '')
+            (pkgs.writeShellScriptBin "npx" ''
+              pnpx "$@"
+            '')
+          ];
       };
     });
   };
