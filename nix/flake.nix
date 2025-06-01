@@ -18,7 +18,7 @@
   in {
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
-        buildInputs = with pkgs; [
+        packages = with pkgs; [
           astro-language-server
         ];
       };
