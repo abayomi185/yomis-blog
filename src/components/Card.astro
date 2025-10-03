@@ -7,18 +7,18 @@ import { CollectionEntry } from 'astro:content';
 type Post = CollectionEntry<keyof AnyEntryMap>;
 
 interface Props {
-	post: Post;
+  post: Post;
 }
 
 const { post } = Astro.props;
 ---
 
 <a href={post.slug}>
-	<div
-		class="h-full rounded-2xl bg-stone-200/50 from-orange-900 via-amber-700 to-white p-[1px] text-sm shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)] hover:bg-gradient-to-r dark:bg-gray-900"
-	>
-		<div
-			class="flex h-full w-full
+  <div
+    class="h-full rounded-2xl bg-stone-200/50 from-orange-900 via-amber-700 to-white p-[1px] text-sm shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)] hover:bg-gradient-to-r dark:bg-gray-900"
+  >
+    <div
+      class="flex h-full w-full
 		flex-col
     rounded-[1rem]
 		bg-stone-300
@@ -27,19 +27,19 @@ const { post } = Astro.props;
     opacity-90
     dark:bg-stone-800
 		dark:text-white"
-		>
-			<div class="flex-auto">
-				<div class="flex justify-between pb-4 text-xs">
-					<p>{formatDate(post.data.pubDate.toDateString())}</p>
-					<p>{post.data.minutesRead}</p>
-				</div>
+    >
+      <div class="flex-auto">
+        <div class="flex justify-between pb-4 text-xs">
+          <p>{formatDate(post.data.date.toDateString())}</p>
+          <p>{post.data.minutesRead}</p>
+        </div>
 
-				<p class="pb-4 text-lg font-bold">{post.data.title}</p>
+        <p class="pb-4 text-lg font-bold">{post.data.title}</p>
 
-				<Tags tags={post.data.tags} />
-				<p class="line-clamp-6 pt-4">{post.data.excerpt}</p>
-			</div>
-			<p class="pt-4 underline">read more →</p>
-		</div>
-	</div>
+        <Tags tags={post.data.tags} />
+        <p class="line-clamp-6 pt-4">{post.data.excerpt}</p>
+      </div>
+      <p class="pt-4 underline">read more →</p>
+    </div>
+  </div>
 </a>
