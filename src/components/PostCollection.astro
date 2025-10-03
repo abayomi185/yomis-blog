@@ -1,0 +1,23 @@
+---
+import Section from './Section.astro';
+import Card from './Card.astro';
+import { AnyEntryMap, CollectionEntry } from 'astro:content';
+
+type Post = CollectionEntry<keyof AnyEntryMap>;
+
+interface Props {
+	posts: Post[];
+}
+
+const { posts } = Astro.props;
+---
+
+<Section>
+	<div class="flex justify-between pb-4">
+		<p class="text-xl font-bold">---</p>
+		<!-- <a href="/posts" class="underline hover:text-orange-600">all posts →</a> -->
+	</div>
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+		{posts.map((post: Post) => <Card post={post} />)}
+	</div>
+</Section>
