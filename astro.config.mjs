@@ -2,9 +2,10 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import { remarkReadingTime } from './src/utils/readingTime';
 import rehypePrettyCode from 'rehype-pretty-code';
-import vercelStatic from '@astrojs/vercel/static';
+import vercelStatic from '@astrojs/vercel';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
 const options = {
   // Specify the theme to use or a custom theme json, in our case
   // it will be a moonlight-II theme from
@@ -33,11 +34,11 @@ const options = {
 export default defineConfig({
   site: 'https://yomis.blog/',
   markdown: {
-    syntaxHighlight: true,
+    // syntaxHighlight: true,
     rehypePlugins: [[rehypePrettyCode, options]],
     remarkPlugins: [remarkReadingTime]
   },
-  integrations: [tailwind(), react(), sitemap()],
+  integrations: [tailwind(), react(), sitemap(), mdx()],
   output: 'static',
   adapter: vercelStatic({
     webAnalytics: {
