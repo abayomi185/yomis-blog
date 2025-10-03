@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
+    "@astrojs/mdx": "^4.3.6",
     "@astrojs/react": "4.2.7",
     "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.4.0",
@@ -21,21 +22,25 @@
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "@vercel/analytics": "^1.5.0",
-    "astro": "5.7.13",
+    "astro": "5.13.10",
     "canvas-confetti": "^1.9.3",
     "mdast-util-to-string": "^4.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "reading-time": "^1.5.0",
     "rehype-pretty-code": "^0.14.1",
+    "sharp": "^0.32.6",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "@pulumi/cloudflare": "^6.9.1",
+    "@pulumi/pulumi": "^3.198.0",
     "@tailwindcss/typography": "^0.5.16",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.5.14"
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "ts-node": "^10.9.2"
   }
 }
