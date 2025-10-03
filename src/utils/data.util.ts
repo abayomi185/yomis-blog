@@ -1,13 +1,13 @@
 import { AnyEntryMap, CollectionEntry } from 'astro:content';
 
-export const formatDate = (pubDate: string) => {
+export const formatDate = (date: string) => {
   var options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'numeric',
     day: 'numeric'
   };
 
-  return new Date(pubDate).toLocaleDateString(undefined, options);
+  return new Date(date).toLocaleDateString(undefined, options);
 };
 
 // export function getCollection<C extends keyof AnyEntryMap, E extends CollectionEntry<C>>(
@@ -15,12 +15,12 @@ export const sortPostsByDate = (
   a: CollectionEntry<keyof AnyEntryMap>,
   b: CollectionEntry<keyof AnyEntryMap>
 ) => {
-  const pubDateA = new Date(a.data.pubDate);
-  const pubDateB = new Date(b.data.pubDate);
-  if (pubDateA < pubDateB) {
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  if (dateA < dateB) {
     return 1;
   }
-  if (pubDateA > pubDateB) {
+  if (dateA > dateB) {
     return -1;
   }
   return 0;

@@ -5,7 +5,7 @@ const postsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     excerpt: z.string(),
-    pubDate: z.date(),
+    date: z.date(),
     tags: z.array(z.string()),
     image: z
       .object({
