@@ -18,18 +18,12 @@
   in {
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
-        packages = with pkgs;
-          [
-            astro-language-server
-          ]
-          ++ [
-            (pkgs.writeShellScriptBin "npm" ''
-              pnpm "$@"
-            '')
-            (pkgs.writeShellScriptBin "npx" ''
-              pnpx "$@"
-            '')
-          ];
+        buildInputs = with pkgs; [
+          astro-language-server
+          awscli2
+          mdx-language-server
+          pulumi-bin
+        ];
       };
     });
   };
