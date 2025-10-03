@@ -2,6 +2,7 @@
 import Section from '@/components/Section.astro';
 import Base from '@/layouts/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
+import Giscus from '@/components/PostComments.astro';
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -10,3 +11,5 @@ const { description } = AppConfig;
 <Base head={{ title, description }}>
 	<Section />
 </Base>
+
+<Giscus />

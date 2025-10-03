@@ -1,0 +1,57 @@
+<div id="giscus-container" class="mt-8"></div>
+
+<script>
+	type GiscusTheme = 'light' | 'dark';
+
+	function createGiscusScript(theme: GiscusTheme): void {
+		const script = document.createElement('script');
+		const container = document.querySelector('#giscus-container');
+
+		// Remove existing script if any
+		const existingScript = container?.querySelector('script');
+		if (existingScript) {
+			existingScript.remove();
+		}
+
+		Object.entries({
+			src: 'https://giscus.app/client.js',
+			'data-repo': 'abayomi185/yomis-blog',
+			'data-repo-id': 'MDEwOlJlcG9zaXRvcnkyNzgwNTQ1MTM=',
+			'data-category': 'Announcements',
+			'data-category-id': 'DIC_kwDOEJLGcc4ClBX8',
+			'data-mapping': 'pathname',
+			'data-strict': '0',
+			'data-reactions-enabled': '1',
+			'data-emit-metadata': '0',
+			'data-input-position': 'top',
+			'data-theme': theme,
+			'data-lang': 'en',
+			'data-loading': 'lazy',
+			crossorigin: 'anonymous'
+		}).forEach(([key, value]) => {
+			script.setAttribute(key, value);
+		});
+		script.setAttribute('async', 'true');
+
+		container?.appendChild(script);
+	}
+
+	// Initial theme setup
+	const isDark = document.documentElement.classList.contains('dark');
+	createGiscusScript(isDark ? 'dark' : 'light');
+
+	// Watch for theme changes
+	const observer = new MutationObserver((mutations) => {
+		mutations.forEach((mutation) => {
+			if (mutation.attributeName === 'class') {
+				const isDark = document.documentElement.classList.contains('dark');
+				createGiscusScript(isDark ? 'dark' : 'light');
+			}
+		});
+	});
+
+	observer.observe(document.documentElement, {
+		attributes: true,
+		attributeFilter: ['class']
+	});
+</script>
