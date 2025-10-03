@@ -1,13 +1,33 @@
 ---
 title: 'PiServer'
-pubDate: 2020-07-08
+date: 2020-07-08
 author: 'Yomi Ikuru'
 excerpt: My instrumental Raspberry Pi Project
-image:
-  src:
-  alt:
+cover:
+  image: ../../../assets/blog/piserver/piserver-intro.jpeg
+  alt: PiServer
 tags: ['project']
 ---
+
+import Image from '../../components/PostImage.astro';
+import ImageGallery from '../../components/PostImageGallery.astro';
+
+import raspberryPiImage from '../../assets/posts/piserver/raspberry-pi4.jpg';
+import macProImage from '../../assets/posts/piserver/mac-pro.jpg';
+import failedPrototypeImage from '../../assets/posts/piserver/piserver_failed_prototype.jpg';
+import scrapsImage from '../../assets/posts/piserver/scraps.jpg';
+import piServerCornerImage from '../../assets/posts/piserver/piserver-corner.jpg';
+import piServerRgbImage from '../../assets/posts/piserver/piserver_rgb.jpg';
+
+import piServerGallery1 from '../../assets/posts/piserver/piserver_front.jpg';
+import piServerGallery2 from '../../assets/posts/piserver/piserver_full.jpg';
+import piServerGallery3 from '../../assets/posts/piserver/piserver_left.jpg';
+import piServerGallery4 from '../../assets/posts/piserver/piserver_right.jpg';
+import piServerGallery5 from '../../assets/posts/piserver/piserver_top_nofan.jpg';
+import piServerGallery6 from '../../assets/posts/piserver/piserver_top.jpg';
+import piServerGallery7 from '../../assets/posts/piserver/piserver1.jpg';
+import piServerGallery8 from '../../assets/posts/piserver/piserver3-3.jpg';
+import piServerGallery9 from '../../assets/posts/piserver/piserver5.jpg';
 
 Firstly, I must say I love taking photos and I also happen to be an Apple fan (please don’t hate). Do you happen to see where this is going? I am also a 3rd year student studying Electrical & Electronics Engineering, this might help you understand my level of expertise or lack there of if you happen to be an enthusiast or professional.
 
@@ -29,11 +49,11 @@ The idea of this project was to create an accessible large storage device for pe
 
 As at the time of searching, there were two big name brands that dominated the search results for Network Attached Storage (NAS), Synology and QNAP. They both have various tiers of solutions they offer at various price point. My budget would only suffice for picking up a low end NAS and I wasn’t pleased with what I saw. At this point I remembered I own a [Raspberry Pi 4](https://www.raspberrypi.org) from an earlier attempt at a project and thus the PiServer idea was born.
 
-<img src="" alt="Raspberry Pi 4 SBC (Single-Board Computer)" />
+<Image src={raspberryPiImage} alt="Raspberry Pi 4 SBC (Single-Board Computer)" maxWidth="600px" />
 
 Inspiration for the design of PiServer enclosure came from [Apple’s 2013 Mac Pro](https://www.apple.com/mac-pro-2013/specs), nicknamed the trashcan, an elegant and simple design free from visual obstructions.
 
-<img src="" alt="Apple Mac Pro 2013" />
+<Image src={macProImage} alt="Apple Mac Pro 2013" />
 
 The PiServer is designed to hold a 3.5 inch HDD in a confined space while maintaining the cylindrical shape. This brought about its challenges when planning for tolerances and other devices that would need to be fitted inside the case; I took dimensions of parts that seemed appropriate off the internet and started jotting them down.
 
@@ -41,17 +61,32 @@ The PiServer enclosure is made from PLA, a 3D printable material and weighs a fe
 
 The initial design had overhangs that spanned across the middle of the enclosure. To print such large overhangs, a 3D printer would need to print support structures to hold the platforms in place while creating them. The support structures proved too difficult to remove and resulted in the first failed prototype that completed with no printing errors. This prototype also took 3 days to print.
 
-<img src="" alt="Failed prototype due to hard-to-remove supports" />
+<Image src={failedPrototypeImage} alt="Failed prototype due to hard-to-remove supports" />
 
 The second prototype reduced the PLA mass significantly and got rid of some unnecessary overhangs as well as improving my knowledge on 3D printing models. This prototype was not able to finish due to a printer error. The same error also happened a second time.
 
-<img src="" alt="Scrap corner" />
+<Image src={scrapsImage} alt="Scrap corner" />
 
 It’s starting to get grim, the prototypes use a lot of PLA, it takes a lot of time to print and its beginning to get expensive.
 
 At this point, it is evident that the PiServer needs a significant re-design.
 
 Introducing, **PiServer 1.0** with a beautifully crafted rail system that allows for modularity while keeping a compact and efficient form factor. It comes in a two tone colour, eloquent grey & dashing blue or any PLA material you can get your hands on.
+
+<ImageGallery
+  images={[
+    { src: piServerGallery1 },
+    { src: piServerGallery2 },
+    { src: piServerGallery3 },
+    { src: piServerGallery4 },
+    { src: piServerGallery5 },
+    { src: piServerGallery6 },
+    { src: piServerGallery7 },
+    { src: piServerGallery8 },
+    { src: piServerGallery9 }
+  ]}
+  columns={3}
+/>
 
 Check out the [PiServer Media Gallery](https://yomis.blog/piserver-gallery) for **more photos & videos**.
 .STL files are also available for download below.
@@ -64,7 +99,7 @@ Airflow in PiServer 1.0 was critically considered to ensure optimum performance.
 
 To power PiServer, I opted to use off-the-shelf power supplies to reduce risks as I would be using AC power. There are two PSUs, a 25.2W 12V and a 25W 5V MeanWell supply; These were carefully selected to meet the space restrictions and power requirements of the devices in PiServer. The 12V supply powers the drives and the top-mounted fan while the 5V supply powers the Pi and some add on accessories. To polish the look of PiServer, an IEC connector and an ethernet adapter is used to provide detachable connections on the outside of the PiServer enclosure. The idea to power LED lights from PiServer came as an afterthought. 3 MOSFETs were soldered to a breadboard (wrapped with yellow electrical tape) with its supply connected to the 5V supply and the gate controlled by the Raspberry Pi’s GPIO pins using PWM.
 
-<img src="" alt="PiServer powering LED light strip" />
+<Image src={piServerCornerImage} alt="PiServer powering LED light strip" maxWidth="400px" />
 
 ### Software
 
@@ -78,7 +113,11 @@ PiServer is also a TimeMachine Backup Server for making full backups of my lapto
 
 My most recent project making use of PiServer called glorious-rgb, is a web server built using Python and Flask that I use to control an LED light strip in my room.
 
-<img src="" alt="Glorious RGB web app to control an RGB LED light strip" />
+<Image
+  src={piServerRgbImage}
+  alt="Glorious RGB web app to control an RGB LED light strip"
+  maxWidth="300px"
+/>
 
 There are future plans to link PiServer to Apple’s HomeKit and Amazon Alexa to perform the function of a hub for smart home accessories, or in my case, dorm accessories.
 

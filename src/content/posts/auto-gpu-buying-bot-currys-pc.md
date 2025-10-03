@@ -1,19 +1,24 @@
 ---
 title: "Auto GPU Buying Bot - Curry's PC"
-pubDate: 2021-03-02
+date: 2021-03-02
 author: 'Yomi Ikuru'
 excerpt: In light of the silicon and GPU shortage, I made a bot to increase my chances of geting a GPU
-image:
-  src:
-  alt:
-tags: ['tag1', 'tag2', 'tag3']
+cover:
+  image: ../../../assets/blog/auto-gpu-buying-bot-currys-pc/mining-rig.jpg
+  alt: Mining Rig
+tags: ['project']
 ---
 
-6 GPU Mining Rig. Image source: [cryptosrus](https://cryptosrus.com/ethereum-mining-rig?ref=yomis.blog)
+<small>6 GPU Mining Rig. Image source: [cryptosrus](https://cryptosrus.com/ethereum-mining-rig)</small>
 
-To go straight to the GitHub repo, follow this link;
+---
 
-abayomi185 - currys-pc-order-bot
+To go straight to the **GitHub** repo, follow this link;<br/>
+[abayomi185 - currys-pc-order-bot](https://github.com/abayomi185/currys-pc-order-bot)
+
+<a class="github-button" href="https://github.com/abayomi185" data-show-count="true" aria-label="Follow @abayomi185 on GitHub">Follow @abayomi185</a> <a class="github-button" href="https://github.com/abayomi185/currys-pc-order-bot" data-icon="octicon-star" data-show-count="true" aria-label="Star abayomi185/currys-pc-order-bot on GitHub">Star</a>
+
+---
 
 The situation with GPU (Graphics Processing Unit) shortages and the general chip manufacturing shortages brought about partly by the increased demand of electronic hardware during the COVID-19 pandemic has caused compounding issues in many other industries and organisations.
 

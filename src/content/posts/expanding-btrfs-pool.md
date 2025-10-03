@@ -1,12 +1,9 @@
 ---
 title: 'Expanding BTRFS Pool'
-pubDate: 2025-04-10
+date: 2025-04-10
 author: 'Yomi Ikuru'
 excerpt: Guide to expanding an existing BTRFS pool
-image:
-  src:
-  alt:
-tags: ['project']
+tags: ['guide']
 ---
 
 To create the BTRFS pool:

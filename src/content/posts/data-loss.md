@@ -1,12 +1,9 @@
 ---
 title: 'Data Loss'
-pubDate: 2024-10-01
+date: 2024-10-01
 author: 'Yomi Ikuru'
 excerpt: I did something very silly. I worked on a production server without proper measures to rollback or recover in the case of an accident
-image:
-  src:
-  alt:
-tags: ['project']
+tags: ['update']
 ---
 
 Hey, Yomi here. I did something very silly. I worked on a production server without proper measures to rollback or recover in the case of an accident. So here I am with a blog site months out of date with a few posts, comments, signups and many drafts lost - I cried.
