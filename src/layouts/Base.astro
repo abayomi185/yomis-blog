@@ -28,17 +28,51 @@ const {
     <link rel="icon" href="/favicon.svg" />
 
     <script>
-      if (
-        localStorage.getItem('dark-mode') === 'true' ||
-        (!('dark-mode' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        localStorage.setItem('dark-mode', 'true');
-        document.querySelector('html')?.classList.add('dark');
-      } else {
-        localStorage.setItem('dark-mode', 'false');
-        document.querySelector('html')?.classList.remove('dark');
+      type Theme = 'light' | 'dark' | 'auto';
+
+      function applyTheme(theme: Theme): void {
+        const html = document.documentElement;
+        const isDark =
+          theme === 'dark' ||
+          (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        if (isDark) {
+          html.classList.add('dark');
+        } else {
+          html.classList.remove('dark');
+        }
       }
+
+      function getStoredTheme(): Theme {
+        const stored = localStorage.getItem('theme');
+        if (stored === 'light' || stored === 'dark' || stored === 'auto') {
+          return stored;
+        }
+        return 'auto';
+      }
+
+      function initTheme(): void {
+        const theme = getStoredTheme();
+        applyTheme(theme);
+      }
+
+      initTheme();
+
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', () => {
+        const theme = getStoredTheme();
+        if (theme === 'auto') {
+          applyTheme(theme);
+        }
+      });
+
+      (window as any).themeManager = {
+        getTheme: getStoredTheme,
+        setTheme: (theme: Theme) => {
+          localStorage.setItem('theme', theme);
+          applyTheme(theme);
+        }
+      };
     </script>
   </head>
   <body

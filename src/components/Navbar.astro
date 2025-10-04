@@ -1,4 +1,5 @@
 ---
+import { Icon } from '@astrojs/starlight/components';
 import { AppConfig } from '@/utils/AppConfig';
 import Section from './Section.astro';
 ---
@@ -14,56 +15,73 @@ import Section from './Section.astro';
           <li><a href="/tags" class="mr-3 hover:text-orange-600">TAGS</a></li>
         </ul>
       </nav>
-      <div class="ml-3 flex flex-col justify-center">
-        <input type="checkbox" id="light-switch" class="light-switch sr-only" />
-        <label class="tada relative cursor-pointer p-2" for="light-switch">
-          <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              class="fill-stone-800"
-              d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z"
-            ></path>
-            <path class="fill-gray-900" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z"
-            ></path>
-          </svg>
-          <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              class="fill-slate-400"
-              d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z"
-            ></path>
-            <path
-              class="fill-slate-500"
-              d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z"
-            ></path>
-          </svg>
-          <span class="sr-only">Switch to light / dark version</span>
-        </label>
+      <div class="ml-3 mt-1.5 flex flex-col justify-center">
+        <button
+          id="theme-toggle"
+          class="tada relative cursor-pointer p-2"
+          aria-label="Toggle theme"
+          data-theme="auto"
+        >
+          <span class="theme-icon theme-icon-light">
+            <Icon name="sun" class="h-5 w-5" />
+          </span>
+          <span class="theme-icon theme-icon-dark">
+            <Icon name="moon" class="h-5 w-5" />
+          </span>
+          <span class="theme-icon theme-icon-auto">
+            <Icon name="laptop" class="h-5 w-5" />
+          </span>
+        </button>
       </div>
     </div>
+
+    <script>
+      type Theme = 'light' | 'dark' | 'auto';
+
+      function getNextTheme(currentTheme: Theme): Theme {
+        const themeOrder: Theme[] = ['auto', 'light', 'dark'];
+        const currentIndex = themeOrder.indexOf(currentTheme);
+        const nextIndex = (currentIndex + 1) % themeOrder.length;
+        return themeOrder[nextIndex]!;
+      }
+
+      function initThemeToggle(): void {
+        const themeManager = (window as any).themeManager;
+        if (!themeManager) return;
+
+        const themeToggle = document.getElementById('theme-toggle');
+        if (!themeToggle) return;
+
+        const currentTheme = themeManager.getTheme();
+        themeToggle.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = themeManager.getTheme();
+          const nextTheme = getNextTheme(currentTheme);
+          themeManager.setTheme(nextTheme);
+          themeToggle.setAttribute('data-theme', nextTheme);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initThemeToggle);
+      } else {
+        initThemeToggle();
+      }
+    </script>
   </div>
 </Section>
 
-<script>
-  const lightSwitches = document.querySelectorAll('.light-switch');
-  if (lightSwitches.length > 0) {
-    lightSwitches.forEach((lightSwitch: any, i) => {
-      if (localStorage.getItem('dark-mode') === 'true') {
-        lightSwitch.checked = true;
-      }
-      lightSwitch.addEventListener('click', () => {
-        const { checked } = lightSwitch;
-        lightSwitches.forEach((el: any, n) => {
-          if (n !== i) {
-            el.checked = checked;
-          }
-        });
-        if (lightSwitch.checked) {
-          document.documentElement.classList.add('dark');
-          localStorage.setItem('dark-mode', 'true');
-        } else {
-          document.documentElement.classList.remove('dark');
-          localStorage.setItem('dark-mode', 'false');
-        }
-      });
-    });
+<style>
+  /* Hide all theme icons by default */
+  .theme-icon {
+    display: none;
   }
-</script>
+
+  /* Show the appropriate icon based on data-theme attribute */
+  [data-theme='light'] .theme-icon-light,
+  [data-theme='dark'] .theme-icon-dark,
+  [data-theme='auto'] .theme-icon-auto {
+    display: inline-block;
+  }
+</style>
