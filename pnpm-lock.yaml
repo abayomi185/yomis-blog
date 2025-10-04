@@ -47,6 +47,9 @@ importers:
       astro:
         specifier: 5.13.10
         version: 5.13.10(@types/node@22.15.27)(encoding@0.1.13)(jiti@1.21.7)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.8.0)
+      astro-expressive-code:
+        specifier: ^0.41.3
+        version: 0.41.3(astro@5.13.10(@types/node@22.15.27)(encoding@0.1.13)(jiti@1.21.7)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.8.0))
       canvas-confetti:
         specifier: ^1.9.3
         version: 1.9.3
@@ -78,6 +81,9 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
     devDependencies:
+      '@github/copilot':
+        specifier: ^0.0.334
+        version: 0.0.334
       '@pulumi/cloudflare':
         specifier: ^6.9.1
         version: 6.10.0(ts-node@10.9.2(@types/node@22.15.27)(typescript@5.8.3))(typescript@5.8.3)
@@ -433,6 +439,9 @@ packages:
     resolution: {integrity: sha512-kzyuwOAQnXJNLS9PSyrk0CWk35nWJW/zl/6KvnTBMFK65gm7U1/Z5BqjxeapjZCIhQcM/DsrEmcbRwDyXyXK4A==}
     engines: {node: '>=14'}
 
+  '@devm33/node-pty@1.0.9':
+    resolution: {integrity: sha512-5yzbTTywkaFk1iRwte2aWEpyDfcpDjCofVD1BiOUQI+fsCvp/+RdJnB4jgnULrdlWOEWuBf+bg4/NZKVApPhoQ==}
+
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
 
@@ -618,6 +627,11 @@ packages:
 
   '@expressive-code/plugin-text-markers@0.41.3':
     resolution: {integrity: sha512-SN8tkIzDpA0HLAscEYD2IVrfLiid6qEdE9QLlGVSxO1KEw7qYvjpbNBQjUjMr5/jvTJ7ys6zysU2vLPHE0sb2g==}
+
+  '@github/copilot@0.0.334':
+    resolution: {integrity: sha512-urqXH+YXrBZJV36gMci2mxsc4LQsaC3wxfP7qBTIseaj5xGWHJfgdNhW3kPPJCa9ECvfM8HHfML9s7EhPuX3eQ==}
+    engines: {node: '>=22'}
+    hasBin: true
 
   '@grpc/grpc-js@1.14.0':
     resolution: {integrity: sha512-N8Jx6PaYzcTRNzirReJCtADVoq4z7+1KQ4E70jTg/koQiMoUSN1kbNjPOqpPbhMFhfU1/l7ixspPl8dNY+FoUg==}
@@ -2609,6 +2623,9 @@ packages:
   just-diff@6.0.2:
     resolution: {integrity: sha512-S59eriX5u3/QhMNq3v/gm8Kd0w8OS6Tz2FS1NG4blv+z0MuQcBRJyFWjdovM0Rad4/P4aUPFtnkNjMjyMlMSYA==}
 
+  keytar-forked-forked@7.10.3:
+    resolution: {integrity: sha512-ipErTUO1NPXmngYhnMrda0yOIOPSNbVJ2BRjk3kNozLx3UmGICnzCfEDemuLY6HgP+rV0c9F+Opt+89+Ydbw6w==}
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -2975,6 +2992,13 @@ packages:
 
   node-addon-api@6.1.0:
     resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
+
+  node-addon-api@7.1.1:
+    resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
+
+  node-addon-api@8.5.0:
+    resolution: {integrity: sha512-/bRZty2mXUIFY/xU5HLvveNHlswNJej+RnxBjOMkidWfwZzgTbPG1E3K5TOxRLOR+5hX7bSofy8yf1hZevMS8A==}
+    engines: {node: ^18 || ^20 || >= 21}
 
   node-fetch-native@1.6.7:
     resolution: {integrity: sha512-g9yhqoedzIUm0nTnTqAQvueMPVOuIY16bqgAJJC8XOOubYFNwz6IER9qs0Gq2Xd0+CecCKFjtdDTMA4u4xG06Q==}
@@ -5157,6 +5181,10 @@ snapshots:
 
   '@ctrl/tinycolor@4.2.0': {}
 
+  '@devm33/node-pty@1.0.9':
+    dependencies:
+      node-addon-api: 7.1.1
+
   '@emmetio/abbreviation@2.3.3':
     dependencies:
       '@emmetio/scanner': 1.0.4
@@ -5285,6 +5313,12 @@ snapshots:
     dependencies:
       '@expressive-code/core': 0.41.3
 
+  '@github/copilot@0.0.334':
+    dependencies:
+      keytar-forked-forked: 7.10.3
+      node-pty: '@devm33/node-pty@1.0.9'
+      sharp: 0.34.4
+
   '@grpc/grpc-js@1.14.0':
     dependencies:
       '@grpc/proto-loader': 0.8.0
@@ -5297,8 +5331,7 @@ snapshots:
       protobufjs: 7.5.4
       yargs: 17.7.2
 
-  '@img/colour@1.0.0':
-    optional: true
+  '@img/colour@1.0.0': {}
 
   '@img/sharp-darwin-arm64@0.34.4':
     optionalDependencies:
@@ -6993,8 +7026,7 @@ snapshots:
 
   detect-libc@2.0.4: {}
 
-  detect-libc@2.1.1:
-    optional: true
+  detect-libc@2.1.1: {}
 
   deterministic-object-hash@2.0.2:
     dependencies:
@@ -7687,6 +7719,10 @@ snapshots:
 
   just-diff@6.0.2: {}
 
+  keytar-forked-forked@7.10.3:
+    dependencies:
+      node-addon-api: 8.5.0
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -8318,6 +8354,10 @@ snapshots:
       semver: 7.7.2
 
   node-addon-api@6.1.0: {}
+
+  node-addon-api@7.1.1: {}
+
+  node-addon-api@8.5.0: {}
 
   node-fetch-native@1.6.7: {}
 
@@ -9045,7 +9085,6 @@ snapshots:
       '@img/sharp-win32-arm64': 0.34.4
       '@img/sharp-win32-ia32': 0.34.4
       '@img/sharp-win32-x64': 0.34.4
-    optional: true
 
   shebang-command@2.0.0:
     dependencies:

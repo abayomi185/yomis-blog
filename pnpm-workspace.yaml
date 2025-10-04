@@ -1,3 +1,5 @@
 onlyBuiltDependencies:
+  - '@devm33/node-pty'
   - esbuild
+  - keytar-forked-forked
   - sharp
