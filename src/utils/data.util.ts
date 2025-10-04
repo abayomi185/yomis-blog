@@ -2,9 +2,7 @@ import { AnyEntryMap, CollectionEntry } from 'astro:content';
 
 export const formatDate = (date: string) => {
   var options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric'
+    dateStyle: 'medium'
   };
 
   return new Date(date).toLocaleDateString(undefined, options);
