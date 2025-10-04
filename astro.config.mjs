@@ -5,6 +5,7 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import expressiveCode from 'astro-expressive-code';
+import { remarkReadingTime } from './src/utils/readingTime';
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,6 +21,9 @@ export default defineConfig({
     }),
     mdx()
   ],
+  markdown: {
+    remarkPlugins: [remarkReadingTime]
+  },
   output: 'static',
   adapter: vercelStatic({
     webAnalytics: {
