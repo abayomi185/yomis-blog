@@ -1,7 +1,7 @@
 ---
-title: 'Tmux Tips'
+title: Tmux Tips
 date: 2024-01-30
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: Tmux tips I've picked up so far
 tags: ['guide']
 ---

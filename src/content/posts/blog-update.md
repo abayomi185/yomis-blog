@@ -1,7 +1,7 @@
 ---
 title: 'Blog Update'
 date: 2021-08-15
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: This blog has recently been updated to use Ghost, a headless CMS and the experience so far has be great. It has boosted my motivation to write new posts and has improved my productivity.
 tags: ['update']
 ---

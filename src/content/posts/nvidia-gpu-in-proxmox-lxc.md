@@ -1,7 +1,7 @@
 ---
-title: 'Using an Nvidia GPU with Proxmox LXC'
+title: Using an Nvidia GPU with Proxmox LXC
 date: 2023-12-29
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: Setting up an LXC container on Proxmox with a GPU passed through, in order to run Ollama with CUDA acceleration.
 tags: ['guide']
 ---

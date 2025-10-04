@@ -1,7 +1,7 @@
 ---
-title: 'Data Loss'
+title: Data Loss
 date: 2024-10-01
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: I did something very silly. I worked on a production server without proper measures to rollback or recover in the case of an accident
 tags: ['update']
 ---

@@ -1,10 +1,10 @@
 ---
-title: 'Crypto-currency Trading Bot'
+title: Crypto-currency Trading Bot
 date: 2023-04-01
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: A simple cryptocurrency bot for Pump and Dump schemes
 cover:
-  image: ../../../assets/blog/crypto-trading/crypto-bot.jpg
+  image: ../../assets/posts/crypto-trading/crypto-bot.jpg
   alt: Crypto Trading Bot CLI
 tags: ['project']
 ---

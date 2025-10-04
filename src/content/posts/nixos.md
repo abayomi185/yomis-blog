@@ -1,10 +1,10 @@
 ---
-title: 'NixOS - A brief review'
+title: NixOS - A brief review
 date: 2024-05-18
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: The best linux distro I have ever used
 cover:
-  image: ../../../assets/blog/nixos/unsplash-nixos.jpeg
+  image: ../../assets/posts/nixos/unsplash-nixos.jpeg
   alt: NixOS neofetch screenshot
 tags: ['project']
 ---

@@ -1,7 +1,7 @@
 ---
-title: 'Proxmox - Resizing a LXC Disk'
+title: Proxmox - Resizing a LXC Disk
 date: 2021-11-12
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: The Proxmox Web-UI is great but it doesn't allow for reducing the size of a LXC disk that you may have overdone. Here's how to do it.
 tags: ['guide']
 ---

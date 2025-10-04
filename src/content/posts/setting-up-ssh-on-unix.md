@@ -1,10 +1,10 @@
 ---
-title: 'Setting up SSH on your Unix-like OS'
+title: Setting up SSH on your Unix-like OS
 date: 2021-12-09
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: Secure Shell or SSH is a network protocol for communcating securely over a network. It is available on most Unix-like systems (Linux, BSD, macOS, etc) as well as Microsoft Windows.
 cover:
-  image: ../../../assets/blog/setting-up-ssh-on-unix/ssh-logo.png
+  image: ../../assets/posts/setting-up-ssh-on-unix/ssh-logo.png
   alt: Terminal logo
 tags: ['guide']
 ---

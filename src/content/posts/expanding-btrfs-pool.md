@@ -1,7 +1,7 @@
 ---
-title: 'Expanding BTRFS Pool'
+title: Expanding BTRFS Pool
 date: 2025-04-10
-author: 'Yomi Ikuru'
+author: Yomi Ikuru
 excerpt: Guide to expanding an existing BTRFS pool
 tags: ['guide']
 ---
