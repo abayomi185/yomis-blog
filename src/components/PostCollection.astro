@@ -15,9 +15,9 @@ const { posts } = Astro.props;
 <Section>
   <div class="flex justify-between pb-4">
     <p class="text-xl font-bold">---</p>
-    <!-- <a href="/posts" class="underline hover:text-orange-600">all posts →</a> -->
+    <p class="text-xl font-bold">---</p>
   </div>
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <div class="mx-auto flex max-w-3xl flex-col gap-4">
     {posts.map((post: Post) => <Card post={post} />)}
   </div>
 </Section>
