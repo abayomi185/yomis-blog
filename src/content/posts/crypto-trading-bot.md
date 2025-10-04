@@ -9,8 +9,6 @@ cover:
 tags: ['project']
 ---
 
-<small>CLI interface for the bot</small>
-
 ---
 
 To go straight to the **GitHub** repo, follow this link;<br/>

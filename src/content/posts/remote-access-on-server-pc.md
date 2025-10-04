@@ -9,7 +9,7 @@ cover:
 tags: ['project']
 ---
 
-I’m joyed with all the server applications I’ve set up on [Server-PC](https://yomis.blog/server-pc) but the joy is lost when I’m away from home (although not common these days) and I need to access my data in my home network. Services like google drive and the likes do work at a cost, but I'm a student and my building concern for privacy urges me to find a solution. Finding a solution is just what I did and alas, my joy when I’m away from home is restored.
+I’m joyed with all the server applications I’ve set up on [Server-PC](/server-pc) but the joy is lost when I’m away from home (although not common these days) and I need to access my data in my home network. Services like google drive and the likes do work at a cost, but I'm a student and my building concern for privacy urges me to find a solution. Finding a solution is just what I did and alas, my joy when I’m away from home is restored.
 
 This set up would be easier if I had a self-managed internet modem and/or router from an ISP, with the ability to request/set a static public IP but such convenience I find doesn't help with developing creative solutions. My solution with the help of this fantastic [guide by John Crawford](https://jordancrawford.kiwi/setting-up-tinc/), a pen and a paper is as follows.
 

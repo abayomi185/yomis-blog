@@ -10,13 +10,7 @@ To create the BTRFS pool:
 
 ```bash
 sudo mkfs.btrfs /dev/nvme --label mofp0
-```
-
-```bash
 sudo mkdir -p /mnt/mofp0
-```
-
-```bash
 sudo mount LABEL=mofp0 /mnt/mofp0
 ```
 
@@ -41,9 +35,6 @@ Label: 'drive0_wd_2tb'  uuid: 4451c98c-4577-43ab-b4c2-59832905d010
 
 ```bash
 sudo btrfs device add /dev/nvme /mnt/mofp0
-```
-
-```bash
 sudo btrfs balance start /mnt/mofp0 --bg # run in the background
 ```
 
