@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 
+import PostImageCaption from './PostImageCaption.astro';
+
 export interface Props {
   src: ImageMetadata;
   alt: string;
@@ -13,44 +15,13 @@ export interface Props {
 const { src, alt, maxWidth = '600px', class: className, showCaption = true, ...rest } = Astro.props;
 ---
 
-<figure class={`blog-image ${className || ''}`}>
+<figure class={`my-6 flex flex-col items-center w-full ${className || ''}`}>
   <Image
     src={src}
     alt={alt}
     style={`max-width: ${maxWidth}; height: auto; object-fit: contain;`}
+    class="block h-auto max-w-full rounded-lg"
     {...rest}
   />
-  {showCaption && <figcaption class="image-caption">{rest.caption ?? alt}</figcaption>}
+  {showCaption && <PostImageCaption caption={rest.caption ?? alt} />}
 </figure>
-
-<style>
-  .blog-image {
-    margin: 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .blog-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-  }
-
-  .image-caption {
-    margin-top: 0.5rem;
-    font-size: 0.875rem;
-    color: #666;
-    text-align: center;
-    font-style: italic;
-    line-height: 1.4;
-  }
-
-  /* Dark mode support */
-  :global(.dark) .image-caption {
-    color: #aaa;
-  }
-</style>

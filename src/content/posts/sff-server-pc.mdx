@@ -10,6 +10,7 @@ tags: ['project']
 ---
 
 import Image from '../../components/PostImage.astro';
+import PostImageCaption from '../../components/PostImageCaption.astro';
 
 import virtManagerUI from '../../assets/posts/sff-server-pc/virt-manager.png';
 import serverPCDiagram from '../../assets/posts/sff-server-pc/server-pc-remote.jpg';
@@ -42,15 +43,18 @@ I opted for the [Metalfish S3 plus](https://www.aliexpress.com/item/100002181463
 - 500GB 2.5” SATA SSD
 - 2TB 2.5” HDD
 
-<iframe
-  src="https://www.youtube.com/embed/e5DTeG9-QMM?si=GiXoyanwAWR5gcOv"
-  style={{ width: '560px', height: '500px' }}
-  title="SFF Server PC RAM Upgrade"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen
-></iframe>
+<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+  <iframe
+    src="https://www.youtube.com/embed/e5DTeG9-QMM?si=GiXoyanwAWR5gcOv"
+    style={{ width: '560px', height: '500px' }}
+    title="SFF Server PC RAM Upgrade"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+  <PostImageCaption caption="SFF Server PC RAM Upgrade" />
+</div>
 
 ## Software
 
