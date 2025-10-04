@@ -1,8 +1,8 @@
 ---
 import { formatDate } from '@/utils/data.util';
 import Tags from './Tags.astro';
-import { AnyEntryMap } from 'astro:content';
-import { CollectionEntry } from 'astro:content';
+import { AnyEntryMap, CollectionEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
 
 type Post = CollectionEntry<keyof AnyEntryMap>;
 
@@ -11,6 +11,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
+const { remarkPluginFrontmatter } = await render(post);
 ---
 
 <a href={post.slug}>
@@ -19,27 +20,43 @@ const { post } = Astro.props;
   >
     <div
       class="flex h-full w-full
-		flex-col
-    rounded-[1rem]
+		flex-row
+    gap-4
+		rounded-[1rem]
 		bg-stone-300
 		p-4
-		text-gray-900
+    text-gray-900
     opacity-90
-    dark:bg-stone-800
-		dark:text-white"
+		dark:bg-stone-800
+    dark:text-white"
     >
-      <div class="flex-auto">
-        <div class="flex justify-between pb-4 text-xs">
+      <div class="flex flex-auto flex-row">
+        <div class="flex flex-1 flex-col justify-between pr-4 text-xs">
           <p>{formatDate(post.data.date.toDateString())}</p>
-          <p>{post.data.minutesRead}</p>
+          <p class="pb-4 text-lg font-bold">{post.data.title}</p>
+          <Tags tags={post.data.tags} />
+          <p class="line-clamp-6 pt-4">{post.data.excerpt}</p>
+          <div class="flex flex-1 flex-col justify-end">
+            <p class="pt-4 underline">read more →</p>
+          </div>
         </div>
-
-        <p class="pb-4 text-lg font-bold">{post.data.title}</p>
-
-        <Tags tags={post.data.tags} />
-        <p class="line-clamp-6 pt-4">{post.data.excerpt}</p>
+        <div class="flex max-h-full flex-col justify-between text-end text-xs">
+          <p>{remarkPluginFrontmatter.minutesRead}</p>
+          {
+            post.data.cover?.image && (
+              <div class="my-auto flex  items-center justify-center pt-2">
+                <Image
+                  src={post.data.cover.image}
+                  alt={post.data.cover.alt || post.data.title}
+                  class="h-full w-full rounded-lg object-cover"
+                  width={192}
+                  height={128}
+                />
+              </div>
+            )
+          }
+        </div>
       </div>
-      <p class="pt-4 underline">read more →</p>
     </div>
   </div>
 </a>
