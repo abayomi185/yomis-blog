@@ -8,10 +8,13 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "upload:images": "bun scripts/upload-images.ts images"
+    "cf:preview": "astro build && wrangler pages dev",
+    "cf:deploy": "astro build && wrangler pages deploy",
+    "cf:typegen": "wrangler types"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
+    "@astrojs/cloudflare": "^12.6.9",
     "@astrojs/mdx": "^4.3.6",
     "@astrojs/react": "4.2.7",
     "@astrojs/rss": "4.0.11",
@@ -39,9 +42,11 @@
     "@pulumi/cloudflare": "^6.9.1",
     "@pulumi/pulumi": "^3.198.0",
     "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^24.6.2",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "wrangler": "^4.42.0"
   }
 }
