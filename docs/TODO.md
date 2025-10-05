@@ -10,4 +10,5 @@
 - [x] Fix `tags` page
   - Consider using a filter instead of a page per tag
 - [x] Fix flicker when changing pages
+- [x] Production build should use the cloudflare binding (blob store) to retrieve images and astro should cache these
 - [ ] Fix responsive mode for main page for mobile
