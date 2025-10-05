@@ -1,7 +1,7 @@
 /// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
 
-type ENV = {
+type Env = {
   BLOB_STORE: R2Bucket;
 };
 
