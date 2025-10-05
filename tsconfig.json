@@ -35,7 +35,7 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client", "./worker-configuration.d.ts"],
+    "types": ["vite/client", "./worker-configuration.d.ts", "node"],
 
     "baseUrl": ".",
     "paths": {

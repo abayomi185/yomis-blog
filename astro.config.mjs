@@ -1,15 +1,28 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import vercelStatic from '@astrojs/vercel';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import expressiveCode from 'astro-expressive-code';
 import { remarkReadingTime } from './src/utils/readingTime';
 
+import vercelStatic from '@astrojs/vercel';
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://yomis.blog/',
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true
+    },
+    imageService: 'cloudflare'
+  }),
+  collections: {
+    posts: {
+      directory: 'src/pages/posts',
+      slug: ({ id, defaultSlug }) => defaultSlug.replace('posts/', '')
+    }
+  },
   integrations: [
     tailwind(),
     react(),
@@ -25,15 +38,6 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime]
   },
   output: 'static',
-  adapter: vercelStatic({
-    webAnalytics: {
-      enabled: true
-    }
-  }),
-  collections: {
-    posts: {
-      directory: 'src/pages/posts',
-      slug: ({ id, defaultSlug }) => defaultSlug.replace('posts/', '')
-    }
-  }
+  site: 'https://yomis.blog/'
 });
+
