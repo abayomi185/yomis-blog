@@ -7,6 +7,6 @@
 - [x] Use code blocks from starlight
 - [x] Change hyperlink color to orange
 - [x] Center the YouTube video iframe
-- [ ] Fix responsive mode for main page for mobile
-- [ ] Fix `tags` page
+- [x] Fix `tags` page
   - Consider using a filter instead of a page per tag
+- [ ] Fix responsive mode for main page for mobile
