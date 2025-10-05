@@ -25,6 +25,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           packageManager: pnpm
+          wranglerVersion: '4.42.0'
 
       - name: print deployment-url
         env:
