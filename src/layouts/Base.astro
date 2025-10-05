@@ -27,6 +27,24 @@ const {
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
     <link rel="icon" href="/favicon.svg" />
 
+    <script is:inline>
+      (function () {
+        const html = document.documentElement;
+        const stored = localStorage.getItem('theme');
+        const theme =
+          stored === 'light' || stored === 'dark' || stored === 'auto' ? stored : 'auto';
+        const isDark =
+          theme === 'dark' ||
+          (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        if (isDark) {
+          html.classList.add('dark');
+        } else {
+          html.classList.remove('dark');
+        }
+      })();
+    </script>
+
     <script>
       type Theme = 'light' | 'dark' | 'auto';
 
@@ -50,13 +68,6 @@ const {
         }
         return 'auto';
       }
-
-      function initTheme(): void {
-        const theme = getStoredTheme();
-        applyTheme(theme);
-      }
-
-      initTheme();
 
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       mediaQuery.addEventListener('change', () => {

@@ -9,4 +9,5 @@
 - [x] Center the YouTube video iframe
 - [x] Fix `tags` page
   - Consider using a filter instead of a page per tag
+- [x] Fix flicker when changing pages
 - [ ] Fix responsive mode for main page for mobile
