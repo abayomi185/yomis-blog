@@ -2,7 +2,7 @@
 import { formatDate } from '@/utils/data.util';
 import Tags from './Tags.astro';
 import { AnyEntryMap, CollectionEntry, render } from 'astro:content';
-import { Image } from 'astro:assets';
+import R2Image from './R2Image.astro';
 
 type Post = CollectionEntry<keyof AnyEntryMap>;
 
@@ -45,12 +45,13 @@ const { remarkPluginFrontmatter } = await render(post);
           {
             post.data.cover?.image && (
               <div class="my-auto flex  items-center justify-center pt-2">
-                <Image
-                  src={post.data.cover.image}
+                <R2Image
+                  key={post.data.cover.image}
                   alt={post.data.cover.alt || post.data.title}
-                  class="h-full w-full rounded-lg object-cover"
+                  class="my-0 h-full w-full rounded-lg object-cover"
                   width={192}
                   height={128}
+                  showCaption={false}
                 />
               </div>
             )
