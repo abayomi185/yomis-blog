@@ -4,7 +4,7 @@ date: 2021-01-18
 author: Yomi Ikuru
 excerpt: Setting up internet access to selfhosted personal server-apps with Tinc VPN and Nginx
 cover:
-  image: ../../assets/posts/remote-access-on-server-pc/server-pc-remote.jpg
+  image: assets/posts/remote-access-on-server-pc/server-pc-remote.jpg
   alt: Diagram showing remote access setup on Server-PC
 tags: ['project']
 ---

@@ -4,29 +4,31 @@ date: 2020-09-05
 author: Yomi Ikuru
 excerpt: Data corruption, power loss and modifications!
 cover:
-  image: ../../assets/posts/piserver-usbmod/usbmod.jpg
+  image: assets/posts/piserver-usbmod/usbmod.jpg
   alt: USB Hub and HDD
 tags: ['project']
 ---
 
-import ImageGallery from '../../components/PostImageGallery.astro';
+import R2ImageGallery from '../../components/R2ImageGallery.astro';
 
-import usbmodGallery1 from '../../assets/posts/piserver-usbmod/back_confined.jpg';
-import usbmodGallery2 from '../../assets/posts/piserver-usbmod/front_confined.jpg';
-import usbmodGallery3 from '../../assets/posts/piserver-usbmod/top_exposed_wideview.jpg';
-import usbmodGallery4 from '../../assets/posts/piserver-usbmod/top_exposed.jpg';
+export const usbmodGallery = [
+  'assets/posts/piserver-usbmod/back_confined.jpg',
+  'assets/posts/piserver-usbmod/front_confined.jpg',
+  'assets/posts/piserver-usbmod/top_exposed_wideview.jpg',
+  'assets/posts/piserver-usbmod/top_exposed.jpg'
+];
 
 A couple months down the line with [PiServer](/piserver), I noticed an issue that I’ve been lazy to fix until now.
 Ever so often, the hard drive (HDD) in PiServer would cut out when I happen to SSH in or access an application on PiServer over the network. It has caused a few minor issues such as corrupting a few files and halting certain processes until the HDD is able to spin back up.
 
 I’ve now been able to rectify this issue by using a 5V powered USB 3.0 hub (an inexpensive noname hub from eBay). It’s not an elegant solution but it gets the job done. The HDD will now receive its power directly from the power supply as opposed to sharing power with the Pi’s processor, of which I had to remove its core frequency overclock.
 
-<ImageGallery
+<R2ImageGallery
   images={[
-    { src: usbmodGallery1 },
-    { src: usbmodGallery2 },
-    { src: usbmodGallery3 },
-    { src: usbmodGallery4 }
+    { key: usbmodGallery[0] },
+    { key: usbmodGallery[1] },
+    { key: usbmodGallery[2] },
+    { key: usbmodGallery[3] }
   ]}
   columns={3}
 />

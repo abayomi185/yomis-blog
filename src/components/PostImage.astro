@@ -4,7 +4,8 @@ import { Image } from 'astro:assets';
 import PostImageCaption from './PostImageCaption.astro';
 
 export interface Props {
-  src: ImageMetadata;
+  src?: ImageMetadata;
+  key?: string;
   alt: string;
   caption?: string;
   maxWidth?: string;
@@ -12,15 +13,24 @@ export interface Props {
   showCaption?: boolean;
 }
 
-const { src, alt, maxWidth = '600px', class: className, showCaption = true, ...rest } = Astro.props;
+const {
+  src,
+  key,
+  alt,
+  maxWidth = '600px',
+  class: className,
+  showCaption = true,
+  ...rest
+} = Astro.props;
 ---
 
 <figure class={`my-6 flex flex-col items-center w-full ${className || ''}`}>
   <Image
-    src={src}
+    src={(key as string) ?? (src as ImageMetadata)}
     alt={alt}
     style={`max-width: ${maxWidth}; height: auto; object-fit: contain;`}
     class="block h-auto max-w-full rounded-lg"
+    inferSize={true}
     {...rest}
   />
   {showCaption && <PostImageCaption caption={rest.caption ?? alt} />}

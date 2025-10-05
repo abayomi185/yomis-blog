@@ -1,0 +1,29 @@
+---
+import PostImage from './PostImage.astro';
+
+export interface Props {
+  key: string;
+  alt: string;
+  caption?: string;
+  maxWidth?: string;
+  class?: string;
+  showCaption?: boolean;
+  width?: number;
+  height?: number;
+}
+
+const { key, ...rest } = Astro.props;
+
+const R2_PUBLIC_URL = import.meta.env.CLOUDFLARE_PUBLIC_R2_URL;
+
+if (!R2_PUBLIC_URL) {
+  throw new Error(
+    'PUBLIC_R2_URL environment variable is not set. Please add it to your .env file.'
+  );
+}
+
+// Construct the full image URL
+const imageUrl = `${R2_PUBLIC_URL}/${key}`;
+---
+
+<PostImage key={imageUrl} {...rest} />

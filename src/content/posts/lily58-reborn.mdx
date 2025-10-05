@@ -4,22 +4,24 @@ date: 2023-03-05
 author: Yomi Ikuru
 excerpt: Improving ergonomics has no boundaries. This new Lily58 Pro build uses low profile Choc switches and black MBK keycaps.
 cover:
-  image: ../../assets/posts/lily58-reborn/main.jpeg
+  image: assets/posts/lily58-reborn/main.jpeg
   alt: Lily58 Pro keyboard build; Right half
 tags: ['guide']
 ---
 
-import Image from '../../components/PostImage.astro';
-import ImageGallery from '../../components/PostImageGallery.astro';
+import R2Image from '../../components/R2Image.astro';
+import R2ImageGallery from '../../components/R2ImageGallery.astro';
 
-import keyboardsOnDesk from '../../assets/posts/lily58-reborn/7.jpeg';
+export const keyboardsOnDesk = 'assets/posts/lily58-reborn/7.jpeg';
 
-import lily58RebornGallery1 from '../../assets/posts/lily58-reborn/3.jpeg';
-import lily58RebornGallery2 from '../../assets/posts/lily58-reborn/4.jpeg';
-import lily58RebornGallery3 from '../../assets/posts/lily58-reborn/5.jpeg';
-import lily58RebornGallery4 from '../../assets/posts/lily58-reborn/1.jpeg';
-import lily58RebornGallery5 from '../../assets/posts/lily58-reborn/2.jpeg';
-import lily58RebornGallery6 from '../../assets/posts/lily58-reborn/6.jpeg';
+export const lily58RebornGallery = [
+  'assets/posts/lily58-reborn/3.jpeg',
+  'assets/posts/lily58-reborn/4.jpeg',
+  'assets/posts/lily58-reborn/5.jpeg',
+  'assets/posts/lily58-reborn/1.jpeg',
+  'assets/posts/lily58-reborn/2.jpeg',
+  'assets/posts/lily58-reborn/6.jpeg'
+];
 
 Remember this? [Lily58L](/lily58l), I made a new one!
 
@@ -27,14 +29,14 @@ The first keyboard build was great and I still use it but I was looking for some
 
 As a result this keyboard uses Kailh Choc v1 red and burnt orange switches. The keycaps are MBK with an overall beautiful black aesthetic.
 
-<ImageGallery
+<R2ImageGallery
   images={[
-    { src: lily58RebornGallery1 },
-    { src: lily58RebornGallery2 },
-    { src: lily58RebornGallery3 },
-    { src: lily58RebornGallery4 },
-    { src: lily58RebornGallery5 },
-    { src: lily58RebornGallery6 }
+    { key: lily58RebornGallery[0] },
+    { key: lily58RebornGallery[1] },
+    { key: lily58RebornGallery[2] },
+    { key: lily58RebornGallery[3] },
+    { key: lily58RebornGallery[4] },
+    { key: lily58RebornGallery[5] }
   ]}
   alt="Gallery of images of the Lily58L split keyboard during the build process."
   columns={3}
@@ -44,8 +46,8 @@ I made only one error whilst building this keyboard, soldering the pins for the 
 
 My firmware of choice is still ZMK but I am working towards creating my own firmware in Rust, so watch this space -> [RFMK Firmware - Rust for Mechanical Keyboard](https://github.com/abayomi185/rfmk_firmware)
 
-<Image
-  src={keyboardsOnDesk}
+<R2Image
+  key={keyboardsOnDesk}
   alt="Old vs New: Both Lily58L and Lily58 Pro (Choc) with mouse and trackpad on a large mouse mat"
 />
 

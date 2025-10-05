@@ -4,16 +4,16 @@ date: 2020-12-18
 author: Yomi Ikuru
 excerpt: New and improved Server Build now on an x86 Platform
 cover:
-  image: ../../assets/posts/sff-server-pc/serverpc.jpg
+  image: assets/posts/sff-server-pc/serverpc.jpg
   alt: SFF Server PC
 tags: ['project']
 ---
 
-import Image from '../../components/PostImage.astro';
+import R2Image from '../../components/R2Image.astro';
 import PostImageCaption from '../../components/PostImageCaption.astro';
 
-import virtManagerUI from '../../assets/posts/sff-server-pc/virt-manager.png';
-import serverPCDiagram from '../../assets/posts/sff-server-pc/server-pc-remote.jpg';
+export const virtManagerUI = 'assets/posts/sff-server-pc/virt-manager.png';
+export const serverPCDiagram = 'assets/posts/sff-server-pc/server-pc-remote.jpg';
 
 Having tested the waters with [PiServer](/piserver) (Raspberry pi 4 powered NAS/Server), I thought I could use a step up, to experiment with ‘bigger toys’ similar to those used in a professional setting; an **x86 platform**.
 
@@ -70,7 +70,7 @@ Kernel-based Virtual Machine (KVM) - [wiki](https://en.wikipedia.org/wiki/Kernel
 
 I discovered KVM, a Type 1 [Hypervisor](https://en.wikipedia.org/wiki/Hypervisor) by watching, [SomeOrdinaryGamers](https://www.youtube.com/user/SomeOrdinaryGamers) on YouTube and I was so intrigued by the capabilities and security benefits from running a virtual machine. KVM is special because as it says in its name, it virtualises at the kernel level which does wonders for performance in VMs and best of all, GPU’s and other peripherals can be **“passed”** to the VM effectively making the VM have full control of PCIe devices and other devices as it would if it were running bare metal (not under a VM).
 
-<Image src={virtManagerUI} alt="Virt-Manager UI for KVM" />
+<R2Image key={virtManagerUI} alt="Virt-Manager UI for KVM" />
 
 #### Windows VM
 
@@ -82,7 +82,7 @@ Installing macOS is different to say the least and compatibility is inconsistent
 
 A tip, if you’re having issues with OpenCore GPU Passthrough; I mounted the OpenCore-Passthrough.qcow2 image and added ‘agdpmod=pikera’ to boot-args in the OpenCore config.plist, to get GPU Passthrough to work with my Radeon Card (Nvidia graphics cards are not supported in macOS versions past High Sierra).
 
-<Image src={serverPCDiagram} alt="Home Lab Network Diagram" />
+<R2Image key={serverPCDiagram} alt="Home Lab Network Diagram" />
 
 ## Conclusion
 

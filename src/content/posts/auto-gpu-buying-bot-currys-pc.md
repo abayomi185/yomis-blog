@@ -4,7 +4,7 @@ date: 2021-03-02
 author: Yomi Ikuru
 excerpt: In light of the silicon and GPU shortage, I made a bot to increase my chances of geting a GPU
 cover:
-  image: ../../assets/posts/auto-gpu-buying-bot-currys-pc/mining-rig.jpg
+  image: assets/posts/auto-gpu-buying-bot-currys-pc/mining-rig.jpg
   alt: Mining Rig
 tags: ['project']
 ---

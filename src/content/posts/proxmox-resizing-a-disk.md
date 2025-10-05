@@ -58,7 +58,7 @@ nano /etc/pve/lxc/420.conf
 
 Update the following line accordingly
 
-```bash
+```
 FROM:
 
 rootfs: local-lvm:vm-420-disk-0,size=20G

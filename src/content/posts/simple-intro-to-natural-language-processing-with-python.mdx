@@ -4,16 +4,19 @@ date: 2021-11-12
 author: Yomi Ikuru
 excerpt: A hopefully simple intro into training a convolutional neural network to identify speech commands using Python, Tensorflow, Librosa, NumPy and Matplotlib.
 cover:
-  image: ../../assets/posts/simple-intro-to-natural-language-processing-with-python/waveform-1.png
+  image: assets/posts/simple-intro-to-natural-language-processing-with-python/waveform-1.png
   alt: Waveform
 tags: ['guide']
 ---
 
-import Image from '../../components/PostImage.astro';
+import R2Image from '../../components/R2Image.astro';
 
-import mfccPlot from '../../assets/posts/simple-intro-to-natural-language-processing-with-python/mfcc.png';
-import waveformPlot from '../../assets/posts/simple-intro-to-natural-language-processing-with-python/waveform-1.png';
-import lossPlot from '../../assets/posts/simple-intro-to-natural-language-processing-with-python/loss.png';
+export const mfccPlot =
+  'assets/posts/simple-intro-to-natural-language-processing-with-python/mfcc.png';
+export const waveformPlot =
+  'assets/posts/simple-intro-to-natural-language-processing-with-python/waveform-1.png';
+export const lossPlot =
+  'assets/posts/simple-intro-to-natural-language-processing-with-python/loss.png';
 
 Download [simple-nlp Jupyter Notebook](https://gist.github.com/abayomi185/2c8a6e77ccbcacf2ffabc7c26fe5680b) from GitHub Gist.
 (Notebook can also be run in [Google Colab](https://colab.research.google.com/gist/abayomi185/2c8a6e77ccbcacf2ffabc7c26fe5680b/cop506.ipynb))
@@ -177,7 +180,7 @@ plt.show
 # Modified code from source [6] answer
 ```
 
-<Image src={mfccPlot} alt="mfcc" />
+<R2Image key={mfccPlot} alt="mfcc" />
 
 ```py
 waveform_example = librosa.feature.inverse.mfcc_to_audio(
@@ -189,7 +192,7 @@ plt.show
 # Modified code from source [6] answer
 ```
 
-<Image src={waveformPlot} alt="waveform" />
+<R2Image key={waveformPlot} alt="waveform" />
 
 The compiled, shuffled and processed audio data is then split in the ratio, 70:15:15 for training data, validation data and testing data.
 
@@ -381,7 +384,7 @@ plt.show()
 # Modified code from source [1]
 ```
 
-<Image src={lossPlot} alt="loss and validation loss graph" />
+<R2Image key={lossPlot} alt="loss and validation loss graph" />
 
 The above plot shows the 'loss' of the model (based on the training dataset) decreasing with epochs, showing that the neural network is learning to identify the speech commands accurately.
 

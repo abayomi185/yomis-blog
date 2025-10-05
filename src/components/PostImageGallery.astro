@@ -2,7 +2,8 @@
 import { Image } from 'astro:assets';
 
 export interface GalleryImage {
-  src: ImageMetadata;
+  src?: ImageMetadata;
+  key?: string;
   alt?: string;
 }
 
@@ -35,7 +36,12 @@ const {
     {
       images.map((image) => (
         <figure class="gallery-item">
-          <Image src={image.src} alt={image.alt || ''} class="gallery-image" />
+          <Image
+            src={(image.key as string) ?? (image.src as ImageMetadata)}
+            alt={image.alt || ''}
+            inferSize={true}
+            class="gallery-image"
+          />
           {showCaptions && <figcaption class="gallery-caption">{image.alt || ''}</figcaption>}
         </figure>
       ))

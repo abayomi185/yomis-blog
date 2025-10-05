@@ -18,7 +18,7 @@ const { frontmatter } = Astro.props;
       tags={frontmatter.tags}
       minutesRead={frontmatter.minutesRead}
       date={frontmatter.date}
-      img={{ src: frontmatter.cover?.image.src, alt: frontmatter.cover?.alt }}
+      img={{ src: frontmatter.cover?.image, alt: frontmatter.cover?.alt }}
     />
     <PostContent><slot /></PostContent>
     <PostComments />
