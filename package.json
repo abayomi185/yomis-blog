@@ -12,6 +12,7 @@
     "cf:deploy": "astro build && wrangler pages deploy",
     "cf:typegen": "wrangler types"
   },
+  "packageManager": "pnpm@10.18.0",
   "dependencies": {
     "@astrojs/check": "0.9.4",
     "@astrojs/cloudflare": "^12.6.9",
