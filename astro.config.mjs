@@ -6,7 +6,6 @@ import mdx from '@astrojs/mdx';
 import expressiveCode from 'astro-expressive-code';
 import { remarkReadingTime } from './src/utils/readingTime';
 
-import vercelStatic from '@astrojs/vercel';
 import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
@@ -40,4 +39,3 @@ export default defineConfig({
   output: 'static',
   site: 'https://yomis.blog/'
 });
-
