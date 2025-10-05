@@ -17,15 +17,26 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v4
+
       - uses: pnpm/action-setup@v4
 
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: pnpm build
+        env:
+          CLOUDFLARE_PUBLIC_R2_URL: ${{ secrets.CLOUDFLARE_PUBLIC_R2_URL }}
+
       - name: Deploy
+        id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           packageManager: pnpm
           wranglerVersion: '4.42.0'
+          command: pages deploy
 
       - name: print deployment-url
         env:
