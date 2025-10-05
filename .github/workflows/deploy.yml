@@ -26,7 +26,7 @@ jobs:
       - name: Build project
         run: pnpm build
         env:
-          CLOUDFLARE_PUBLIC_R2_URL: ${{ secrets.CLOUDFLARE_PUBLIC_R2_URL }}
+          CLOUDFLARE_R2_URL: ${{ secrets.CLOUDFLARE_R2_URL }}
 
       - name: Deploy
         id: deploy
@@ -36,7 +36,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           packageManager: pnpm
           wranglerVersion: '4.42.0'
-          command: pages deploy
 
       - name: print deployment-url
         env:

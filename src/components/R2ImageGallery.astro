@@ -15,18 +15,16 @@ export interface Props {
 let { images } = Astro.props;
 const { ...rest } = Astro.props;
 
-const R2_PUBLIC_URL = import.meta.env.CLOUDFLARE_PUBLIC_R2_URL;
+const CLOUDFLARE_R2_URL = import.meta.env.CLOUDFLARE_R2_URL;
 
-if (!R2_PUBLIC_URL) {
-  throw new Error(
-    'PUBLIC_R2_URL environment variable is not set. Please add it to your .env file.'
-  );
+if (!CLOUDFLARE_R2_URL) {
+  throw new Error('CLOUDFLARE_R2_URL environment variable is not set.');
 }
 
 // Construct the full image URL
 images = images.map((image) => ({
   ...image,
-  key: image.key ? `${R2_PUBLIC_URL}/${image.key}` : undefined
+  key: image.key ? `${CLOUDFLARE_R2_URL}/${image.key}` : undefined
 }));
 ---
 
