@@ -41,7 +41,7 @@
    * Static Assets
    * https://developers.cloudflare.com/workers/static-assets/binding/
    */
-  // "assets": { "directory": "./src/assets/", "binding": "MY_ASSETS" },
+  "assets": { "directory": "./dist/" },
   /**
    * R2 Bucket Bindings
    * https://developers.cloudflare.com/workers/wrangler/configuration/#r2-buckets
