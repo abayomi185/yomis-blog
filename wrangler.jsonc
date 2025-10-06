@@ -11,14 +11,16 @@
   "observability": {
     "enabled": true
   },
-  "routes": [
-    {
-      "pattern": "yomis.blog",
-      "custom_domain": true
-    }
-  ],
   "workers_dev": true,
   "env": {
+    "production": {
+      "routes": [
+        {
+          "pattern": "yomis.blog",
+          "custom_domain": true
+        }
+      ]
+    },
     "draft": {
       "routes": [
         {
