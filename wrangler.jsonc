@@ -11,26 +11,14 @@
   "observability": {
     "enabled": true
   },
+  "routes": [
+    {
+      "pattern": "yomis.blog",
+      "custom_domain": true
+    }
+  ],
   "workers_dev": true,
   "env": {
-    "production": {
-      "routes": [
-        {
-          "pattern": "yomis.blog",
-          "custom_domain": true
-        }
-      ],
-      /**
-       * R2 Bucket Bindings
-       * https://developers.cloudflare.com/workers/wrangler/configuration/#r2-buckets
-       */
-      "r2_buckets": [
-        {
-          "binding": "BLOB_STORE",
-          "bucket_name": "yomis-blog"
-        }
-      ]
-    },
     "draft": {
       "routes": [
         {
@@ -70,10 +58,21 @@
    * Static Assets
    * https://developers.cloudflare.com/workers/static-assets/binding/
    */
-  "assets": { "directory": "./dist/" }
+  "assets": { "directory": "./dist/" },
+  /**
+   * R2 Bucket Bindings
+   * https://developers.cloudflare.com/workers/wrangler/configuration/#r2-buckets
+   */
+  "r2_buckets": [
+    {
+      "binding": "BLOB_STORE",
+      "bucket_name": "yomis-blog"
+    }
+  ],
   /**
    * Service Bindings (communicate between multiple Workers)
    * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
    */
   // "services": [{ "binding": "MY_SERVICE", "service": "my-service" }]
+  "send_metrics": false
 }

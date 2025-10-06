@@ -55,7 +55,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           packageManager: pnpm
           wranglerVersion: '4.42.0'
-          environment: ${{ steps.env.outputs.environment }}
+          environment: ${{ steps.env.outputs.environment != 'production' && steps.env.outputs.environment || '' }}
 
       - name: Print deployment info
         env:
