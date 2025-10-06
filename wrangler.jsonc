@@ -19,6 +19,16 @@
           "pattern": "yomis.blog",
           "custom_domain": true
         }
+      ],
+      /**
+       * R2 Bucket Bindings
+       * https://developers.cloudflare.com/workers/wrangler/configuration/#r2-buckets
+       */
+      "r2_buckets": [
+        {
+          "binding": "BLOB_STORE",
+          "bucket_name": "yomis-blog"
+        }
       ]
     },
     "draft": {
@@ -26,6 +36,12 @@
         {
           "pattern": "draft.yomis.blog",
           "custom_domain": true
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "BLOB_STORE",
+          "bucket_name": "yomis-blog"
         }
       ]
     }
@@ -54,17 +70,7 @@
    * Static Assets
    * https://developers.cloudflare.com/workers/static-assets/binding/
    */
-  "assets": { "directory": "./dist/" },
-  /**
-   * R2 Bucket Bindings
-   * https://developers.cloudflare.com/workers/wrangler/configuration/#r2-buckets
-   */
-  "r2_buckets": [
-    {
-      "binding": "BLOB_STORE",
-      "bucket_name": "yomis-blog"
-    }
-  ]
+  "assets": { "directory": "./dist/" }
   /**
    * Service Bindings (communicate between multiple Workers)
    * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
