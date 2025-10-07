@@ -14,14 +14,8 @@ export interface Props {
 
 const { key, ...rest } = Astro.props;
 
-const CLOUDFLARE_R2_URL = import.meta.env.CLOUDFLARE_R2_URL;
-
-if (!CLOUDFLARE_R2_URL) {
-  throw new Error('CLOUDFLARE_R2_URL environment variable is not set');
-}
-
 // Construct the full image URL
-const imageUrl = `${CLOUDFLARE_R2_URL}/${key}`;
+const imageUrl = '/static/' + key;
 ---
 
 <PostImage key={imageUrl} {...rest} />

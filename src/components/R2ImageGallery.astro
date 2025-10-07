@@ -15,16 +15,10 @@ export interface Props {
 let { images } = Astro.props;
 const { ...rest } = Astro.props;
 
-const CLOUDFLARE_R2_URL = import.meta.env.CLOUDFLARE_R2_URL;
-
-if (!CLOUDFLARE_R2_URL) {
-  throw new Error('CLOUDFLARE_R2_URL environment variable is not set.');
-}
-
 // Construct the full image URL
 images = images.map((image) => ({
   ...image,
-  key: image.key ? `${CLOUDFLARE_R2_URL}/${image.key}` : undefined
+  key: image.key ? '/static/' + image.key : undefined
 }));
 ---
 
