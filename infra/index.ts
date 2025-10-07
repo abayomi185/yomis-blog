@@ -40,6 +40,6 @@ new cloudflare.R2CustomDomain(`${BUCKET_NAME}-domain-resource`, {
   accountId: process.env.CLOUDFLARE_ACCOUNT_ID!,
   bucketName: yomisBlogBucket.name,
   domain: domain.replace('https://', ''),
-  enabled: true,
+  enabled: false,
   zoneId
 });

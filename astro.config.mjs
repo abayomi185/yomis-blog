@@ -1,20 +1,22 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import { remarkReadingTime } from './src/utils/readingTime';
+import cloudflare from '@astrojs/cloudflare';
+import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-import mdx from '@astrojs/mdx';
+import tailwind from '@astrojs/tailwind';
 import expressiveCode from 'astro-expressive-code';
-import { remarkReadingTime } from './src/utils/readingTime';
-
-import cloudflare from '@astrojs/cloudflare';
+import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare({
+    imageService: 'passthrough',
     platformProxy: {
-      enabled: true
-    },
-    imageService: 'cloudflare'
+      enabled: true,
+      experimental: {
+        remoteBindings: true
+      }
+    }
   }),
   collections: {
     posts: {
@@ -33,15 +35,27 @@ export default defineConfig({
     }),
     mdx()
   ],
+  image: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'localhost', port: '4321', pathname: '/**' },
+      { protocol: 'https', hostname: 'yomis.blog', pathname: '/**' },
+      { protocol: 'https', hostname: 'draft.yomis.blog', pathname: '/**' }
+    ]
+  },
   markdown: {
     remarkPlugins: [remarkReadingTime]
   },
-  output: 'static',
   redirects: {
     '/rss': {
       status: 302,
       destination: '/rss.xml'
     }
   },
-  site: 'https://yomis.blog/'
+  output: 'server',
+  site: 'https://yomis.blog/',
+  vite: {
+    ssr: {
+      external: ['@pulumi/pulumi']
+    }
+  }
 });

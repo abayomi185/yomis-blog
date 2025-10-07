@@ -11,6 +11,8 @@ export interface Props {
   maxWidth?: string;
   class?: string;
   showCaption?: boolean;
+  width?: number;
+  height?: number;
 }
 
 const {
@@ -20,6 +22,8 @@ const {
   maxWidth = '600px',
   class: className,
   showCaption = true,
+  width,
+  height,
   ...rest
 } = Astro.props;
 ---
@@ -30,7 +34,9 @@ const {
     alt={alt}
     style={`max-width: ${maxWidth}; height: auto; object-fit: contain;`}
     class="block h-auto max-w-full rounded-lg"
-    inferSize={true}
+    width={width ?? 1200}
+    height={height ?? 800}
+    inferSize
     {...rest}
   />
   {showCaption && <PostImageCaption caption={rest.caption ?? alt} />}

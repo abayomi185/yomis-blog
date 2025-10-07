@@ -15,6 +15,8 @@ export interface Props {
   maxWidth?: string;
   showCaptions?: boolean;
   class?: string;
+  width?: number;
+  height?: number;
 }
 
 const {
@@ -24,7 +26,9 @@ const {
   gap = '1rem',
   maxWidth = '1200px',
   showCaptions = false,
-  class: className
+  class: className,
+  width,
+  height
 } = Astro.props;
 ---
 
@@ -39,7 +43,9 @@ const {
           <Image
             src={(image.key as string) ?? (image.src as ImageMetadata)}
             alt={image.alt || ''}
-            inferSize={true}
+            width={width ?? 1200}
+            height={height ?? 800}
+            inferSize
             class="gallery-image"
           />
           {showCaptions && <figcaption class="gallery-caption">{image.alt || ''}</figcaption>}
