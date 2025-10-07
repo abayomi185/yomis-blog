@@ -6,6 +6,12 @@ const apiToken = process.env.CLOUDFLARE_API_TOKEN!;
 const zoneId = process.env.CLOUDFLARE_ZONE_ID!;
 const domain = process.env.CLOUDFLARE_R2_URL!;
 
+export const ALLOWED_ORIGINS = [
+  'http://localhost:4321',
+  'https://yomis.blog',
+  'https://draft.yomis.blog'
+];
+
 new cloudflare.Provider('cloudflare', {
   apiToken: apiToken
 });
@@ -24,7 +30,7 @@ new cloudflare.R2BucketCors(`${BUCKET_NAME}-cors-resource`, {
     {
       allowed: {
         methods: ['GET'],
-        origins: ['http://localhost:8788', 'https://yomis.blog', 'https://draft.yomis.blog']
+        origins: ALLOWED_ORIGINS
       }
     }
   ]
