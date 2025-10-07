@@ -27,14 +27,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build project
-        run: pnpm build
-        env:
-          CLOUDFLARE_R2_URL: ${{ secrets.CLOUDFLARE_R2_URL }}
+        with:
+          version: 10
+          run_install: true
 
       - name: Determine environment
         id: env
