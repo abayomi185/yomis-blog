@@ -37,5 +37,11 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime]
   },
   output: 'static',
+  redirects: {
+    '/rss': {
+      status: 302,
+      destination: '/rss.xml'
+    }
+  },
   site: 'https://yomis.blog/'
 });
