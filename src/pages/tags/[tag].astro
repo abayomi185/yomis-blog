@@ -7,6 +7,8 @@ import { AppConfig } from '@/utils/AppConfig';
 import { getCollection } from 'astro:content';
 import PostCollection from '@/components/PostCollection.astro';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
   const allTags: Set<string> = new Set(allPosts.map((post) => post.data.tags).flat());
