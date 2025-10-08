@@ -6,7 +6,6 @@ export const prerender = false;
 
 export async function GET({ locals, params, request }: APIContext) {
   const { BLOB_STORE } = locals.runtime.env;
-  console.log('BLOB_STORE:', BLOB_STORE);
 
   let key = params.key;
 
@@ -17,14 +16,6 @@ export async function GET({ locals, params, request }: APIContext) {
   key = key.replace(/^static\//, '');
 
   let response: Response;
-
-  // const cache = caches.default;
-  // let response = await cache.match(request);
-
-  // if (response) {
-  //   // Return cached response
-  //   return response;
-  // }
 
   try {
     const object = await BLOB_STORE.get(key);
@@ -56,9 +47,6 @@ export async function GET({ locals, params, request }: APIContext) {
       headers,
       status: 200
     });
-
-    // Cache the response
-    // await cache.put(request, response.clone());
 
     return response;
   } catch (error) {
