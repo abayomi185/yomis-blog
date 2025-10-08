@@ -32,6 +32,20 @@
           "bucket_name": "yomis-blog"
         }
       ]
+    },
+    "preview": {
+      "routes": [
+        {
+          "pattern": "preview.yomis.blog",
+          "custom_domain": true
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "BLOB_STORE",
+          "bucket_name": "yomis-blog"
+        }
+      ]
     }
   },
   /**

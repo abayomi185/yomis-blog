@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - preview
 
   pull_request:
     types: [opened, synchronize, reopened]
@@ -40,6 +41,8 @@ jobs:
             echo "environment=draft" >> $GITHUB_OUTPUT
           elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             echo "environment=${{ github.event.inputs.environment }}" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.ref }}" == "refs/heads/preview" ]]; then
+            echo "environment=preview" >> $GITHUB_OUTPUT
           else
             echo "environment=production" >> $GITHUB_OUTPUT
           fi
