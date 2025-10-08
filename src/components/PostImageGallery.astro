@@ -54,7 +54,7 @@ const actualGridCols =
 
 <>
   <div
-    class={`grid ${actualGridCols} ${imageCount > 2 ? maxWidthClass : ''} gap-4 my-8 mx-auto p-0 ${className || ''}`}
+    class={`grid ${actualGridCols} ${imageCount > 2 ? maxWidthClass : ''} gap-4 mt-8 mx-auto p-0 auto-rows-auto ${className || ''}`}
   >
     {
       images.map((image) => (
@@ -65,7 +65,7 @@ const actualGridCols =
             width={width ?? 1200}
             height={height ?? 800}
             inferSize
-            class="h-[200px] w-full rounded-lg object-cover shadow-md transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-lg"
+            class="h-auto w-full rounded-lg object-cover transition-all duration-300 ease-in-out hover:-translate-y-0.5"
           />
           {showCaptions && (
             <figcaption class="mt-2 text-center text-sm italic leading-relaxed text-gray-600 dark:text-gray-400">
