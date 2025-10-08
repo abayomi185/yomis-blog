@@ -1,3 +1,4 @@
+import { ALLOWED_ORIGINS } from '../src/constants';
 import * as cloudflare from '@pulumi/cloudflare';
 
 const BUCKET_NAME = 'yomis-blog';
@@ -5,12 +6,6 @@ const BUCKET_NAME = 'yomis-blog';
 const apiToken = process.env.CLOUDFLARE_API_TOKEN!;
 const zoneId = process.env.CLOUDFLARE_ZONE_ID!;
 const domain = process.env.CLOUDFLARE_R2_URL!;
-
-export const ALLOWED_ORIGINS = [
-  'http://localhost:4321',
-  'https://yomis.blog',
-  'https://draft.yomis.blog'
-];
 
 new cloudflare.Provider('cloudflare', {
   apiToken: apiToken
