@@ -1,11 +1,9 @@
-import { ALLOWED_ORIGINS } from '../src/constants';
+import { ALLOWED_ORIGINS } from '../src/constants.js';
 import * as cloudflare from '@pulumi/cloudflare';
 
 const BUCKET_NAME = 'yomis-blog';
 
 const apiToken = process.env.CLOUDFLARE_API_TOKEN!;
-const zoneId = process.env.CLOUDFLARE_ZONE_ID!;
-const domain = process.env.CLOUDFLARE_R2_URL!;
 
 new cloudflare.Provider('cloudflare', {
   apiToken: apiToken
@@ -29,12 +27,4 @@ new cloudflare.R2BucketCors(`${BUCKET_NAME}-cors-resource`, {
       }
     }
   ]
-});
-
-new cloudflare.R2CustomDomain(`${BUCKET_NAME}-domain-resource`, {
-  accountId: process.env.CLOUDFLARE_ACCOUNT_ID!,
-  bucketName: yomisBlogBucket.name,
-  domain: domain.replace('https://', ''),
-  enabled: false,
-  zoneId
 });
