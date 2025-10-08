@@ -31,10 +31,6 @@ const formattedDate = formatDate(date);
       <span>{formattedDate}</span> -- <span>{minutesRead}</span>
     </div>
 
-    {
-      img?.src ? (
-        <PostImage class="mx-auto my-0 mt-6 max-w-xl rounded-lg" key={img.src} alt={img.alt} />
-      ) : null
-    }
+    {img?.src ? <PostImage class="my-0 mt-6 rounded-lg" key={img.src} alt={img.alt} /> : null}
   </div>
 </Section>
