@@ -11,9 +11,6 @@
   "observability": {
     "enabled": true
   },
-  "build": {
-    "command": "pnpm build"
-  },
   "routes": [
     {
       "pattern": "yomis.blog",
