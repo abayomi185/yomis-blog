@@ -2,7 +2,7 @@
 import { formatDate } from '@/utils/data.util';
 import Section from './Section.astro';
 import Tags from './Tags.astro';
-import R2Image from './R2Image.astro';
+import PostImage from './PostImage.astro';
 
 interface Props {
   title: string;
@@ -33,9 +33,7 @@ const formattedDate = formatDate(date);
 
     {
       img?.src ? (
-        <>
-          <R2Image class="mx-auto my-0 mt-6 max-w-xl rounded-lg" key={img.src} alt={img.alt} />
-        </>
+        <PostImage class="mx-auto my-0 mt-6 max-w-xl rounded-lg" key={img.src} alt={img.alt} />
       ) : null
     }
   </div>
