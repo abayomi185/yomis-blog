@@ -1,7 +1,6 @@
+import { ALLOWED_ORIGINS } from '@/constants';
 import { logger } from '@/utils/logger';
 import type { APIContext } from 'astro';
-import { ALLOWED_ORIGINS } from 'infra';
-import sharp from 'sharp';
 
 export const prerender = false;
 
@@ -9,9 +8,6 @@ export async function GET({ locals, params, request }: APIContext) {
   const { BLOB_STORE } = locals.runtime.env;
   console.log('BLOB_STORE:', BLOB_STORE);
 
-  // params.key will contain the full path after /static/
-  // e.g., /static/assets/images/photo.jpg -> params.key = "assets/images/photo.jpg"
-  // But if the URL is /static/static/assets/..., we need to strip the extra "static/"
   let key = params.key;
 
   if (!key) {
@@ -44,19 +40,6 @@ export async function GET({ locals, params, request }: APIContext) {
     headers.set('Content-Type', contentType);
     headers.set('etag', object.httpEtag);
     headers.set('Cache-Control', 'public, max-age=31536000, immutable');
-    
-    // Extract image dimensions for Astro's Image component
-    if (contentType.startsWith('image/')) {
-      try {
-        const metadata = await sharp(Buffer.from(data)).metadata();
-        if (metadata.width && metadata.height) {
-          headers.set('x-image-width', metadata.width.toString());
-          headers.set('x-image-height', metadata.height.toString());
-        }
-      } catch (error) {
-        logger.warn({ key, error }, 'Failed to extract image metadata');
-      }
-    }
 
     const requestOrigin = request.headers.get('Origin');
     if (requestOrigin && ALLOWED_ORIGINS.includes(requestOrigin)) {
