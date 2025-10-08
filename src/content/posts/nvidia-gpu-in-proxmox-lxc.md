@@ -115,7 +115,7 @@ With this all setup and the container rebooted, the same installer for the Nvidi
 sudo pct push <VMID> ./NVIDIA-Linux-x86_64-525.89.02.run /root/NVIDIA-Linux-x86_64-525.89.02.run
 ```
 
-All that is left to do is install the drivers again without the kernel modules because they have already been installed. Look up what `cgroup` is for more details on how this works - the LXC container shares the host's kernel.
+All that is left to do is install the drivers again without the kernel modules because they have already been installed. Look up what [cgroups](https://en.wikipedia.org/wiki/Cgroups) is for more details on how this works - the LXC container shares the host's kernel.
 
 ```bash
 sudo ./NVIDIA-Linux-x86_64-525.89.02.run --no-kernel-module
