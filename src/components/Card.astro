@@ -20,18 +20,18 @@ const { remarkPluginFrontmatter } = await render(post);
   >
     <div
       class="flex h-full w-full
-		flex-row
-    gap-4
-		rounded-[1rem]
+		flex-col gap-4
+    rounded-[1rem]
 		bg-stone-300
 		p-4
-    text-gray-900
+		text-gray-900
     opacity-90
-		dark:bg-stone-800
-    dark:text-white"
+    dark:bg-stone-800
+		dark:text-white
+    sm:flex-row"
     >
-      <div class="flex flex-auto flex-row">
-        <div class="flex flex-1 flex-col justify-between pr-4 text-xs">
+      <div class="flex flex-auto flex-col sm:flex-row">
+        <div class="flex flex-1 flex-col justify-between text-xs sm:pr-4">
           <p>{formatDate(post.data.date.toDateString())}</p>
           <p class="pb-4 text-lg font-bold">{post.data.title}</p>
           <Tags tags={post.data.tags} />
@@ -41,14 +41,14 @@ const { remarkPluginFrontmatter } = await render(post);
           </div>
         </div>
         <div class="flex max-h-full flex-col justify-between text-end text-xs">
-          <p>{remarkPluginFrontmatter.minutesRead}</p>
+          <p class="hidden sm:block">{remarkPluginFrontmatter.minutesRead}</p>
           {
             post.data.cover?.image && (
-              <div class="my-auto flex  items-center justify-center pt-2">
+              <div class="my-auto flex items-center justify-center pt-2">
                 <PostImage
                   key={post.data.cover.image}
                   alt={post.data.cover.alt || post.data.title}
-                  class="my-0 h-full w-full rounded-lg object-cover"
+                  class="my-0 w-full rounded-lg object-cover sm:w-48"
                   width={192}
                   height={128}
                   showCaption={false}
