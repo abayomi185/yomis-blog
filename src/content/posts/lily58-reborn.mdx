@@ -4,23 +4,23 @@ date: 2023-03-05
 author: Yomi Ikuru
 excerpt: Improving ergonomics has no boundaries. This new Lily58 Pro build uses low profile Choc switches and black MBK keycaps.
 cover:
-  image: assets/posts/lily58-reborn/main.jpeg
+  image: /static/assets/posts/lily58-reborn/main.jpeg
   alt: Lily58 Pro keyboard build; Right half
 tags: ['guide']
 ---
 
-import R2Image from '../../components/R2Image.astro';
-import R2ImageGallery from '../../components/R2ImageGallery.astro';
+import PostImage from '../../components/PostImage.astro';
+import PostImageGallery from '../../components/PostImageGallery.astro';
 
-export const keyboardsOnDesk = 'assets/posts/lily58-reborn/7.jpeg';
+export const keyboardsOnDesk = '/static/assets/posts/lily58-reborn/7.jpeg';
 
 export const lily58RebornGallery = [
-  'assets/posts/lily58-reborn/3.jpeg',
-  'assets/posts/lily58-reborn/4.jpeg',
-  'assets/posts/lily58-reborn/5.jpeg',
-  'assets/posts/lily58-reborn/1.jpeg',
-  'assets/posts/lily58-reborn/2.jpeg',
-  'assets/posts/lily58-reborn/6.jpeg'
+  '/static/assets/posts/lily58-reborn/3.jpeg',
+  '/static/assets/posts/lily58-reborn/4.jpeg',
+  '/static/assets/posts/lily58-reborn/5.jpeg',
+  '/static/assets/posts/lily58-reborn/1.jpeg',
+  '/static/assets/posts/lily58-reborn/2.jpeg',
+  '/static/assets/posts/lily58-reborn/6.jpeg'
 ];
 
 Remember this? [Lily58L](/lily58l), I made a new one!
@@ -29,7 +29,7 @@ The first keyboard build was great and I still use it but I was looking for some
 
 As a result this keyboard uses Kailh Choc v1 red and burnt orange switches. The keycaps are MBK with an overall beautiful black aesthetic.
 
-<R2ImageGallery
+<PostImageGallery
   images={[
     { key: lily58RebornGallery[0] },
     { key: lily58RebornGallery[1] },
@@ -46,7 +46,7 @@ I made only one error whilst building this keyboard, soldering the pins for the 
 
 My firmware of choice is still ZMK but I am working towards creating my own firmware in Rust, so watch this space -> [RFMK Firmware - Rust for Mechanical Keyboard](https://github.com/abayomi185/rfmk_firmware)
 
-<R2Image
+<PostImage
   key={keyboardsOnDesk}
   alt="Old vs New: Both Lily58L and Lily58 Pro (Choc) with mouse and trackpad on a large mouse mat"
 />

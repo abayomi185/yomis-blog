@@ -4,17 +4,17 @@ date: 2022-04-23
 author: Yomi Ikuru
 excerpt: It's LAN but its everywhere and anywhere! You're gonna love it.
 cover:
-  image: assets/posts/tailscale-openwrt/tailsclale_logo.png
+  image: /static/assets/posts/tailscale-openwrt/tailsclale_logo.png
   alt: Tailscale Logo
 tags: ['guide']
 ---
 
-import R2Image from '../../components/R2Image.astro';
+import PostImage from '../../components/PostImage.astro';
 
 export const luciWebInterface =
-  'assets/posts/tailscale-openwrt/Screenshot-2022-04-23-at-04.01.46.jpg';
+  '/static/assets/posts/tailscale-openwrt/Screenshot-2022-04-23-at-04.01.46.jpg';
 export const ts0InterfaceOnLuci =
-  'assets/posts/tailscale-openwrt/Screenshot-2022-04-23-at-04.08.08.jpg';
+  '/static/assets/posts/tailscale-openwrt/Screenshot-2022-04-23-at-04.08.08.jpg';
 
 I've been needing to set up a point-to-site VPN (1 subnet) to replace my long standing wireguard setup. The setup that currently allows me to remotely access my infrastructure and services internally and publicly.
 
@@ -47,12 +47,12 @@ In the shell of the OpenWrt device, run `tailscale up` to authenticate your devi
 
 Run the command `tailscale up --advertise-routes=<YOUR-LOCAL-SUBNET-HERE>` to add the OpenWrt device as a subnet router in your VPN. You may need to go to your Tailscale dashboard to acknowledge the changes for the OpenWrt device; the free Tailscale account is limited to 1 subnet router.
 
-<R2Image key={luciWebInterface} alt="Luci web interface showing tailscale device." />
+<PostImage key={luciWebInterface} alt="Luci web interface showing tailscale device." />
 
 A new `tailscale0` device will show up in the `luci` interface under Network>Interfaces>Devices. At this point, the OpenWrt device can be pinged from other devices in the tailscale network.
 
 To allow access to the local subnet, an interface for the new `tailscale0` device would need to be created. In my setup, the interface protocol is set to unmanaged and the interface is added to the same firewall zone of the subnet to expose (the 10.1.0.x subnet in my case), then follows a restart of the OpenWrt device and the setup is complete!
 
-<R2Image key={ts0InterfaceOnLuci} alt="Tailscale interface - TS0." />
+<PostImage key={ts0InterfaceOnLuci} alt="Tailscale interface - TS0." />
 
 My gripe with this setup is that I am relying on Tailscale to orchestrate the mesh network. This gives quite a bit of information to Tailscale which is detailed in their [Privacy Policy](https://tailscale.com/privacy-policy/) in addition to the information given to OAuth providers (Google and Microsoft/GitHub) to authenticate Tailscale accounts. For this reason, I am looking to make the switch to [Headscale](https://github.com/juanfont/headscale), a self-hosted implementation for the Tailscale control server. Until then, I will happily enjoy the freedom the Tailnet gives me.

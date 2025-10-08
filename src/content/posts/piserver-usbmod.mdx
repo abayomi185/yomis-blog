@@ -4,18 +4,18 @@ date: 2020-09-05
 author: Yomi Ikuru
 excerpt: Data corruption, power loss and modifications!
 cover:
-  image: assets/posts/piserver-usbmod/usbmod.jpg
+  image: /static/assets/posts/piserver-usbmod/usbmod.jpg
   alt: USB Hub and HDD
 tags: ['project']
 ---
 
-import R2ImageGallery from '../../components/R2ImageGallery.astro';
+import PostImageGallery from '../../components/PostImageGallery.astro';
 
 export const usbmodGallery = [
-  'assets/posts/piserver-usbmod/back_confined.jpg',
-  'assets/posts/piserver-usbmod/front_confined.jpg',
-  'assets/posts/piserver-usbmod/top_exposed_wideview.jpg',
-  'assets/posts/piserver-usbmod/top_exposed.jpg'
+  '/static/assets/posts/piserver-usbmod/back_confined.jpg',
+  '/static/assets/posts/piserver-usbmod/front_confined.jpg',
+  '/static/assets/posts/piserver-usbmod/top_exposed_wideview.jpg',
+  '/static/assets/posts/piserver-usbmod/top_exposed.jpg'
 ];
 
 A couple months down the line with [PiServer](/piserver), I noticed an issue that I’ve been lazy to fix until now.
@@ -23,7 +23,7 @@ Ever so often, the hard drive (HDD) in PiServer would cut out when I happen to S
 
 I’ve now been able to rectify this issue by using a 5V powered USB 3.0 hub (an inexpensive noname hub from eBay). It’s not an elegant solution but it gets the job done. The HDD will now receive its power directly from the power supply as opposed to sharing power with the Pi’s processor, of which I had to remove its core frequency overclock.
 
-<R2ImageGallery
+<PostImageGallery
   images={[
     { key: usbmodGallery[0] },
     { key: usbmodGallery[1] },

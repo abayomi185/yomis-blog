@@ -4,7 +4,7 @@ date: 2024-05-18
 author: Yomi Ikuru
 excerpt: The best linux distro I have ever used
 cover:
-  image: assets/posts/nixos/unsplash-nixos.jpeg
+  image: /static/assets/posts/nixos/unsplash-nixos.jpeg
   alt: NixOS neofetch screenshot
 tags: ['project']
 ---

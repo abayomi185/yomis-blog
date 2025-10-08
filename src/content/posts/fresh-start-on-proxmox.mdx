@@ -4,35 +4,35 @@ date: 2022-02-12
 author: Yomi Ikuru
 excerpt: So why Proxmox? Proxmox is a Hypervisor first and foremost and has a lovely web interface to orchestrate a majority of things that would take more steps to do using a terminal. Proxmox also runs Linux, Debian GNU/Linux to be exact.
 cover:
-  image: assets/posts/fresh-start-on-proxmox/Proxmox-logo-860.png
+  image: /static/assets/posts/fresh-start-on-proxmox/Proxmox-logo-860.png
   alt: Proxmox Logo
 tags: ['project']
 ---
 
-import R2Image from '../../components/R2Image.astro';
-import R2ImageGallery from '../../components/R2ImageGallery.astro';
+import PostImage from '../../components/PostImage.astro';
+import PostImageGallery from '../../components/PostImageGallery.astro';
 
-export const linuxMeme = 'assets/posts/fresh-start-on-proxmox/alwayhasbeenlinux.jpg';
+export const linuxMeme = '/static/assets/posts/fresh-start-on-proxmox/alwayhasbeenlinux.jpg';
 export const proxmoxDashboard =
-  'assets/posts/fresh-start-on-proxmox/Screenshot-2022-04-23-at-04.33.49.jpg';
+  '/static/assets/posts/fresh-start-on-proxmox/Screenshot-2022-04-23-at-04.33.49.jpg';
 
 export const nr200BuildGallery = [
-  'assets/posts/fresh-start-on-proxmox/computer_top.jpeg',
-  'assets/posts/fresh-start-on-proxmox/computer_front.jpeg',
-  'assets/posts/fresh-start-on-proxmox/intel_cpu.jpeg',
-  'assets/posts/fresh-start-on-proxmox/computer_side.jpeg',
-  'assets/posts/fresh-start-on-proxmox/computer_cpu_paste.jpeg'
+  '/static/assets/posts/fresh-start-on-proxmox/computer_top.jpeg',
+  '/static/assets/posts/fresh-start-on-proxmox/computer_front.jpeg',
+  '/static/assets/posts/fresh-start-on-proxmox/intel_cpu.jpeg',
+  '/static/assets/posts/fresh-start-on-proxmox/computer_side.jpeg',
+  '/static/assets/posts/fresh-start-on-proxmox/computer_cpu_paste.jpeg'
 ];
 
 > Please see my [previous blog post](/sff-server-pc) for context.
 
 I did it, I finally did it! I learned a lot from using Linux with Linux Mint and I thought I'd take it a step further. An unfamiliar territory that gave me chills but I ventured into it and scoured the proxmox web interface until I stumbled across a chevron above an underscore. Is this what I think it is, a terminal!? \[Cue dramatic music\]. I then swiftly realised that its not as unfamiliar as I thought.
 
-<R2Image key={linuxMeme} alt="Always has been Linux - source: r/linuxmemes by u/parkerlreed" />
+<PostImage key={linuxMeme} alt="Always has been Linux - source: r/linuxmemes by u/parkerlreed" />
 
 So why Proxmox? Proxmox is a Hypervisor first and foremost and has a lovely web interface to orchestrate a majority of things that would take more steps to do using a terminal. Proxmox also runs Linux, Debian GNU/Linux to be exact.
 
-<R2Image key={proxmoxDashboard} alt="Proxmox web interface" />
+<PostImage key={proxmoxDashboard} alt="Proxmox web interface" />
 
 To briefly tell you what has changed from my [previous build](/sff-server-pc);
 
@@ -43,7 +43,7 @@ To briefly tell you what has changed from my [previous build](/sff-server-pc);
 **Fans:** Many 120mm fans (Mostly by Arctic)
 **Antennae:** Cute and small antennae
 
-<R2ImageGallery
+<PostImageGallery
   images={[
     { key: nr200BuildGallery[0] },
     { key: nr200BuildGallery[1] },

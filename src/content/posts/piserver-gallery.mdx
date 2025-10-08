@@ -4,62 +4,62 @@ date: 2020-07-24
 author: Yomi Ikuru
 excerpt: A Collection of images & videos from the PiServer Project
 cover:
-  image: assets/posts/piserver-gallery/piserver_gallery.jpg
+  image: /static/assets/posts/piserver-gallery/piserver_gallery.jpg
   alt: PiServer
 tags: ['project', 'gallery']
 ---
 
-import R2Image from '../../components/R2Image.astro';
+import PostImage from '../../components/PostImage.astro';
 import PostImageCaption from '../../components/PostImageCaption.astro';
 
 export const photoshootImages = [
-  'assets/posts/piserver-gallery/piserver1.jpg',
-  'assets/posts/piserver-gallery/piserver12.jpg',
-  'assets/posts/piserver-gallery/piserver2.jpg',
-  'assets/posts/piserver-gallery/piserver3-3.jpg',
-  'assets/posts/piserver-gallery/piserver4.jpg',
-  'assets/posts/piserver-gallery/piserver5.jpg',
-  'assets/posts/piserver-gallery/piserver6.jpg',
-  'assets/posts/piserver-gallery/piserver7.jpg',
-  'assets/posts/piserver-gallery/piserver8.jpg',
-  'assets/posts/piserver-gallery/piserver9.jpg',
-  'assets/posts/piserver-gallery/piserver10.jpg',
-  'assets/posts/piserver-gallery/piserver11.jpg',
-  'assets/posts/piserver-gallery/piserver13.jpg',
-  'assets/posts/piserver-gallery/piserver18.jpg',
-  'assets/posts/piserver-gallery/piserver19.jpg',
-  'assets/posts/piserver-gallery/piserver21.jpg',
-  'assets/posts/piserver-gallery/piserver20.jpg'
+  '/static/assets/posts/piserver-gallery/piserver1.jpg',
+  '/static/assets/posts/piserver-gallery/piserver12.jpg',
+  '/static/assets/posts/piserver-gallery/piserver2.jpg',
+  '/static/assets/posts/piserver-gallery/piserver3-3.jpg',
+  '/static/assets/posts/piserver-gallery/piserver4.jpg',
+  '/static/assets/posts/piserver-gallery/piserver5.jpg',
+  '/static/assets/posts/piserver-gallery/piserver6.jpg',
+  '/static/assets/posts/piserver-gallery/piserver7.jpg',
+  '/static/assets/posts/piserver-gallery/piserver8.jpg',
+  '/static/assets/posts/piserver-gallery/piserver9.jpg',
+  '/static/assets/posts/piserver-gallery/piserver10.jpg',
+  '/static/assets/posts/piserver-gallery/piserver11.jpg',
+  '/static/assets/posts/piserver-gallery/piserver13.jpg',
+  '/static/assets/posts/piserver-gallery/piserver18.jpg',
+  '/static/assets/posts/piserver-gallery/piserver19.jpg',
+  '/static/assets/posts/piserver-gallery/piserver21.jpg',
+  '/static/assets/posts/piserver-gallery/piserver20.jpg'
 ];
 
 export const designImages = [
-  'assets/posts/piserver-gallery/piserver_full.jpg',
-  'assets/posts/piserver-gallery/piserver_front.jpg',
-  'assets/posts/piserver-gallery/piserver_left.jpg',
-  'assets/posts/piserver-gallery/piserver_right.jpg',
-  'assets/posts/piserver-gallery/piserver_top.jpg',
-  'assets/posts/piserver-gallery/piserver_top_nofan.jpg'
+  '/static/assets/posts/piserver-gallery/piserver_full.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_front.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_left.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_right.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_top.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_top_nofan.jpg'
 ];
 
 export const prototypeImages = [
-  'assets/posts/piserver-gallery/piserver_testbench.jpg',
-  'assets/posts/piserver-gallery/piserver_prototype_black.jpg'
+  '/static/assets/posts/piserver-gallery/piserver_testbench.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_prototype_black.jpg'
 ];
 
 export const assemblyImages = [
-  'assets/posts/piserver-gallery/piserver_workbench.jpg',
-  'assets/posts/piserver-gallery/piserver_print.jpg',
-  'assets/posts/piserver-gallery/piserver_print_complete.jpg',
-  'assets/posts/piserver-gallery/piserver_top_tray.jpg',
-  'assets/posts/piserver-gallery/piserver_wiring_top.jpg',
-  'assets/posts/piserver-gallery/piserver_wiring_left.jpg',
-  'assets/posts/piserver-gallery/piserver_wiring_right.jpg',
-  'assets/posts/piserver-gallery/piserver_wiring.jpg',
-  'assets/posts/piserver-gallery/piserver16.jpg',
-  'assets/posts/piserver-gallery/piserver17.jpg'
+  '/static/assets/posts/piserver-gallery/piserver_workbench.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_print.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_print_complete.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_top_tray.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_wiring_top.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_wiring_left.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_wiring_right.jpg',
+  '/static/assets/posts/piserver-gallery/piserver_wiring.jpg',
+  '/static/assets/posts/piserver-gallery/piserver16.jpg',
+  '/static/assets/posts/piserver-gallery/piserver17.jpg'
 ];
 
-export const redditFameImage = 'assets/posts/piserver-gallery/piserver_reddit_fame.jpg';
+export const redditFameImage = '/static/assets/posts/piserver-gallery/piserver_reddit_fame.jpg';
 
 This is a collection of photos and videos of the activities & processes from design to finish, from the [PiServer project](/piserver).
 
@@ -69,119 +69,125 @@ This is a collection of photos and videos of the activities & processes from des
 
 ## PhotoShoot
 
-<R2Image key={photoshootImages[0]} alt="Built up PiServer 1.0" />
+<PostImage key={photoshootImages[0]} alt="Built up PiServer 1.0" />
 
-<R2Image key={photoshootImages[1]} alt="PiServer on my desk and powering an RGB LED light strip" />
+<PostImage
+  key={photoshootImages[1]}
+  alt="PiServer on my desk and powering an RGB LED light strip"
+/>
 
-<R2Image key={photoshootImages[2]} alt="External ports" />
+<PostImage key={photoshootImages[2]} alt="External ports" />
 
-<R2Image key={photoshootImages[3]} alt="Top OLED display" />
+<PostImage key={photoshootImages[3]} alt="Top OLED display" />
 
-<R2Image key={photoshootImages[4]} alt="Front view" />
+<PostImage key={photoshootImages[4]} alt="Front view" />
 
-<R2Image
+<PostImage
   key={photoshootImages[5]}
   alt="Left side view showing connectors, wiring and 12V PSU that powers the HDD and top fan"
 />
 
-<R2Image
+<PostImage
   key={photoshootImages[5]}
   alt="Front view showing tray design and 'yellow' covered MOSFETs for RGB LED control"
 />
 
-<R2Image key={photoshootImages[6]} alt="HDD Tray with felt pads to reduce vibration" />
+<PostImage key={photoshootImages[6]} alt="HDD Tray with felt pads to reduce vibration" />
 
-<R2Image key={photoshootImages[7]} alt="3.5 inch 2TB seagate iron wolf HDD on tray" />
+<PostImage key={photoshootImages[7]} alt="3.5 inch 2TB seagate iron wolf HDD on tray" />
 
-<R2Image
+<PostImage
   key={photoshootImages[8]}
   alt="Front view showing Raspberry Pi and dc connectors in recessed cable area"
 />
 
-<R2Image key={photoshootImages[9]} alt="Bottom tray in place to partly cover cables" />
+<PostImage key={photoshootImages[9]} alt="Bottom tray in place to partly cover cables" />
 
-<R2Image key={photoshootImages[10]} alt="Left side showing 12V PSU with shroud removed" />
+<PostImage key={photoshootImages[10]} alt="Left side showing 12V PSU with shroud removed" />
 
-<R2Image
+<PostImage
   key={photoshootImages[11]}
   alt="Front view showing 1 of 3 ventilation slits and felt pads in HDD compartment"
 />
 
-<R2Image
+<PostImage
   key={photoshootImages[12]}
   alt="Right side showing 5V PSU that powers the Raspberry Pi 4"
 />
 
-<R2Image key={photoshootImages[13]} alt="Rear view showing the inside amd cabling in PiServer" />
+<PostImage key={photoshootImages[13]} alt="Rear view showing the inside amd cabling in PiServer" />
 
-<R2Image key={photoshootImages[14]} alt="A closer look of the rear with the HDD taken out" />
+<PostImage key={photoshootImages[14]} alt="A closer look of the rear with the HDD taken out" />
 
 ## Design
 
-<R2Image
+<PostImage
   key={designImages[0]}
   alt="Built Piserver without casing. Space available for two 3.5 inch HDDs"
 />
 
-<R2Image
+<PostImage
   key={designImages[1]}
   alt="Front View with visible front airflow vent at the base of the chassis"
 />
 
-<R2Image
+<PostImage
   key={designImages[2]}
   alt="Left-side view showing 12V PSU, IEC connector and Ethernet adapter"
 />
 
-<R2Image
+<PostImage
   key={designImages[3]}
   alt="Right-side view showing 5V PSU and tray system with a Raspberry Pi mounted"
 />
 
-<R2Image key={designImages[4]} alt="Top View showing a 140mm fan and an OLED display" />
+<PostImage key={designImages[4]} alt="Top View showing a 140mm fan and an OLED display" />
 
-<R2Image
+<PostImage
   key={designImages[5]}
   alt="Top View without fan mounted, exposing the inside of the chassis"
 />
 
 ## Prototypes
 
-<R2Image key={prototypeImages[0]} alt="Failed prototype being used as a test bench" />
+<PostImage key={prototypeImages[0]} alt="Failed prototype being used as a test bench" />
 
-<R2Image
+<PostImage
   key={prototypeImages[1]}
   alt="Failed prototype; Very difficult to remove 3D printing supports"
 />
 
 ## Assembly
 
-<R2Image key={assemblyImages[0]} alt="My Workbench...work-bed...bed" />
+<PostImage key={assemblyImages[0]} alt="My Workbench...work-bed...bed" />
 
-<R2Image key={assemblyImages[1]} alt="Printing PiServer 1.0" />
+<PostImage key={assemblyImages[1]} alt="Printing PiServer 1.0" />
 
-<R2Image key={assemblyImages[2]} alt="PiServer 1.0 print complete. Print time: 2 Days, 20 Hours" />
+<PostImage
+  key={assemblyImages[2]}
+  alt="PiServer 1.0 print complete. Print time: 2 Days, 20 Hours"
+/>
 
-<R2Image key={assemblyImages[3]} alt="PiServer top tray with Raspberry Pi 4." />
+<PostImage key={assemblyImages[3]} alt="PiServer top tray with Raspberry Pi 4." />
 
-<R2Image key={assemblyImages[4]} alt="Laying wires in recessed wire area." />
+<PostImage key={assemblyImages[4]} alt="Laying wires in recessed wire area." />
 
-<R2Image key={assemblyImages[5]} alt="Wiring up the left side." />
+<PostImage key={assemblyImages[5]} alt="Wiring up the left side." />
 
-<R2Image key={assemblyImages[6]} alt="Wiring up the right side." />
+<PostImage key={assemblyImages[6]} alt="Wiring up the right side." />
 
-<R2Image key={assemblyImages[7]} alt="Mounting the fan on PiServer." />
+<PostImage key={assemblyImages[7]} alt="Mounting the fan on PiServer." />
 
-<R2Image
+<PostImage
   key={assemblyImages[8]}
   alt="Placing PiServer outer casing; Very gracious tolerance given to avoid needing to print another."
 />
 
-<R2Image key={assemblyImages[9]} alt="PiServer with its outer casing hovering above it." />
+<PostImage key={assemblyImages[9]} alt="PiServer with its outer casing hovering above it." />
 
 ## Reddit-fame
 
-<R2Image key={redditFameImage} alt="PiServer post on r/homelab subreddit" />
+<PostImage key={redditFameImage} alt="PiServer post on r/homelab subreddit" />
 
 # Videos
 

@@ -4,32 +4,32 @@ date: 2022-05-06
 author: Yomi Ikuru
 excerpt: Two is better than one?
 cover:
-  image: assets/posts/lily58l/splits-copy.jpg
+  image: /static/assets/posts/lily58l/splits-copy.jpg
   alt: Lily58L split keyboard with custom 3D printed case
 tags: ['project']
 ---
 
-import R2Image from '../../components/R2Image.astro';
-import R2ImageGallery from '../../components/R2ImageGallery.astro';
+import PostImage from '../../components/PostImage.astro';
+import PostImageGallery from '../../components/PostImageGallery.astro';
 
-export const lily58LPCBImage = 'assets/posts/lily58l/pcb.jpg';
-export const lily58LTopDownImage = 'assets/posts/lily58l/tempImageHhkwtG.gif';
+export const lily58LPCBImage = '/static/assets/posts/lily58l/pcb.jpg';
+export const lily58LTopDownImage = '/static/assets/posts/lily58l/tempImageHhkwtG.gif';
 
 export const lily58LGallery = [
-  'assets/posts/lily58l/left-board.jpg',
-  'assets/posts/lily58l/right-board.jpg',
-  'assets/posts/lily58l/battery.jpg',
-  'assets/posts/lily58l/rgb.jpg',
-  'assets/posts/lily58l/splits.jpg',
-  'assets/posts/lily58l/yellow.jpg',
-  'assets/posts/lily58l/prototype.jpg'
+  '/static/assets/posts/lily58l/left-board.jpg',
+  '/static/assets/posts/lily58l/right-board.jpg',
+  '/static/assets/posts/lily58l/battery.jpg',
+  '/static/assets/posts/lily58l/rgb.jpg',
+  '/static/assets/posts/lily58l/splits.jpg',
+  '/static/assets/posts/lily58l/yellow.jpg',
+  '/static/assets/posts/lily58l/prototype.jpg'
 ];
 
 My venture into split keyboards was born from wrist pains that I presumed had been because of the long hours I spent sat at my computer desk with an unergonomic setup. I later realised that cycling was the cause after spending on a Lily58L to improve my desk ergonomics🥲. It is clearly too late now and I've sunken deep into the desire to build more split keyboards, but back to the topic at hand, the Lily58L split keyboard.
 
 [Lily58](https://github.com/kata0510/Lily58), not to be confused with [Lily58L](https://github.com/Keycapsss/Lily58L-Build-Guide) is an open source split keyboard design that is available on GitHub. Lily58L is a seemingly closed source modification of Lily58 from [Keycapsss](keycapsss.com) that has support for underglow LEDs, per-key LEDs and dual rotary encoders, with the optional addition of a track ball in the position of a rotary encoder. The keyboard also features a number row that I hoped would help ease the transition from my [Keychron K6](https://www.keychron.com/products/keychron-k6-wireless-mechanical-keyboard). And I can't forget the OLED display for the cool factor and I suppose for the somewhat useful information that it is able to show. What I really want on the OLED displays though, is to get [bongocat](https://en.wikipedia.org/wiki/Bongo_Cat) vibing on the displays when I figure out how to set it up. All in all, the Lily58L is a well rounded design that offers all I needed from my first split keyboard build.
 
-<R2Image
+<PostImage
   key={lily58LPCBImage}
   alt="Image showing the Lily58L and a custom carbon activated fume extractor."
 />
@@ -45,7 +45,7 @@ My component list is as follows
 
 Simple FR4 cases are widely available for the Lily58 but I chose to design and 3D print my keyboard case which is soon to be open source.
 
-<R2ImageGallery
+<PostImageGallery
   images={[
     { key: lily58LGallery[0] },
     { key: lily58LGallery[1] },
@@ -67,4 +67,4 @@ I shall be updating this article as things change with my current build. I am lo
 
 Please feel free to reach out to me via the comment section below or via the contact page to discuss about keyboards or anything tech.
 
-<R2Image key={lily58LTopDownImage} alt="Update: new keycaps." />
+<PostImage key={lily58LTopDownImage} alt="Update: new keycaps." />
