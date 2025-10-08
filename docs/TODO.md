@@ -15,5 +15,7 @@
   - [x] Add excerpt to RSS feed
 - [x] Look into using workers to serve images rather than a public bucket
   - https://docs.astro.build/en/guides/integrations-guide/cloudflare/
-- [ ] Fix responsive mode for main page for mobile
-- [ ] Convert post gallery component to use tailwind for styling
+- [x] Convert post gallery component to use tailwind for styling
+- [x] Fix responsive mode for main page for mobile
+  - [x] Fix Giscus padding on mobile
+  - [x] Fix iframe video size on mobile
