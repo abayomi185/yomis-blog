@@ -52,10 +52,5 @@ export default defineConfig({
     }
   },
   output: 'static',
-  site: 'https://yomis.blog/',
-  vite: {
-    ssr: {
-      external: ['@pulumi/pulumi']
-    }
-  }
+  site: 'https://yomis.blog/'
 });
