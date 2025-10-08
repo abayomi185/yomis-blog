@@ -51,7 +51,7 @@ export default defineConfig({
       destination: '/rss.xml'
     }
   },
-  output: 'server',
+  output: 'static',
   site: 'https://yomis.blog/',
   vite: {
     ssr: {
