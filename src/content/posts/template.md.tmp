@@ -6,7 +6,7 @@ excerpt: <excerpt goes here>
 cover:
   image: <s3 key to image>
   alt: <short description of image>
-tags: [] // add relevant tags here
+tags: [] # add relevant tags here
 ---
 
 Say something here...
