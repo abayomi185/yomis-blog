@@ -1,7 +1,7 @@
 ---
-import { Icon } from '@astrojs/starlight/components';
 import { AppConfig } from '@/utils/AppConfig';
 import Section from './Section.astro';
+import Icon from './Icon.astro';
 ---
 
 <Section>
@@ -73,12 +73,10 @@ import Section from './Section.astro';
 </Section>
 
 <style>
-  /* Hide all theme icons by default */
   .theme-icon {
     display: none;
   }
 
-  /* Show the appropriate icon based on data-theme attribute */
   [data-theme='light'] .theme-icon-light,
   [data-theme='dark'] .theme-icon-dark,
   [data-theme='auto'] .theme-icon-auto {

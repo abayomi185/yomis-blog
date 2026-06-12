@@ -1,9 +1,9 @@
 ---
 import Section from './Section.astro';
 import Card from './Card.astro';
-import { AnyEntryMap, CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
-type Post = CollectionEntry<keyof AnyEntryMap>;
+type Post = CollectionEntry<'posts'>;
 
 interface Props {
   posts: Post[];

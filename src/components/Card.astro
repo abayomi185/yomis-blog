@@ -1,10 +1,11 @@
 ---
 import { formatDate } from '@/utils/data.util';
 import Tags from './Tags.astro';
-import { AnyEntryMap, CollectionEntry, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
 import PostImage from './PostImage.astro';
 
-type Post = CollectionEntry<keyof AnyEntryMap>;
+type Post = CollectionEntry<'posts'>;
 
 interface Props {
   post: Post;
@@ -14,7 +15,7 @@ const { post } = Astro.props;
 const { remarkPluginFrontmatter } = await render(post);
 ---
 
-<a href={`/${post.slug}`}>
+<a href={`/${post.id}`}>
   <div
     class="h-full rounded-2xl bg-stone-200/50 from-orange-900 via-amber-700 to-white p-[1px] text-sm shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)] hover:bg-gradient-to-r dark:bg-gray-900"
   >

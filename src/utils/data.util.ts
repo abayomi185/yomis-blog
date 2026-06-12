@@ -1,4 +1,4 @@
-import { AnyEntryMap, CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
 export const formatDate = (date: string) => {
   var options: Intl.DateTimeFormatOptions = {
@@ -8,10 +8,9 @@ export const formatDate = (date: string) => {
   return new Date(date).toLocaleDateString(undefined, options);
 };
 
-// export function getCollection<C extends keyof AnyEntryMap, E extends CollectionEntry<C>>(
 export const sortPostsByDate = (
-  a: CollectionEntry<keyof AnyEntryMap>,
-  b: CollectionEntry<keyof AnyEntryMap>
+  a: CollectionEntry<'posts'>,
+  b: CollectionEntry<'posts'>
 ) => {
   const dateA = new Date(a.data.date);
   const dateB = new Date(b.data.date);

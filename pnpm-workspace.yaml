@@ -2,5 +2,6 @@ onlyBuiltDependencies:
   - '@devm33/node-pty'
   - esbuild
   - keytar-forked-forked
+  - protobufjs
   - sharp
   - workerd

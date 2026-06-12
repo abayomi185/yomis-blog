@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
+
 import expressiveCode from 'astro-expressive-code';
 import { defineConfig } from 'astro/config';
 
@@ -11,22 +12,11 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   adapter: cloudflare({
     imageService: 'passthrough',
-    platformProxy: {
-      enabled: true,
-      experimental: {
-        remoteBindings: true
-      }
-    }
+    remoteBindings: true
   }),
-  collections: {
-    posts: {
-      directory: 'src/pages/posts',
-      slug: ({ id, defaultSlug }) => defaultSlug.replace('posts/', '')
-    }
-  },
   integrations: [
-    tailwind(),
     react(),
+    tailwind(),
     sitemap(),
     expressiveCode({
       themes: ['github-light', 'github-dark'],
@@ -42,7 +32,7 @@ export default defineConfig({
       { protocol: 'https', hostname: 'draft.yomis.blog', pathname: '/**' }
     ]
   },
-  markdown: {
+  unified: {
     remarkPlugins: [remarkReadingTime]
   },
   redirects: {

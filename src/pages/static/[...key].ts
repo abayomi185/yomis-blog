@@ -1,11 +1,12 @@
 import { ALLOWED_ORIGINS } from '@/constants';
 import { logger } from '@/utils/logger';
 import type { APIContext } from 'astro';
+import { env } from 'cloudflare:workers';
 
 export const prerender = false;
 
-export async function GET({ locals, params, request }: APIContext) {
-  const { BLOB_STORE } = locals.runtime.env;
+export async function GET({ params, request }: APIContext) {
+  const { BLOB_STORE } = env;
 
   let key = params.key;
 
