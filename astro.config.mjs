@@ -11,8 +11,7 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   adapter: cloudflare({
-    imageService: 'passthrough',
-    remoteBindings: true
+    imageService: 'passthrough'
   }),
   integrations: [
     react(),
